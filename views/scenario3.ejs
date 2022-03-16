@@ -1,0 +1,216 @@
+<head>
+    <!-- Bootstrap CSS and javascript -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- axios cdn so that I can use axios post requests -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+
+
+
+
+    <!-- choose either online CDN or local script p5 -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.min.js"></script>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <meta charset="utf-8">
+
+    <title> Micromonde combat simulation system</title>
+
+
+    <link rel="stylesheet" href="public/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+    <!--nav bar-->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">MCSS</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="/home"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+
+
+
+                <li class="active"><a href="/"><span class="glyphicon glyphicon-screenshot"></span> Simulation in
+                        Progress!</a></li>
+
+
+
+            </ul>
+        </div>
+    </nav>
+
+
+
+
+
+    <!--parameters-->
+
+    <div id="dronesInfoContainer">
+        <div class="parameters">
+
+
+            <!--parameters-->
+
+
+            <h4 style="color:black">Track parameters:</h4>
+            <hr class="new1">
+            <p id="ID"></p>
+            <hr class="new1">
+
+            <p id='selected-drone-xPos'>
+            </p>
+            <hr class="new1">
+            <p id="selected-drone-yPos"> </p>
+
+            <hr class="new1">
+
+            <p id="countryOrigin">
+            </p>
+            <hr class="new1">
+
+            <p id="Altitude"> </p>
+            <hr class="new1">
+            <p id="IFF"> </p>
+            <hr class="new1">
+            <p id="Weapons"> </p>
+            <hr class="new1">
+            <p id="Emissions"> </p>
+        </div>
+
+
+
+
+        <div class="droneButtonsTitle">
+
+        </div>
+        <div class="droneButtons">
+            <div>
+                <h4 style="color: black;">Classification: </h4>
+            </div>
+
+            <hr class="new1">
+
+            <button id="hostile" type="button">
+                Hostile
+            </button>
+            <button id="nonHostile" type="button">
+                Non-hostile
+            </button>
+            <button id="uncertain" type="button">
+                Uncertain
+            </button>
+            <button id="confirmButton" type="button">
+                Confirm
+            </button>
+            <br>
+
+        </div>
+        <br>
+
+        <div id="dronesIdClassParameters">
+            <div id="parametersTrack">
+
+                <h4> Classified Drone Tracker
+
+                </h4>
+                <hr class="new1">
+
+                <p id="IdTrack"></p>
+
+
+
+            </div>
+
+
+        </div>
+
+
+        <!-- Qualtrics questionaires -->
+        <!-- Trigger/Open The Modal -->
+        <!-- <button id="myBtn">Open Modal</button> -->
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Please complete the following quizes</p>
+
+
+                <ul>
+
+                    <li><a href="https://cardiff.qualtrics.com/jfe/form/SV_3e2XR6XZEKUmaGO/" target="_blank">quiz 1</a>
+                    </li>
+
+                    <li><a href="https://cardiff.qualtrics.com/jfe/form/SV_bHDpAecWItu8eN0" target="_blank">quiz 2 </a>
+                    </li>
+
+                    <li><a href="https://cardiff.qualtrics.com/jfe/form/SV_7ZLj3a1LxGg0DZQ" target="_blank">quiz 3</a>
+                    </li>
+
+
+                </ul>
+                <button id="finishedQuizesBtn">Finished</button>
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+    <!--Iframe containing the link to the microsoft forms-->
+    <!--get element by id in a javascript file, probably sketch as it has the logic for the code-->
+    <!-- create a settimeout function for it to be displayed for a certain amount of time-->
+    <!-- show quiz on top of the simulation and show scenario finished, go on to scenario 2-->
+    <!--redirect user to second scenario-->
+
+    <!-- making a box with gltich video to be output-->
+
+    <div id="black-cover-box">
+        <video width='100%' height='100%' playsinline autoplay='autoplay' muted loop
+            style="pointer-events: none; opacity:0.3; object-fit: fill;">
+            <source src="assets/glitch_video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- even timestamp, when button is pressed this is displa -->
+
+
+
+    <div id="logFile">
+
+
+    </div>
+    <div id="black-cover-box">
+        <video width='100%' height='100%' playsinline autoplay='autoplay' muted loop
+            style="pointer-events: none; opacity:0.3; object-fit: fill;">
+            <source src="assets/glitch_video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+
+
+    <!--  creates a var set to the ID  that should allow to access it from sketch.js -->
+    <script>
+        let UserID = "<%= ID %>"
+
+
+    </script>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js"></script>
+    <script src="/scripts/drones.js"></script>
+    <script src="/scripts/accuracy25.js"></script>
+
+</body>

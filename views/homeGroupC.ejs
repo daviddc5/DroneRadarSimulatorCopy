@@ -1,0 +1,205 @@
+<head>
+    <!-- Bootstrap CSS and javascript -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+    <!-- choose either online CDN or local script p5 -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+
+    <title> Micromonde combat control simulation system</title>
+
+
+    <link rel="stylesheet" href="public/css/style.css" rel="stylesheet">
+</head>
+
+<!--nav bar-->
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">MSCCS</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="/home"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+
+
+            <!-- <li><a href="/"><span class="glyphicon glyphicon-home"></span> Simulation</a></li> -->
+
+
+
+
+            <!-- <li><a href="/logOut"><span class="glyphicon glyphicon-remove"></span> Log Out</a></li> -->
+        </ul>
+    </div>
+</nav>
+
+
+<!---
+<div class="btn-group-vertical">
+    <a type="button" class="btn btn-danger btn-lg"> Scenario 1 </a>
+    <br>
+    <button type="button" class="btn btn-danger btn-lg"> Scenario 2</button>
+    <br>
+    <button type="button" class="btn btn-danger btn-lg"> Scenario 3</button>
+
+</div>
+-->
+
+
+<div id="ScenariosLinksContainer">
+    <br>
+    <h1>Group C</h1>
+    <br>
+
+    <h4>Please complete the following scenarios in order:</h4>
+    <br>
+
+    <br>
+    <a id=testScenario href="/testScenario">
+        <h4>test scenario</h4>
+        <!-- <hr class="new1"> -->
+    </a>
+    <br>
+    <br>
+
+    <a id=scenario1 href="/scenario2">
+        <h4>Scenario 1</h4>
+    </a>
+    <hr class="new1">
+    <br>
+
+    <a id=scenario2 href="/scenario3">
+        <h4>Scenario 2</h4>
+    </a>
+    <hr class="new1">
+    <br>
+    <a id=scenario3 href="/scenario1">
+        <h4>Scenario 3</h4>
+    </a>
+    <br>
+    <br>
+
+</div>
+
+
+
+<div id="scenariosFinishedContainer">
+
+
+    <h3>Scenarios Finished</h3>
+    <br>
+    <h4>highlited in green are finished</h4>
+    <h4>hightlighted red are to be completed</h4>
+
+
+
+    <br>
+    <a id=finishedTest>
+        <h4>test scenario</h4>
+        <!-- <hr class="new1"> -->
+    </a>
+    <br>
+    <br>
+    <a id=finished1>
+        <h4>Scenario 1</h4>
+    </a>
+    <hr class="new1">
+    <br>
+    <a id=Finished2>
+        <h4>Scenario 2</h4>
+    </a>
+    <hr class="new1">
+    <br>
+    <a id=finished3>
+        <h4>Scenario 3</h4>
+    </a>
+    <br>
+    <br>
+
+</div>
+
+
+<!-- 
+█▀█ █▀█ █▀▄ █▀▀ █▀█   █▀█ █▀▀   █▀ █▀▀ █▀▀ █▄░█ ▄▀█ █▀█ █ █▀█ █▀
+█▄█ █▀▄ █▄▀ ██▄ █▀▄   █▄█ █▀░   ▄█ █▄▄ ██▄ █░▀█ █▀█ █▀▄ █ █▄█ ▄█
+ -->
+
+<!-- determines if each of the scenarios has been done or not -->
+<script>
+    //initially test is true as it is scenario 0 and everything else is set to false
+    //test is deleted
+    //new scenario 0 is scenario1
+    //scenario 1 is true as it is scenario 0 and everything else is false
+    //scenario 1 is finisihed and taken of the list
+    //scenario 2 is true rest is false
+    //scenario 2 taken off the list 
+    //scenario 3 is last button rest is false
+    //scenario 3 deleted, list finished
+    //in the else statement display to user (finished, thanks for your time)
+
+    const testScenario = document.getElementById("testScenario")
+    const scenario1 = document.getElementById("scenario1")
+    const scenario2 = document.getElementById("scenario2")
+    const scenario3 = document.getElementById("scenario3")
+
+
+
+    // var to check if scenario is finished
+    const testScenarioFinished = sessionStorage.getItem("testScenario");
+
+    const scenario1Finished = sessionStorage.getItem("scenario1");
+    const scenario2Finished = sessionStorage.getItem("scenario2");
+    const scenario3Finished = sessionStorage.getItem("scenario3");
+
+    // const testScenarioFinished = sessionStorage.getItem("testScenario");
+    const testScenarioStatus = document.getElementById("finishedTest");
+    console.log(testScenarioStatus)
+    const scenario1status = document.getElementById("finished1");
+    console.log(scenario1status)
+    const scenario2status = document.getElementById("finished2");
+    const scenario3status = document.getElementById("finished3");
+
+    testScenario.style.display = "block";
+    scenario1.style.display = "none";
+    scenario2.style.display = "none"
+    scenario3.style.display = "none"
+
+    if (testScenarioFinished) {
+        console.log("true!!")
+        testScenario.style.display = "none";
+        scenario1.style.display = "block";
+
+        testScenarioStatus.style.backgroundColor = "#32CD32";
+
+    }
+    if (scenario1Finished) {
+        testScenario.style.display = "none";
+        scenario2.style.display = "block"
+        scenario1.style.display = "none";
+
+        scenario3.style.display = "none"
+        scenario1status.style.backgroundColor = "#32CD32";
+
+    }
+    if (scenario2Finished) {
+        testScenario.style.display = "none";
+        scenario2.style.display = "none"
+        scenario1.style.display = "none";
+
+        scenario3.style.display = "block"
+        scenario2status.style.backgroundColor = "#32CD32";
+
+    }
+    if (scenario3Finished) {
+        scenario3.style.display = "none"
+        scenario3status.style.backgroundColor = "#32CD32";
+
+    }
+
+</script>

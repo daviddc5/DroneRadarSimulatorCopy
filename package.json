@@ -1,0 +1,30 @@
+{
+  "name": "hssrc",
+  "version": "1.0.0",
+  "description": "Measuring variability of trust in systems of changing accuracy",
+  "main": "index.js",
+  "scripts": {
+    "devStart": "nodemon server.js --ignore log.json"
+  },
+  "author": "David",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-flash": "0.0.2",
+    "express-session": "^1.17.2",
+    "firebase": "^9.6.7",
+    "firebase-admin": "^10.0.2",
+    "method-override": "^3.0.0",
+    "passport": "^0.5.0",
+    "passport-local": "^1.0.0",
+    "session-file-store": "^1.5.0",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "dotenv": "^10.0.0",
+    "nodemon": "^2.0.14"
+  }
+}
