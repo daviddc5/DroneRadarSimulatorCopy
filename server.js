@@ -87,14 +87,13 @@ app.post( "/", (req, res) => {
   // console.log(req.session);
   req.session.username = req.body.ID
 
-  // console.log(req.session.username);
-  // console.log(req.session);
+  
   res.redirect('/home')
 })
 
 app.get("/testScenario", (req,res)=>{
   res.render("testScenario.ejs", { ID: req.session.username });
-  console.log(req.session.username)
+  
 });
 
 
@@ -133,8 +132,8 @@ app.get("/home", (req, res) => {
   userIDparsed = req.session.username;
   // console.log(userIDparsed);
   if(groupA.includes(parseInt(userIDparsed))){
-    console.log("sending to Group A");
-    console.log(userIDparsed);
+    // console.log("sending to Group A");
+    // console.log(userIDparsed);
     res.render("homeGroupA.ejs");
     
   }
@@ -143,7 +142,7 @@ app.get("/home", (req, res) => {
   else if(groupB.includes(parseInt(userIDparsed)))
  
       {
-    console.log(userIDparsed);
+    // console.log(userIDparsed);
     console.log("sending to Group B");
     res.render("homeGroupB.ejs");
   }
@@ -151,7 +150,7 @@ app.get("/home", (req, res) => {
 
   else if(groupC.includes(parseInt(userIDparsed)))
     {
-    console.log(userIDparsed);
+    // console.log(userIDparsed);
     res.render("homeGroupC.ejs");
   }
 
@@ -160,7 +159,6 @@ app.get("/home", (req, res) => {
      
   }
 
-  // res.render("homeGroupA.ejs");
 });
 
 
@@ -192,7 +190,8 @@ app.get("/home", (req, res) => {
 
 // creating a post route so that I can send the variables to the back end node, and then add them to the log file
 
-app.post("/scenario1", (request) =>{
+
+app.post("/testScenario", (request) =>{
   var dataToBeLogged = JSON.stringify(request.body)
   // console.log(dataToBeLogged);
   
@@ -208,22 +207,35 @@ app.post("/scenario1", (request) =>{
   logger.write(dataToBeLogged + "\n" )
   // console.log("posting in Scenario1")
   // res.json({ msg: 'success' });
-  logger.end();
+})
+
+
+app.post("/scenario1", (request) =>{
+  var dataToBeLogged = JSON.stringify(request.body)
+  // console.log(dataToBeLogged);
+  
+  // creates a log
+  var logger = fs.createWriteStream('log.json', {
+    flags: 'a' // flags allow to set if old data should be stored, a stands for appending mod, write removes and writes
+  })
+
+  // UNCOMMENT THIS
+  logger.write(dataToBeLogged + "\n" )
+
 
 })
 
 
 app.post("/scenario2", (request) =>{
   var dataToBeLogged = JSON.stringify(request.body)
-  console.log(dataToBeLogged);
+  
   
   // creates a lo
   var logger = fs.createWriteStream('log.json', {
     flags: 'a' // flags allow to set if old data should be stored, a stands for appending mod, write removes and writes
   })
   
-  // logger.write("non hostile button pressed by ID  on : sketch.js:152 Mon Dec 13 2021 14:06:19 GMT+0000 (Greenwich Mean Time)" + "/n") 
-  // append string to your file")
+
   logger.write(dataToBeLogged + "\n" )
   
 
@@ -233,15 +245,14 @@ app.post("/scenario2", (request) =>{
 
 app.post("/scenario3", (request) =>{
   var dataToBeLogged = JSON.stringify(request.body)
-  console.log(dataToBeLogged);
+  
   
   // creates a lo
   var logger = fs.createWriteStream('log.json', {
     flags: 'a' // flags allow to set if old data should be stored, a stands for appending mod, write removes and writes
   })
   
-  // logger.write("non hostile button pressed by ID  on : sketch.js:152 Mon Dec 13 2021 14:06:19 GMT+0000 (Greenwich Mean Time)" + "/n") 
-  // append string to your file")
+  
   logger.write(dataToBeLogged + "\n" )
 
 }  )

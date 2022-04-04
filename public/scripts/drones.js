@@ -7,7 +7,7 @@ class Drone {
 
     //this variable will randomly determine where the drones will spawn
       this.spawnDirection = Math.round(random(1,5));
-      console.log(this.spawnDirection);
+    //   console.log(this.spawnDirection);
 
       
 
@@ -136,7 +136,7 @@ constructor(){
     //Checks for distance in relation to the center
     this.Distance = Math.abs(Math.round((this.xPos/2 -250   + this.yPos/2 )));
     this.countryOfOrigin= "WYMB";
-    this.identificationFriendOrUknown = "Ally";
+    this.identificationFriendOrUknown = "Friendly";
     this.weapons = "No";
     this.emissions = "No";
     // Altitude parameter imported from drone JS
@@ -178,48 +178,8 @@ move() {
     if (this.yPos > 400) {
     this.ySpeed = -this.ySpeed;
         }
-    }
-
-    // missclassify(){
-
-          
-            
-    //     setTimeout(()=>{
-            
-
-    //         console.log(this.misclassifiedColourGenerator)
-    //     // console.log(this.misclassifiedColourGenerator);
-    //         //classify as hostile
-    //     if(this.misclassifiedColourGenerator == 0){
-    //         this.colour = color(255,0,0);
-    //         console.log("missclasify as red") 
-    //     }
-    
-    //     if(this.misclassifiedColourGenerator == 1){
-    //         this.colour = color(255,255,0);
-    //         console.log("missclasify as green") 
-    //     }
-    //     }, 24000);
-
-        
-
-      
-    // }
-    // //classfy accurately is a fucntion that is run four minutes into a scenario with a 75 or 25 trial, one minute into trial 2 of these scenarios right after the screen freeze
-
-    // classifyAccurately(){
-    
-        
-
-
-    //         setTimeout(() => {
-    //             // console.log("working?")
-
-    //             this.colour = color(0, 255, 0);
-    //             console.log( "working?" +this.colour.levels);
-                
-    //         }, 42000);
-    // }
+    }         
+   
 }
 
 
@@ -234,7 +194,7 @@ class missclassifiedNonHostileDrone extends Drone{
         //Checks for distance in relation to the center
         this.Distance = Math.abs(Math.round((this.xPos/2 -250   + this.yPos/2 )));
         this.countryOfOrigin= "WYMB";
-        this.identificationFriendOrUknown = "Ally";
+        this.identificationFriendOrUknown = "Friendly";
         this.weapons = "No";
         this.emissions = "No";
         // Altitude parameter imported from drone JS
@@ -443,7 +403,7 @@ class HostileDrone extends Drone{
 
             else if(this.uncertainDroneGenerator ==2){
                 this.countryOfOrigin= "WYMB";
-                this.identificationFriendOrUknown = "Uknown";
+                this.identificationFriendOrUknown = "Unknown";
                 this.weapons = "No";
                 this.emissions = "Yes";
             }
@@ -451,7 +411,7 @@ class HostileDrone extends Drone{
             else if(this.uncertainDroneGenerator == 3){
 
                 this.countryOfOrigin= "WYMB";
-                this.identificationFriendOrUknown = "Uknown";
+                this.identificationFriendOrUknown = "Unknown";
                 this.weapons = "No";
                 this.emissions = "No";
             }
@@ -541,14 +501,14 @@ class HostileDrone extends Drone{
             }
             else if (this.uncertainDroneGenerator ==1){
                 this.countryOfOrigin= "ADRK";
-                this.identificationFriendOrUknown = "Uknown";
+                this.identificationFriendOrUknown = "Unknown";
                 this.weapons = "Yes";
                 this.emissions = "No";
             }
 
             else if(this.uncertainDroneGenerator ==2){
                 this.countryOfOrigin= "WYMB";
-                this.identificationFriendOrUknown = "Uknown";
+                this.identificationFriendOrUknown = "Unknown";
                 this.weapons = "No";
                 this.emissions = "Yes";
             }
@@ -556,7 +516,7 @@ class HostileDrone extends Drone{
             else if(this.uncertainDroneGenerator == 3){
 
                 this.countryOfOrigin= "WYMB";
-                this.identificationFriendOrUknown = "Uknown";
+                this.identificationFriendOrUknown = "Unknown";
                 this.weapons = "No";
                 this.emissions = "No";
             }

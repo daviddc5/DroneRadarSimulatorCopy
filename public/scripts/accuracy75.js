@@ -2,11 +2,12 @@
 setTimeout(function(){
   sessionStorage.setItem("scenario2", "true");
   modal.style.display = "block";
-  // window.location.href = '/home';
+  
   noLoop();
 }, 120000);
 
 
+dataToPostScenario2 = [];
 
 
 
@@ -42,47 +43,25 @@ const blackCoverBox = document.getElementById('black-cover-box');
 const quiz= document.getElementById('responsiveQuizContainer');
 
 
-// //TESTING HOW TO OUTPUT THE USER ID on screen
-// const user = import('../../server.js'); 
-
-// console.log(`User: ${user.getID()}`);
-
-//TESTNG URL PARAMETERS
-// The idea is to use to redirect the participant to a URL that contains parameters corresponding to their given ID
-// const queryStr = "  "
-// const usp = "   "
-
-parameters = new URLSearchParams(window.location.href);
-const paramsString = 'accuracy=100 &randomSeed=1';
-
-let searchParams = new URLSearchParams(paramsString);
 
 
-// console.log(searchParams.get('accuracy'));
-// console.log(searchParams.get('randomSeed'));
+
 
 // interval to display screen freeze
 intervalId = 0;
 setInterval(() => {
   blackCoverBox.style.display = 'block';
   setTimeout(() => {
-    blackCoverBox.style.display = 'none';
-  }, 800)
+    blackCoverBox.style.display = 'none'
+  }, 800);
 },60000);
 
 
 
 
-// // interval to display quiz
-// setInterval(() => {
-//   quiz.style.display = 'block';
-//   setTimeout(() => {
-//     quiz.style.display = 'none';
-//   }, 60000)
-// },6000);
+
 
 //create button that will display after three minutes that redirects to the next trial
-
 
 //setup function is part of p5 and creates a canvas and allows to define a framerate
 function setup() {
@@ -119,13 +98,13 @@ function setup() {
     if( i> 12 && i<17 ){
       
       drones[i] = new uncertainDrone();
-      //console.log(drones[i]);
+      
     }
     if( i>=17){
 
       drones[i] = new HostileDrone();
 
-      console.log("hostile drone created")
+     
     }
   }
     
@@ -152,6 +131,16 @@ function setDroneID(droneIndex){
 }
 
 
+//updates the class of the drones currently selected, called in cb function and then is used in confirm to confirm if the classification is correct or not
+function updateSelectedDroneClass(currentDroneClass){
+
+  droneClass = currentDroneClass;
+ 
+  return droneClass;
+
+
+}
+
 
 // var logFile = document.getElementById("logFile");
 //when confirm is pressed it creates a timestamp of the time the button confirmw, hostile non hostile or uncertain was pressed
@@ -174,8 +163,6 @@ function getTime() {
 
   var timeLog = String(date)
   
-  // var dateString = document.createTextNode(String(date)+ "\n");
-  // logFile.append(dateString);
 
   return timeLog;
 
@@ -198,55 +185,140 @@ function logDroneID(droneIndex){
 
 }
 
-btnConfirm.addEventListener('click',() => {    
-
-  console.log(UserID);
-  var outputConfirmButton = (getButton("confirm"));
-
-  console.log(outputConfirmButton);
-  var outputConfirmTimeLog = (getTime());
-  console.log(outputConfirmTimeLog);
-
-  // logger.write(outputConfirmButton) // append string to your file")
-
-  const confirmButtonLog = {outputConfirmButton, outputConfirmTimeLog };
+function getTimeDroneClicked(timeClicked){
+  timeClickedDrone = timeClicked;
+  return timeClickedDrone;
 
   
-  axios.post("/scenario2",confirmButtonLog);
+}
+
+var dronesClassifiedCorrectly = 0;
+
+
+btnConfirm.addEventListener('click',() => {  
+  const confirmButtonLog = {outputConfirmButton:(getButton("confirm"))+ (getTime())};
+  // console.log(confirmButtonLog);
+
+  dataToPostScenario2.push(confirmButtonLog)
+
+  
+  
+// information to be logged in drone tracker
+  const pID = document.createElement('p');
+  const pClass = document.createElement('p');
+  const separationID = document.createElement('hr');
+  const separationClass = document.createElement('hr');
+ 
+
+  // if the element is in the array it hasnt been classified, delete it from list and output its classification
+
+
+    pID.innerText = "ID of drone tracked: " + droneID;
+
+    // + ", classified as " + currentButtonPressed;
+
+    pClass.innerText = "classification:" + currentButtonPressed;
+    randomPrependORAppend= Math.round(random(0,1));
+    console.log(randomPrependORAppend)
+
+    if (randomPrependORAppend == 0){
+      document.getElementById("parametersTrackID").prepend(separationID);
+      document.getElementById("parametersTrackID").prepend(pID);
+      document.getElementById("parametersTrackID").prepend(separationID);
+      document.getElementById("parametersTrackClass").prepend(pClass);
+      document.getElementById("parametersTrackClass").prepend(separationClass);
+      document.getElementById("parametersTrackClass").prepend(separationClass);
+
+    }
+    if (randomPrependORAppend== 1){
+      document.getElementById("parametersTrackID").append(separationID);
+      document.getElementById("parametersTrackID").append(pID);
+      document.getElementById("parametersTrackID").append(separationID);
+      document.getElementById("parametersTrackClass").append(separationClass);
+      document.getElementById("parametersTrackClass").append(pClass);
+      document.getElementById("parametersTrackClass").append(separationClass);
+
+    }
+
+    
+    // document.getElementById("parametersTrackClass").prependChild(pClass);
+    //timeStampDroneConfirmed, gets second at which the user has confirmed drone
+
+    const date = new Date()
+
+    timeStampDroneConfirmed = date.getSeconds();
+    // console.log("timestamp drone confirmed at "+ timeStampDroneConfirmed);
+
+    timeElapsedClassifyingDrone =timeStampDroneConfirmed-timeClickedDrone 
+
+
+    
+    
+    if(timeElapsedClassifyingDrone<0){
+      timeElapsedClassifyingDrone= 60-timeElapsedClassifyingDrone
+    }
+
+
+    // console.log("time between clicking drone and confirming "+timeElapsedClassifyingDrone +" seconds");
+
+    
+    timeElapsed = "time between clicking drone and confirming "+timeElapsedClassifyingDrone +" seconds"
+
+    const timeElapsedBetweenClickingAndConfirming = {timeElapsed};
+
+    // axios.post("/scenario1",timeElapsedBetweenClickingAndConfirming, {timeout:2000});
+
+    dataToPostScenario2.push(timeElapsedBetweenClickingAndConfirming)
+
+
+
+    // we create a variable that works as a counter for how many drones the user has got right (initially 0)
+    if(currentButtonPressed == droneClass){
+      var classification = "correct"
+      dronesClassifiedCorrectly++;
+      
+    }
+    else{
+      var classification = "incorrect"
+
+    }
+    // dronesClassifiedIncorrectly = (20 - dronesClassifiedCorrectly);
+    // this variable has info on the user ID drone id classified and classification
+    finalDroneClassification = "The final drone classification of user "+ UserID+" of drone ID "+ droneID+ " is "+ currentButtonPressed+ ", this classification, is " + classification+ "!";
+    //this variable updates every time the confirm button is switched, and will add one if the drone has been correctly classified
+    finalNumberOfCorrectlyClassifiedDrones = "the current number of drones classified correctly is " + dronesClassifiedCorrectly +" /20 drones in scenario"
+    // finalNumberOfIncorrectlyClassifiedDrones = "the current number of drones classified incorrectly is " + dronesClassifiedIncorrectly +" /20 drones in scenario"
+    
+    const classificationInformation = {finalDroneClassification, finalNumberOfCorrectlyClassifiedDrones};
+    // console.log(classificationInformation);
+
+
+    // axios.post("/scenario1",classificationInformation);
+    dataToPostScenario2.push(classificationInformation);
+
+
+ // depending on the value of the current button pressed we change the colour of drones
 
   if(currentButtonPressed == "nonHostile") {
     drones[droneID].colour = color(0,255,0);
-    console.log(currentButtonPressed)
+    // console.log(currentButtonPressed)
     // console.log("non hostile working??")
-  
+
   }
-  else if(currentButtonPressed == "Uncertain") {
+ else if(currentButtonPressed == "Uncertain") {
     drones[droneID].colour = color(255,255,0);
-    console.log(currentButtonPressed)
+    // console.log(currentButtonPressed)
     // console.log("uncertain working??")
   }
-  
+
   else if(currentButtonPressed == "Hostile") {
-    console.log(currentButtonPressed)
+    // console.log(currentButtonPressed)
     // console.log(" hostile working??")
     drones[droneID].colour = color(255,0,0);
-  
-  }
 
-
-
-   // selectedDroneIdTrack_p.innerText = "ID of drone tracked: " + droneID;
-
- 
-   const p = document.createElement('p');
-
-    
-
-   p.innerText = "ID of drone tracked: " + droneID + ", classified as " + currentButtonPressed;
-   document.getElementById("parametersTrack").appendChild(p);
- 
-
+  }  
 });
+
 
 btnHostile.addEventListener('click',() => {    
   var outputHostileButton = (getButton("hostile"));
@@ -257,7 +329,10 @@ btnHostile.addEventListener('click',() => {
   const HostileButtonLog = {outputHostileButton, outputHostileTimeLog };
 
   
-  axios.post("/scenario2",HostileButtonLog);
+  // axios.post("/scenario2",HostileButtonLog);
+
+  dataToPostScenario2.push(HostileButtonLog);
+
   btnNonHostile.style.backgroundColor = "#B1ACA3"
   btnHostile.style.backgroundColor = "#ff0000"
   btnUncertain.style.backgroundColor = "B1ACA3"
@@ -283,7 +358,9 @@ btnNonHostile.addEventListener('click',() => {
 
   const nonHostileButton = {outputNonHostileButton, outputNonHostileTimeLog};
 
-  axios.post("/scenario2", nonHostileButton);
+  // axios.post("/scenario2", nonHostileButton);
+
+  dataToPostScenario2.push(nonHostileButton);
   btnNonHostile.style.backgroundColor = "00ff00"
   btnHostile.style.backgroundColor = "B1ACA3"
   btnUncertain.style.backgroundColor = "B1ACA3"
@@ -306,7 +383,9 @@ btnUncertain.addEventListener('click',() => {
 
   const UncertainButtonLog = {outputUncertainButton, outputUncertainTimeLog};
 
-  axios.post("/scenario2", UncertainButtonLog)
+  // axios.post("/scenario2", UncertainButtonLog)
+
+  dataToPostScenario2.push(UncertainButtonLog);
 
   btnNonHostile.style.backgroundColor = "#B1ACA3"
   btnHostile.style.backgroundColor = "#B1ACA3"
@@ -323,23 +402,25 @@ function cb(droneIndex) {
   //set drone ID to be current
 
   setDroneID(droneIndex)
+
+  const date = new Date()
+
+  timestampSecondDroneClicked = date.getSeconds();
+
+  getTimeDroneClicked(timestampSecondDroneClicked);
   
 
   const backEndDroneIndexLog = {droneIndexLog};
 
-  axios.post("/scenario2", backEndDroneIndexLog);
+  // axios.post("/scenario2", backEndDroneIndexLog);
 
-  
+  dataToPostScenario2.push(backEndDroneIndexLog);
 
-  
 
   // selectedDroneIndex != null ? drones[selectedDroneIndex].colour = color(255,255,255) : '';
   // selectedDroneIndex used as a reference for the previously selected drone
   
-  // initialDroneColour = drones[droneIndex].colour
-  //console.log("drone index: " + droneIndex);
   if (selectedDroneIndex != null) {
-    //drones[selectedDroneIndex].colour = initialDroneColour;
     drones[selectedDroneIndex].selected = false;
   }
     // sselectedDroneIndex is set to new drone index, reference for the new one
@@ -419,20 +500,18 @@ function cb(droneIndex) {
       console.log("hostile drone")
     
       updateSelectedButton("Hostile");
-      // btnHostile.style.backgroundColor = "#ff0000"
-      // btnNonHostile.style.backgroundColor = "#B1ACA3"
+      updateSelectedDroneClass("Hostile");
+
       
-      // btnUncertain.style.backgroundColor = "#B1ACA3"
   
     }
   
     if (drones[selectedDroneIndex] instanceof nonHostileDrone){
       console.log("non hostile drone")
       updateSelectedButton("nonHostile");
+      updateSelectedDroneClass("nonHostile");
       
-      // btnNonHostile.style.backgroundColor = "#00ff00"
-      // btnHostile.style.backgroundColor = "#B1ACA3"
-      // btnUncertain.style.backgroundColor = "#B1ACA3"
+     
       
       
     }
@@ -440,10 +519,29 @@ function cb(droneIndex) {
       console.log("uncertain drone")
 
       updateSelectedButton("Uncertain");
+      updateSelectedDroneClass("Uncertain");
       
-      // btnUncertain.style.backgroundColor = "#ffff00"
-      // btnHostile.style.backgroundColor = "#B1ACA3"
-      // btnNonHostile.style.backgroundColor = "#B1ACA3"
+     
+  
+    }
+
+    if (drones[selectedDroneIndex] instanceof missclassifiedUncertainDrone){
+      console.log("uncertain drone")
+
+      updateSelectedButton("Uncertain");
+      updateSelectedDroneClass("Uncertain");
+      
+     
+  
+    }
+
+    if (drones[selectedDroneIndex] instanceof missclassifiedNonHostileDrone){
+      console.log("uncertain drone")
+
+      updateSelectedButton("nonHostile");
+      updateSelectedDroneClass("nonHostile");
+      
+     
   
     }
     
@@ -474,30 +572,50 @@ function draw() {
   //square(30, 20, 55);
   //plots all other drones in array previously created
   // 5 drones missclasified 15 correctly classified
+
   for (let i = 0; i< drones.length; i++) {
+
+    
   
 
-    //5
-    if ( i<17){
-      drones[i].move(); 
+    //nonHostile
+    if ( i<=8){
+      drones[i].move();
       drones[i].show();
 
+    }
+
+    //two missclassified nonHostile
+  if( i> 8 && i<=10 ){
+    drones[i].move();
+    drones[i].show();
+   
+  }
+  //two missclassified uncertain
+
+    if( i> 10 && i<=12 ){
+      drones[i].move();
+      drones[i].show();
+     
+    }
+
+//uncertain
+    if( i> 12 && i<17 ){
+    
+      drones[i].move();
+      drones[i].show();
       
     }
     
-//3
+//hostile
     if ( i>= 17){
-      // console.log("working?")
+      
       drones[i].show();
 
       
       drones[i].disguisedMovement();
 
-      // timeForHostility = Math.round(random(15000, 20000));
-
-      // setTimeout(() => {
-      //     drones[i].switchToHostile();
-      //   }, timeForHostility)
+      
     
      
     }
@@ -520,6 +638,8 @@ var finishedQuizesBtn = document.getElementById("finishedQuizesBtn");
 
 // When the user clicks the button, open the modal 
 finishedQuizesBtn.onclick = function () {
+
+  axios.post("/scenario2", dataToPostScenario2);
   (window.location.href = '/home')
 }
 

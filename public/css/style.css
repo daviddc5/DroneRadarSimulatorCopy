@@ -1,5 +1,7 @@
 body {
   background-color: rgb(59, 58, 56);
+  font-family: 'Courier New', monospace;
+  font-size:16px;
 }
 
 canvas {
@@ -18,40 +20,124 @@ canvas {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 99999; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  padding-top: 200px; /* Location of the box */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+   background-color: rgb(0,0,0); 
+  background-color: rgb(0, 0, 0, 0.9); /* Black w/ opacity */
 }
 
 /* Modal Content */
 .modal-content {
-  background-color: #fefefe;
+  background-color: #a5a5a5;
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
+  height:60%;
   z-index:99999;
+  border-top:500px;
+  
 }
 
-/* The Close Button */
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+.modal-content p {
+  margin:0; 
+  display:inline;
+  font-size:20px;
 }
 
-.close:hover,
-.close:focus {
-  color: #000;
+#finishedQuizesBtn{
+
+  
+left:10%;
+background-color: #ff3c3c;
+color: white;
+padding: 14px 25px;
+text-align: center;
+text-decoration: none;
+border-radius: 10px;
+border-top:100px;
+width:200px;
+height:100px;
+
+}
+
+
+
+
+#quizOne{
+
+left:10%;
+background-color: #ff3c3c;
+color: white;
+padding: 14px 25px;
+text-align: center;
+text-decoration: none;
+border-radius: 10px;
+border-top:100px;
+}
+
+#quizTwo{
+
+  left:10%;
+  background-color: #ff3c3c;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
   text-decoration: none;
-  cursor: pointer;
-}
+  border-radius: 10px;
+  border-top:100px;
+  width:100px
+  }
+
+  #quizThree{
+
+    left:10%;
+    background-color: #ff3c3c;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    border-top:100px;
+    }
+
+    #quizOneFinished{
+
+      left:10%;
+      background-color: #ff3c3c;
+      color: white;
+      padding: 14px 25px;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 10px;
+      border-top:100px;
+      }
+      #quizTwoFinished{
+
+        left:10%;
+        background-color: #ff3c3c;
+        color: white;
+        padding: 14px 25px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 10px;
+        border-top:100px;
+        }
+      #quizThreeFinished{
+
+        left:10%;
+        background-color: #ff3c3c;
+        color: white;
+        padding: 14px 25px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 10px;
+        border-top:100px;
+        }
 
 
 /* CSS for the status/finished state of scenarios button */
@@ -224,7 +310,7 @@ canvas {
 .parameters {
   width: 310px;
   line-height:1;
-  font-family: "Times New Roman", Times, serif;
+  
   font-size: 1pc;
   text-align: center;
   color: rgb(0, 0, 0);
@@ -235,10 +321,10 @@ canvas {
 }
 
 
-#parametersTrack {
-  width: 500px;
+#parametersTrackID {
+  width: 300px;
   line-height:1;
-  font-family: "Times New Roman", Times, serif;
+  
   font-size: 1pc;
   text-align: center;
   color: rgb(0, 0, 0);
@@ -249,6 +335,81 @@ canvas {
   
 }
 
+#parametersTrackIDHeading {
+  width: 300px;
+  height: 50px;
+  display: flex;
+  position:absolute;
+  flex-direction: column;
+  align-items: center;
+  margin-left:2700px;
+  margin-top: 40px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  background-color: rgb(177, 172, 163);
+  /*border:10px solid rgb(0, 0, 0);*/
+  outline: 2px solid black;
+  border-radius: 10px;
+  
+}
+
+#parametersTrackClassHeading {
+  width: 400px;
+  height: 50px;
+  display: flex;
+  position:absolute;
+  flex-direction: column;
+  align-items: center;
+  margin-left:3500px;
+  margin-top: 40px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  background-color: rgb(177, 172, 163);
+  /*border:10px solid rgb(0, 0, 0);*/
+  outline: 2px solid black;
+  border-radius: 10px;
+  
+}
+
+
+#parametersTrackClass {
+  width: 400px;
+  line-height:1;
+  
+  font-size: 1pc;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  background-color: rgb(177, 172, 163);
+  /*border:10px solid rgb(0, 0, 0);*/
+  outline: 2px solid black;
+  border-radius: 10px;
+  
+}
+
+#dronesIdParameters{
+  font-size: 8;
+  width: 50px;
+  height: 100%;
+  display: flex;
+  position:absolute;
+  flex-direction: column;
+  align-items: center;
+  margin-left:2700px;
+  margin-top: 100px;
+}
+
+#dronesClassParameters{
+/* height: 100vh; */
+width: 50px;
+height: 100%;
+display: flex;
+position:absolute;
+flex-direction: column;
+align-items: center;
+margin-left :3500px;
+margin-top: 100px;
+}
+
 
 
 
@@ -257,7 +418,7 @@ canvas {
 #hostile {
   background-color: rgb(177, 172, 163);
   width: 100px;
-  font-family: "Times New Roman", Times, serif;
+  
   font-size: 1pc;
   line-height: 2.5;
   border-radius: 10px;
@@ -270,15 +431,14 @@ canvas {
   text-align: center;
 }
 
-.hostile:hover {
+#hostile:hover {
   background-color: rgb(202, 197, 193);
 }
 
 /*CSS for buttons*/
 #nonHostile {
   background-color: rgb(177, 172, 163);
-  width: 100px;
-  font-family: "Times New Roman", Times, serif;
+  width: 130px;
   font-size: 1pc;
   line-height: 2.5;
   border-radius: 10px;
@@ -291,7 +451,7 @@ canvas {
   text-align: center;
 }
 
-.nonHostile:hover {
+#nonHostile:hover {
   background-color: rgb(202, 197, 193);
 }
 
@@ -299,7 +459,7 @@ canvas {
 #uncertain {
   background-color: rgb(177, 172, 163);
   width: 100px;
-  font-family: "Times New Roman", Times, serif;
+  
   font-size: 1pc;
   line-height: 2.5;
   border-radius: 10px;
@@ -312,22 +472,21 @@ canvas {
   text-align: center;
 }
 
-.uncertain:hover {
+#uncertain:hover {
   background-color: rgb(202, 197, 193);
 }
-
-
-
 .droneButtons{
   /*
   margin-top: 10px;
   margin-bottom: 10px;
  */
+ width:350px;
  background-color:rgb(177, 172, 163);
  margin: 20px 0;
  outline: 2px solid black;
  border-radius: 10px;
  text-align: center;
+ margin-left:10px;
  
 }
 
@@ -341,24 +500,27 @@ canvas {
   align-items: center;
 }
 
-#dronesIdClassParameters{
-    /* height: 100vh; */
-    width: 350px;
-    height: 100%;
-    display: flex;
-    position:absolute;
-    flex-direction: column;
-    align-items: center;
-    margin-left:3000px;
-    margin-top: 100px;
+
+
+#dronesClass{
+  /* height: 100vh; */
+  width: 150px;
+  height: 100%;
+  display: flex;
+  position:absolute;
+  flex-direction: column;
+  align-items: center;
+  margin-left:3600px;
+  margin-top: 100px;
 }
+
 
 
 /*CSS for threatbuttons*/
 #confirmButton {
   background-color: rgb(177, 172, 163);
   width: 300px;
-  font-family: "Times New Roman", Times, serif;
+  
   font-size: 1pc;
   line-height: 2.5;
   border-radius: px;
@@ -367,11 +529,13 @@ canvas {
   text-align: center;
   margin-top: 20px;
   border-radius: 10px;
+  margin-left:25px;
   
 }
-/* #confirmButton:hover {
-  background-color: rgb(240, 173, 28);
-} */
+#confirmButton:hover {
+  
+  background-color: rgb(202, 197, 193);
+}
 
 
 #droneTracker{
@@ -380,15 +544,15 @@ canvas {
  
   
   align-items: center;
-   border-left: -100px;;
-   border-top: 10px;
+  border-left: -800px;;
+  
 } 
 
 .drones{ 
   
   width: 310px;
   line-height:1;
-  font-family: "Times New Roman", Times, serif;
+  
   font-size: 1pc;
   text-align: center;
   color: rgb(0, 0, 0);
@@ -422,23 +586,9 @@ canvas {
   background-color: rgb(190, 63, 54) ;
 }
 
-/* .login {
-  width: 500px;
-  background-color: rgb(255, 78, 65);
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 40%;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  left: 30%;
-  top: 40%;
-} */
 
 
-.login[type="submit"]:hover {
-  background-color: rgb(255, 111, 59);
-}
+
 
 
 
@@ -515,18 +665,6 @@ select {
   
 }
 
-/* input[type="email"],
-select {
-  width: 300px;
-  height: 50px;
-  padding: 12px 20px;
-  margin: 8px 40%;
-  text-align: center;
-  display: list-item;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-} */
 
 input[type="password"],
 select {
@@ -545,52 +683,13 @@ select {
 /* CSS for the iframe elements */
 
 
- #responsiveQuizContainer{
-  width:100%;
-  height:0%;
-  padding-bottom: 56.25%;
-  position:relative;
-  margin-top: -1500px;
-  display: none;
-  z-index: 999;
-
-  
-  
-}
-
-#responsiveQuizContainer iframe {
-  
-  width: 100%;
-  height: 1200px;
-  border-radius: 10px;
-
-  
-  
-  overflow:visible;
-  
-  border-radius: 10px;
- }
-  
 
 
 
-/* css for the temporary logFile that will be displayed on screen
 
-#logFile{
-  background-color: rgb(177, 172, 163);
-  width: 300px;
-  height: 400px;
-  font-family: "Times New Roman", Times, serif;
-  font-size: 1pc;
-  line-height: 2.5;
-  border-radius: 10px;
-  color: rgb(0, 0, 0);
-  margin-left: 30px;
-  text-align: center;
-  margin-top: -300px;
-  position: relative;
 
-} */
+
+
 
 
 

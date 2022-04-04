@@ -17,7 +17,7 @@
 
 
     <link rel="stylesheet" href="public/css/style.css" rel="stylesheet">
-    <script src="jquery-3.5.1.min.js"></script>
+    <!-- <script src="jquery-3.5.1.min.js"></script> -->
 
 
 <body>
@@ -29,11 +29,11 @@
                 <a class="navbar-brand" href="#">MCSS</a>
             </div>
             <ul class="nav navbar-nav">
-                <li><a href="/home"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+                <!-- <li><a href="/home"><span class="glyphicon glyphicon-home"></span> Home</a></li> -->
 
 
 
-                <li class="active"><a href="/"><span class="glyphicon glyphicon-screenshot"></span> Simulation in
+                <li class="active"><a><span class="glyphicon glyphicon-screenshot"></span> Simulation in
                         Progress!</a></li>
 
 
@@ -130,64 +130,76 @@
         <!-- drone tracker -->
 
 
-        <div id="dronesIdClassParameters">
-            <div id="parametersTrack">
+        <!-- drone tracker -->
+        <div id="parametersTrackIDHeading">
 
-                <h4> Classified Drone Tracker
 
-                </h4>
-                <hr class="new1">
 
+
+            <h4> Classified Drone (ID) Tracker </h4>
+
+        </div>
+
+        <div id="parametersTrackClassHeading">
+
+
+
+
+            <h4> Classified Drone (Class) Tracker </h4>
+
+        </div>
+
+
+
+        <div id="dronesIdParameters">
+            <div id="parametersTrackID">
                 <p id="IdTrack"></p>
-
-
-
             </div>
 
+        </div>
 
+
+        <div id="dronesClassParameters">
+            <div id="parametersTrackClass">
+
+
+
+                <p id="IdTrack"></p>
+            </div>
 
         </div>
 
 
-        <!--Iframe containing the link to the microsoft forms-->
-        <!--get element by id in a javascript file, probably sketch as it has the logic for the code-->
-        <!-- create a settimeout function for it to be displayed for a certain amount of time-->
-        <!-- show quiz on top of the simulation and show scenario finished, go on to scenario 2-->
-        <!--redirect user to second scenario-->
+        <!-- Qualtrics questionaires -->
+        <!-- Trigger/Open The Modal -->
+        <!-- <button id="myBtn">Open Modal</button> -->
 
-        <!-- making a box with gltich video to be output-->
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
 
-        <div id="black-cover-box">
-            <video width='100%' height='100%' playsinline autoplay='autoplay' muted loop
-                style="pointer-events: none; opacity:0.3; object-fit: fill;">
-                <source src="assets/glitch_video.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
+            <!-- Modal content -->
+            <div class="modal-content">
 
-        <!-- even timestamp, when button is pressed this is displa -->
+                <p>Time is out! you managed to classify correctly :</p>
+                <p id="finalNumberOfCorrectlyClassifiedDrones"></p>
+                <p>drone/s</p>
+                <button id="finishedQuizesBtn">Finished</button>
+            </div>
 
-
-
-        <!-- <div id="logFile">
-
-
-    </div> -->
-        <div id="black-cover-box">
-            <video width='100%' height='100%' playsinline autoplay='autoplay' muted loop
-                style="pointer-events: none; opacity:0.3; object-fit: fill;">
-                <source src="assets/glitch_video.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
         </div>
 
 
 
+    </div>
 
 
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js"></script>
-        <script src="/scripts/drones.js"></script>
-        <script src="/scripts/test.js"></script>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js"></script>
+    <script src="/scripts/drones.js"></script>
+    <script src="/scripts/test.js"></script>
 
 </body>

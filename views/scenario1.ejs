@@ -2,6 +2,7 @@
     <!-- Bootstrap CSS and javascript -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
+
     <!-- axios cdn so that I can use axios post requests -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
@@ -17,7 +18,7 @@
 
 
     <link rel="stylesheet" href="public/css/style.css" rel="stylesheet">
-    <script src="jquery-3.5.1.min.js"></script>
+
 </head>
 
 
@@ -30,11 +31,11 @@
                 <a class="navbar-brand" href="#">MCSS</a>
             </div>
             <ul class="nav navbar-nav">
-                <li><a href="/home"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+                <!-- <li><a href="/home"><span class="glyphicon glyphicon-home"></span> Home</a></li> -->
 
 
 
-                <li class="active"><a href="/"><span class="glyphicon glyphicon-screenshot"></span> Simulation in
+                <li class="active"><a><span class="glyphicon glyphicon-screenshot"></span> Simulation in
                         Progress!</a></li>
 
 
@@ -71,6 +72,7 @@
             <p id="Altitude"> </p>
             <hr class="new1">
             <p id="IFF"> </p>
+
             <hr class="new1">
             <p id="Weapons"> </p>
             <hr class="new1">
@@ -108,7 +110,7 @@
                 Hostile
             </button>
             <button id="nonHostile" type="button">
-                Non-hostile
+                nonHostile
             </button>
             <button id="uncertain" type="button">
                 Uncertain
@@ -126,23 +128,41 @@
 
 
         <!-- drone tracker -->
+        <div id="parametersTrackIDHeading">
+
+            <h4> Classified Drone (ID) Tracker </h4>
+
+        </div>
+
+        <div id="parametersTrackClassHeading">
 
 
-        <div id="dronesIdClassParameters">
-            <div id="parametersTrack">
 
-                <h4> Classified Drone Tracker
 
-                </h4>
-                <hr class="new1">
+            <h4> Classified Drone (Class) Tracker </h4>
 
+        </div>
+
+
+
+        <div id="dronesIdParameters">
+            <div id="parametersTrackID">
                 <p id="IdTrack"></p>
-
-
-
             </div>
 
         </div>
+
+
+        <div id="dronesClassParameters">
+            <div id="parametersTrackClass">
+
+
+
+                <p id="IdTrack"></p>
+            </div>
+
+        </div>
+
 
 
         <!-- Qualtrics questionaires -->
@@ -158,15 +178,35 @@
                 <p>Please complete the following quizes</p>
 
                 <ul>
+                    <hr class="new1">
+                    <br>
 
-                    <li><a href="https://cardiff.qualtrics.com/jfe/form/SV_3e2XR6XZEKUmaGO/" target="_blank">quiz 1</a>
-                    </li>
+                    <a id=quizOne href="https://cardiff.qualtrics.com/jfe/form/SV_3e2XR6XZEKUmaGO/"
+                        onclick="checkQuizOne()" target="_blank">quiz
+                        1</a>
 
-                    <li><a href="https://cardiff.qualtrics.com/jfe/form/SV_bHDpAecWItu8eN0" target="_blank">quiz 2 </a>
-                    </li>
+                    <a id=quizOneFinished onclick="checkQuizOne()">quiz 1 finished </a>
 
-                    <li><a href="https://cardiff.qualtrics.com/jfe/form/SV_7ZLj3a1LxGg0DZQ" target="_blank">quiz 3</a>
-                    </li>
+
+                    <hr class="new1">
+                    <br>
+
+                    <a id=quizTwo href="https://cardiff.qualtrics.com/jfe/form/SV_bHDpAecWItu8eN0"
+                        onclick="checkQuizTwo()" target="_blank">quiz
+                        2 </a>
+                    <a id=quizTwoFinished onclick="checkQuizTwo()">quiz 2 finished </a>
+
+                    <hr class="new1">
+                    <br>
+
+                    <a id=quizThree href="https://cardiff.qualtrics.com/jfe/form/SV_7ZLj3a1LxGg0DZQ"
+                        onclick="checkQuizThree()" target="_blank">quiz 3</a>
+
+                    <a id=quizThreeFinished onclick="checkQuizThree()">quiz 3 finished</a>
+
+
+
+                    <hr class="new1">
 
 
                 </ul>
@@ -175,10 +215,56 @@
             </div>
 
         </div>
-
-
-
     </div>
+
+
+
+
+    <script>
+
+        //if the quizone is selected
+
+        const quizOne = document.getElementById("quizOne");
+        const quizTwo = document.getElementById("quizTwo");
+        const quizThree = document.getElementById("quizThree");
+
+        const quizOneFinished = document.getElementById("quizOneFinished");
+        const quizTwoFinished = document.getElementById("quizTwoFinished");
+        const quizThreeFinished = document.getElementById("quizThreeFinished");
+
+        finishedQuizesBtn.style.display = 'none';
+
+
+        function checkQuizOne() {
+            quizOne.style.display = 'none';
+            quizOneFinished.style.backgroundColor = "#32CD32"
+
+        }
+
+        function checkQuizTwo() {
+            quizTwo.style.display = 'none';
+            quizTwoFinished.style.backgroundColor = "#32CD32"
+
+        }
+        function checkQuizThree() {
+            quizThree.style.display = 'none';
+            quizThreeFinished.style.backgroundColor = "#32CD32"
+            finishedQuizesBtn.style.display = 'block';
+
+
+
+
+        }
+        // console.log(quizOneFlag)
+        // if (quizOneFlag && quizTwoFlag && quizThreeFlag) {
+        //     console.log(quiz)
+           
+
+        // }
+
+    </script>
+
+
 
 
 

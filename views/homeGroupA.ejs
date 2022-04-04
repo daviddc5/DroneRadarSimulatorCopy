@@ -2,7 +2,7 @@
     <!-- Bootstrap CSS and javascript -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 
@@ -10,7 +10,7 @@
     <!-- choose either online CDN or local script p5 -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.min.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="public/css/style.css" rel="stylesheet">
     <meta charset="utf-8">
 
     <title> Micromonde combat control simulation system</title>
@@ -23,33 +23,13 @@
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">MSCCS</a>
+            <a class="navbar-brand">MSCCS</a>
         </div>
         <ul class="nav navbar-nav">
             <li class="active"><a href="/home"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-
-
-            <!-- <li><a href="/"><span class="glyphicon glyphicon-home"></span> Simulation</a></li> -->
-
-
-
-
-            <!-- <li><a href="/logOut"><span class="glyphicon glyphicon-remove"></span> Log Out</a></li> -->
         </ul>
     </div>
 </nav>
-
-
-<!---
-<div class="btn-group-vertical">
-    <a type="button" class="btn btn-danger btn-lg"> Scenario 1 </a>
-    <br>
-    <button type="button" class="btn btn-danger btn-lg"> Scenario 2</button>
-    <br>
-    <button type="button" class="btn btn-danger btn-lg"> Scenario 3</button>
-
-</div>
--->
 
 
 <div id="ScenariosLinksContainer">
@@ -57,13 +37,13 @@
     <h1>Group A</h1>
     <br>
 
-    <h4>Please complete the following scenarios in order:</h4>
+    <h4>Please complete the following scenarios as presented till all pannels are green:</h4>
 
     <hr class="new1">
     <br>
     <a id=testScenario href="/testScenario">
-        <h4>test scenario</h4>
-        <!-- <hr class="new1"> -->
+        <h4>Test scenario</h4>
+
     </a>
     <br>
     <br>
@@ -91,13 +71,14 @@
 
 <div id="scenariosFinishedContainer">
 
-    <h3>Scenarios Finished</h3>
+    <h3>Scenarios finished</h3>
     <hr class="new1">
     <br>
     <a id=finishedTest>
-        <h4>test scenario</h4>
-        <!-- <hr class="new1"> -->
+        <h4>Test scenario</h4>
+
     </a>
+    <br>
     <br>
     <br>
     <a id=finished1>
@@ -152,10 +133,11 @@
 
     // const testScenarioFinished = sessionStorage.getItem("testScenario");
     const testScenarioStatus = document.getElementById("finishedTest");
-    console.log(testScenarioStatus)
+
     const scenario1status = document.getElementById("finished1");
-    console.log(scenario1status)
+
     const scenario2status = document.getElementById("finished2");
+
     const scenario3status = document.getElementById("finished3");
 
     testScenario.style.display = "block";
@@ -164,7 +146,7 @@
     scenario3.style.display = "none"
 
     if (testScenarioFinished) {
-        console.log("true!!")
+
         testScenario.style.display = "none";
         scenario1.style.display = "block";
 
