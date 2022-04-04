@@ -204,6 +204,8 @@ class missclassifiedNonHostileDrone extends Drone{
        
          //miscclasified colour generator for accuracy
          this.misclassifiedColourGenerator = Math.round(Math.floor(random() * (1 - 0 + 1)) + 0);
+        this.missclassify();
+        this.classifyAccurately();
     
           
     }
@@ -256,7 +258,7 @@ class missclassifiedNonHostileDrone extends Drone{
                 this.colour = color(255,255,0);
                 // console.log("missclasify as green") 
             }
-            }, 20000);
+            }, 181000);
     
             
     
@@ -275,7 +277,7 @@ class missclassifiedNonHostileDrone extends Drone{
                     this.colour = color(0, 255, 0);
                     console.log( "working?" +this.colour.levels);
                     
-                }, 30000);
+                }, 4800000);
         }
     }
 
@@ -571,7 +573,7 @@ class HostileDrone extends Drone{
                 this.colour = color(0,255,0);
                 // console.log("missclasify uncertain as green") 
             }
-            }, 20000);
+            }, 180000);
 
             
 
@@ -586,6 +588,6 @@ class HostileDrone extends Drone{
                     this.colour = color(255, 255, 0);
                     console.log( "working?"+this.colour.levels);
                     
-                }, 30000);
+                }, 480000);
         }
     }

@@ -105,6 +105,17 @@ border-top:100px;
     border-top:100px;
     }
 
+    #quizFour{
+
+      left:10%;
+      background-color: #ff3c3c;
+      color: white;
+      padding: 14px 25px;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 10px;
+      border-top:100px;
+      }
     #quizOneFinished{
 
       left:10%;
@@ -138,6 +149,18 @@ border-top:100px;
         border-radius: 10px;
         border-top:100px;
         }
+
+        #quizFourFinished{
+
+          left:10%;
+          background-color: #ff3c3c;
+          color: white;
+          padding: 14px 25px;
+          text-align: center;
+          text-decoration: none;
+          border-radius: 10px;
+          border-top:100px;
+          }
 
 
 /* CSS for the status/finished state of scenarios button */

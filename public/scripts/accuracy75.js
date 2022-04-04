@@ -4,7 +4,7 @@ setTimeout(function(){
   modal.style.display = "block";
   
   noLoop();
-}, 120000);
+}, 960000);
 
 
 dataToPostScenario2 = [];
@@ -54,7 +54,7 @@ setInterval(() => {
   setTimeout(() => {
     blackCoverBox.style.display = 'none'
   }, 800);
-},60000);
+},180000);
 
 
 

@@ -4,7 +4,7 @@ setTimeout(function(){
   noLoop();
   modal.style.display = "block";
   sessionStorage.setItem("scenario1", "true");
-}, 120000);
+},960000);
 
 
 var dataToPostScenario1 = [];
@@ -56,7 +56,7 @@ setInterval(() => {
     blackCoverBox.style.display = 'none';
     
   }, 800)
-},60000);
+},180000);
 
 
 

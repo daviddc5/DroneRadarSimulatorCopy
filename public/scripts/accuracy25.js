@@ -4,7 +4,7 @@ setTimeout(function(){
   // window.location.href = '/home';
   modal.style.display = "block";
   noLoop();
-}, 120000);
+}, 960000);
 
 
 dataToPostScenario3 = [];
@@ -54,7 +54,7 @@ setInterval(() => {
   setTimeout(() => {
     blackCoverBox.style.display = 'none';
   }, 800)
-},120000);
+},180000);
 
 
 
@@ -109,7 +109,7 @@ function setup() {
 
     if( i> 12 && i<18 ){
       drones[i] = new missclassifiedUncertainDrone();
-      drones.id = String(i);
+      // drones.id = String(i);
       //console.log(drones[i]);
     }
     if(i>= 18 && i<=20){
@@ -615,6 +615,9 @@ function draw() {
       drones[i].generateRandomCombinationOfTraits();
       drones[i].move();
       drones[i].show();
+
+      // drones[i].missclasify();
+      // drones[i].classifyAccurately();
 
       
     }
