@@ -3,38 +3,61 @@
 class Drone {
     //defines a drone with random seed,  white color a random x and y position inside of canvas
     constructor() {
+
       this.randomSeed = random(0.5, 1);
 
     //this variable will randomly determine where the drones will spawn
       this.spawnDirection = Math.round(random(1,5));
-    //   console.log(this.spawnDirection);
+      this.id = Math.round(random(1000,9999));
+      
+        
 
       
 
-      //drone spawns north
-if (this.spawnDirection == 1){
-    this.xPos = (width+50)
+   
 
-    this.yPos = random(-75,0);
+      
+      /*random direction*/
+      this.xBallDir = random(-1, 1);
+      this.yBallDir = random(-1, 1);
+      /* random speed at which it will go in that direction*/
+      this.xSpeed = random(0.4, 0.6);
+      this.ySpeed = random(0.4, 0.6);
+      this.selected = false;
+      this.Altitude();
+      
+    
+     
+      // Checks for distance in relation to the center
+      //this.Distance = Math.abs(Math.round((this.xPos/2 -250   + this.yPos/2 )));
+      // checks if altitude is high, mid or low
+    //   this.droneAltitude = this.yPos > 250 ? 'Low' : 'High';
+     
+
+    //drone spawns north
+    if (this.spawnDirection == 1){
+        this.xPos = (width+50)
+
+        this.yPos = random(-75,0);
         
     }
 
-      //drone spawns and comes from the south
-      if (this.spawnDirection == 2){
+    //drone spawns and comes from the south
+        if (this.spawnDirection == 2){
         this.xPos = (width+50)
         this.yPos = random(height, height+75);
           
         
     }
 
-      //drone spawns and comes from the east
+    //drone spawns and comes from the east
       if (this.spawnDirection == 3){
         this.xPos = random(width,width+75);
         this.yPos = random(height+50);
         
     }
 
-      //drone spawns and comes from the west
+    //drone spawns and comes from the west
       if (this.spawnDirection == 4){
         this.xPos = random(-75,0);
         this.yPos = random(height+50);
@@ -50,29 +73,11 @@ if (this.spawnDirection == 1){
     }
 
 
-
-      
-      
-      /*random direction*/
-      this.xBallDir = random(-1, 1);
-      this.yBallDir = random(-1, 1);
-      /* random speed at which it will go in that direction*/
-      this.xSpeed = random(0.4, 0.6);
-      this.ySpeed = random(0.4, 0.6);
-      this.selected = false;
-      
-    //   console.log(this.id);
-     
-      // Checks for distance in relation to the center
-      //this.Distance = Math.abs(Math.round((this.xPos/2 -250   + this.yPos/2 )));
-      // checks if altitude is high, mid or low
-      this.droneAltitude = this.yPos > 250 ? 'Low' : 'High';
-      this.Altitude();
       
     }
     //should be working as everything is internal
     Altitude() {
-        setInterval(() => {
+        
             if(this.yPos > 250) {
   
                 this.droneAltitude = "Low";
@@ -83,7 +88,7 @@ if (this.spawnDirection == 1){
                 this.droneAltitude = "High";
             }
             
-        }, 1000);
+        
     }
    
     show() {

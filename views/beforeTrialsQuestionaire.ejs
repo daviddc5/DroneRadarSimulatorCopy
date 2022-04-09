@@ -1,0 +1,152 @@
+<head>
+    <!-- Bootstrap CSS and javascript -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+
+    <!-- axios cdn so that I can use axios post requests -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+
+
+    <!-- choose either online CDN or local script p5 -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.min.js"></script>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <meta charset="utf-8">
+
+    <title> Micromonde combat simulation system</title>
+
+
+    <link rel="stylesheet" href="public/css/style.css" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+    <!--nav bar-->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">MCSS</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <!-- <li><a href="/home"><span class="glyphicon glyphicon-home"></span> Home</a></li> -->
+
+
+
+                <li class="active"><a><span class="glyphicon glyphicon-screenshot"></span> Simulation in
+                        Progress!</a></li>
+
+
+
+            </ul>
+        </div>
+    </nav>
+
+
+
+
+
+
+
+    <!-- Modal content -->
+    <div class="questionairesBeforeTrials">
+        <!-- <span class="close">&times;</span> -->
+        <p>Please complete the following quizes</p>
+
+        <ul>
+            <hr>
+            <br>
+
+            <a id=quizOne href="https://cardiff.qualtrics.com/jfe/form/SV_3e2XR6XZEKUmaGO" onclick="checkQuizOne()"
+                target="_blank">quiz
+                1</a>
+
+            <a id=quizOneFinished onclick="checkQuizOne()">quiz 1 finished </a>
+
+
+            <hr>
+            <br>
+
+            <a id=quizTwo href="https://cardiff.qualtrics.com/jfe/form/SV_bHDpAecWItu8eN0" onclick="checkQuizTwo()"
+                target="_blank">quiz
+                2 </a>
+            <a id=quizTwoFinished onclick="checkQuizTwo()">quiz 2 finished </a>
+
+            <hr>
+            <br>
+
+            <a id=quizThree href="https://cardiff.qualtrics.com/jfe/form/SV_7ZLj3a1LxGg0DZQ" onclick="checkQuizThree()"
+                target="_blank">quiz 3</a>
+
+            <a id=quizThreeFinished onclick="checkQuizThree()">quiz 3 finished</a>
+
+
+
+            <hr>
+
+
+        </ul>
+        <button id="finishedQuizesBtn">Finished</button>
+
+    </div>
+
+    </div>
+
+
+
+</body>
+
+<script>
+
+    //if the quizone is selected
+
+    const quizOne = document.getElementById("quizOne");
+    const quizTwo = document.getElementById("quizTwo");
+    const quizThree = document.getElementById("quizThree");
+
+    const quizOneFinished = document.getElementById("quizOneFinished");
+    const quizTwoFinished = document.getElementById("quizTwoFinished");
+    const quizThreeFinished = document.getElementById("quizThreeFinished");
+
+    finishedQuizesBtn.style.display = 'none';
+
+
+    function checkQuizOne() {
+        quizOne.style.display = 'none';
+        quizOneFinished.style.backgroundColor = "#32CD32"
+
+    }
+
+    function checkQuizTwo() {
+        quizTwo.style.display = 'none';
+        quizTwoFinished.style.backgroundColor = "#32CD32"
+
+    }
+    function checkQuizThree() {
+        quizThree.style.display = 'none';
+        quizThreeFinished.style.backgroundColor = "#32CD32"
+        finishedQuizesBtn.style.display = 'block';
+
+
+
+
+    }
+
+    finishedQuizesBtn.onclick = function () {
+
+
+
+
+        (window.location.href = '/home')
+        console.log("redirecting");
+
+
+
+
+
+    }
+
+
+</script>

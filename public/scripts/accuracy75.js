@@ -284,7 +284,7 @@ btnConfirm.addEventListener('click',() => {
     }
     // dronesClassifiedIncorrectly = (20 - dronesClassifiedCorrectly);
     // this variable has info on the user ID drone id classified and classification
-    finalDroneClassification = "The final drone classification of user "+ UserID+" of drone ID "+ droneID+ " is "+ currentButtonPressed+ ", this classification, is " + classification+ "!";
+    finalDroneClassification = "The final drone classification of user "+ UserID+" of drone ID "+ currentDroneID+ ", class "+ droneClass+  ", is "+ currentButtonPressed+ ", this classification, is " + classification+ "!";
     //this variable updates every time the confirm button is switched, and will add one if the drone has been correctly classified
     finalNumberOfCorrectlyClassifiedDrones = "the current number of drones classified correctly is " + dronesClassifiedCorrectly +" /20 drones in scenario"
     // finalNumberOfIncorrectlyClassifiedDrones = "the current number of drones classified incorrectly is " + dronesClassifiedIncorrectly +" /20 drones in scenario"
@@ -309,6 +309,8 @@ btnConfirm.addEventListener('click',() => {
     drones[droneID].colour = color(255,255,0);
     // console.log(currentButtonPressed)
     // console.log("uncertain working??")
+
+    
   }
 
   else if(currentButtonPressed == "Hostile") {
@@ -467,6 +469,7 @@ function cb(droneIndex) {
       btnNonHostile.style.backgroundColor = "#00ff00"
       btnHostile.style.backgroundColor = "#B1ACA3"
       btnUncertain.style.backgroundColor = "#B1ACA3"
+      updateSelectedButton("nonHostile");
 
   
     
@@ -479,6 +482,7 @@ function cb(droneIndex) {
         btnNonHostile.style.backgroundColor = "#B1ACA3"
         btnHostile.style.backgroundColor = "#B1ACA3"
         btnUncertain.style.backgroundColor = "#ffff00"
+        updateSelectedButton("Uncertain");
 
         
 
@@ -490,6 +494,7 @@ function cb(droneIndex) {
         btnNonHostile.style.backgroundColor = "#B1ACA3"
         btnHostile.style.backgroundColor = "#ff0000"
         btnUncertain.style.backgroundColor = "B1ACA3"
+        updateSelectedButton("Hostile");
 
         
       }
@@ -499,7 +504,7 @@ function cb(droneIndex) {
     if (drones[selectedDroneIndex] instanceof HostileDrone){
       console.log("hostile drone")
     
-      updateSelectedButton("Hostile");
+      // updateSelectedButton("Hostile");
       updateSelectedDroneClass("Hostile");
 
       
@@ -508,7 +513,7 @@ function cb(droneIndex) {
   
     if (drones[selectedDroneIndex] instanceof nonHostileDrone){
       console.log("non hostile drone")
-      updateSelectedButton("nonHostile");
+      // updateSelectedButton("nonHostile");
       updateSelectedDroneClass("nonHostile");
       
      
@@ -518,7 +523,7 @@ function cb(droneIndex) {
      if (drones[selectedDroneIndex] instanceof uncertainDrone){
       console.log("uncertain drone")
 
-      updateSelectedButton("Uncertain");
+      // updateSelectedButton("Uncertain");
       updateSelectedDroneClass("Uncertain");
       
      
@@ -528,7 +533,7 @@ function cb(droneIndex) {
     if (drones[selectedDroneIndex] instanceof missclassifiedUncertainDrone){
       console.log("uncertain drone")
 
-      updateSelectedButton("Uncertain");
+      // updateSelectedButton("Uncertain");
       updateSelectedDroneClass("Uncertain");
       
      
@@ -538,11 +543,9 @@ function cb(droneIndex) {
     if (drones[selectedDroneIndex] instanceof missclassifiedNonHostileDrone){
       console.log("uncertain drone")
 
-      updateSelectedButton("nonHostile");
+      // updateSelectedButton("nonHostile");
       updateSelectedDroneClass("nonHostile");
       
-     
-  
     }
     
     

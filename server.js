@@ -91,6 +91,12 @@ app.post( "/", (req, res) => {
   res.redirect('/home')
 })
 
+app.get("/beforeTrialsQuestionaire", (req,res)=>{
+  res.render("beforeTrialsQuestionaire.ejs", { ID: req.session.username });
+  
+});
+
+
 app.get("/testScenario", (req,res)=>{
   res.render("testScenario.ejs", { ID: req.session.username });
   

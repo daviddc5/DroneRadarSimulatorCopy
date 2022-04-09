@@ -303,9 +303,7 @@ btnConfirm.addEventListener('click',() => {
     }
     // dronesClassifiedIncorrectly = (20 - dronesClassifiedCorrectly);
     // this variable has info on the user ID drone id classified and classification
-    finalDroneClassification = "The final drone classification of user "+ UserID+" of drone ID "+ droneID+ " is "+ currentButtonPressed+ ", this classification, is " + classification+ "!";
-    //this variable updates every time the confirm button is switched, and will add one if the drone has been correctly classified
-    finalNumberOfCorrectlyClassifiedDrones = "the current number of drones classified correctly is " + dronesClassifiedCorrectly +" /20 drones in scenario"
+    finalDroneClassification = "The final drone classification of user "+ UserID+" of drone ID "+ currentDroneID+ ", class "+ droneClass+  ", is "+ currentButtonPressed+ ", this classification, is " + classification+ "!";
     // finalNumberOfIncorrectlyClassifiedDrones = "the current number of drones classified incorrectly is " + dronesClassifiedIncorrectly +" /20 drones in scenario"
     
     const classificationInformation = {finalDroneClassification, finalNumberOfCorrectlyClassifiedDrones};
@@ -479,25 +477,33 @@ function cb(droneIndex) {
       btnNonHostile.style.backgroundColor = "#00ff00"
       btnHostile.style.backgroundColor = "#B1ACA3"
       btnUncertain.style.backgroundColor = "#B1ACA3"
+
+      updateSelectedButton("nonHostile");
     
     }
 
     if (drones[selectedDroneIndex].colour.levels[0] == 255){
       // console.log("working")
 
-      if (drones[selectedDroneIndex].colour.levels[1] == 255){
+      if (drones[selectedDroneIndex].colour.levels[1] == 255 ){
         btnNonHostile.style.backgroundColor = "#B1ACA3"
         btnHostile.style.backgroundColor = "#B1ACA3"
         btnUncertain.style.backgroundColor = "#ffff00"
+        updateSelectedButton("Uncertain");
+
+        
 
       }
 
       else{
+
         
         
         btnNonHostile.style.backgroundColor = "#B1ACA3"
         btnHostile.style.backgroundColor = "#ff0000"
         btnUncertain.style.backgroundColor = "B1ACA3"
+
+        updateSelectedButton("Hostile");
 
       }
 
@@ -507,7 +513,7 @@ function cb(droneIndex) {
     if (drones[selectedDroneIndex] instanceof HostileDrone){
       console.log("hostile drone")
     
-      updateSelectedButton("Hostile");
+      // updateSelectedButton("Hostile");
       updateSelectedDroneClass("Hostile");
 
       
@@ -516,7 +522,7 @@ function cb(droneIndex) {
   
     if (drones[selectedDroneIndex] instanceof nonHostileDrone){
       console.log("non hostile drone")
-      updateSelectedButton("nonHostile");
+      // updateSelectedButton("nonHostile");
       updateSelectedDroneClass("nonHostile");
       
      

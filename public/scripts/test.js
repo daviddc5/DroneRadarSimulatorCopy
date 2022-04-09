@@ -7,7 +7,7 @@ setTimeout(function(){
   sessionStorage.setItem("testScenario", "true");
   noLoop();
 
-}, 960000);
+}, 2000);
 
 testScenarioLog = [];
 
@@ -50,30 +50,16 @@ let finalNumberOfCorrectlyClassifiedDronesp = document.getElementById("finalNumb
   const box = document.querySelector('.box');
   const blackCoverBox = document.getElementById('black-cover-box');
   const quiz= document.getElementById('responsiveQuizContainer');
-
   
   
-  
-  
-  // how do I pass all of the information I have finally managed to get in a console log on the sketch file.
-  // do I currently have any variable I am passing into back end from front end?
-  
-  // I have had an idea, maybe if I manage to understand the url parameters I can create a timeout so that after a certain amount of time the parameters change to that accuracy and then they change back from x= {25,75,95} back to 95 which is the default accuracy
-  
-  // the question is, how do I pass variable from a front end javascript file to a back end node js file
-  // can I pass variables from the front to the back end the same way as i did from back to front end
-  // the variables that I want to fetch from the back end are t fheollowing:
-  //
-  
-  
-  // // interval to display screen freeze
-  // intervalId = 0;
-  // setInterval(() => {
-  //   blackCoverBox.style.display = 'block';
-  //   setTimeout(() => {
-  //     blackCoverBox.style.display = 'none';
-  //   }, 800)
-  // },60000);
+// // interval to display screen freeze
+//   intervalId = 0;
+//   setInterval(() => {
+//     blackCoverBox.style.display = 'block';
+//     setTimeout(() => {
+//       blackCoverBox.style.display = 'none';
+//     }, 800)
+//   },60000);
   
   
   
@@ -527,7 +513,7 @@ let finalNumberOfCorrectlyClassifiedDronesp = document.getElementById("finalNumb
       "Country: " + drones[droneIndex].countryOfOrigin;
     // IFF
     selectedDroneIFU_p.innerText =
-      "IFU: " + drones[droneIndex].identificationFriendOrUknown;
+      "Intention: " + drones[droneIndex].identificationFriendOrUknown;
     //Weapons
     selectedDroneWeapons_p.innerText = "Weapons: " + drones[droneIndex].weapons;
     //Emmisions

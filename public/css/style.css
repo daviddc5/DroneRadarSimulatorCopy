@@ -13,6 +13,19 @@ canvas {
   
 }
 
+.questionairesBeforeTrials{
+  color:white;
+ 
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  height:60%;
+  z-index:99999;
+  border-top:500px;
+
+}
+
 /* links for qualtrics */
 
 /* The Modal (background) */
@@ -238,6 +251,16 @@ border-top:100px;
   border-radius: 10px;
 }
 
+#beforeTrialsQuestionaire {
+  left:10%;
+  background-color: #ff3c3c;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  
+  border-radius: 10px;
+}
 #testScenario {
   left:10%;
   background-color: #ff3c3c;
