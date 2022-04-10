@@ -203,9 +203,11 @@ function getTimeDroneClicked(timeClicked){
 
 
 
-
-
+dronesToClassify = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]
 var dronesClassifiedCorrectly = 0;
+
+
+
 btnConfirm.addEventListener('click',() => {  
   const confirmButtonLog = {outputConfirmButton:(getButton("confirm"))+ (getTime())};
   // console.log(confirmButtonLog);
@@ -215,43 +217,43 @@ btnConfirm.addEventListener('click',() => {
   // console.log(dataToPostScenario1)
   
 // information to be logged in drone tracker
-  const pID = document.createElement('p');
-  const pClass = document.createElement('p');
-  const separationID = document.createElement('hr');
-  const separationClass = document.createElement('hr');
+  // const pID = document.createElement('p');
+  // const pClass = document.createElement('p');
+  // const separationID = document.createElement('hr');
+  // const separationClass = document.createElement('hr');
  
 
   // if the element is in the array it hasnt been classified, delete it from list and output its classification
   // if (dronesClassified.includes(droneID)){
 
 
-    pID.innerText = "ID of drone tracked: " + droneID;
+    // pID.innerText = "ID of drone tracked: " + droneID;
 
-    // + ", classified as " + currentButtonPressed;
+    // // + ", classified as " + currentButtonPressed;
 
-    pClass.innerText = "classification:" + currentButtonPressed;
+    // pClass.innerText = "classification:" + currentButtonPressed;
 
-    randomPrependORAppend= Math.round(random(0,1));
-    console.log(randomPrependORAppend)
+    // randomPrependORAppend= Math.round(random(0,1));
+    // console.log(randomPrependORAppend)
 
-    if (randomPrependORAppend == 0){
-      document.getElementById("parametersTrackID").prepend(separationID);
-      document.getElementById("parametersTrackID").prepend(pID);
-      document.getElementById("parametersTrackID").prepend(separationID);
-      document.getElementById("parametersTrackClass").prepend(pClass);
-      document.getElementById("parametersTrackClass").prepend(separationClass);
-      document.getElementById("parametersTrackClass").prepend(separationClass);
+    // if (randomPrependORAppend == 0){
+    //   document.getElementById("parametersTrackID").prepend(separationID);
+    //   document.getElementById("parametersTrackID").prepend(pID);
+    //   document.getElementById("parametersTrackID").prepend(separationID);
+    //   document.getElementById("parametersTrackClass").prepend(pClass);
+    //   document.getElementById("parametersTrackClass").prepend(separationClass);
+    //   document.getElementById("parametersTrackClass").prepend(separationClass);
 
-    }
-    if (randomPrependORAppend== 1){
-      document.getElementById("parametersTrackID").append(separationID);
-      document.getElementById("parametersTrackID").append(pID);
-      document.getElementById("parametersTrackID").append(separationID);
-      document.getElementById("parametersTrackClass").append(separationClass);
-      document.getElementById("parametersTrackClass").append(pClass);
-      document.getElementById("parametersTrackClass").append(separationClass);
+    // }
+    // if (randomPrependORAppend== 1){
+    //   document.getElementById("parametersTrackID").append(separationID);
+    //   document.getElementById("parametersTrackID").append(pID);
+    //   document.getElementById("parametersTrackID").append(separationID);
+    //   document.getElementById("parametersTrackClass").append(separationClass);
+    //   document.getElementById("parametersTrackClass").append(pClass);
+    //   document.getElementById("parametersTrackClass").append(separationClass);
 
-    }
+    // }
 
     
     // document.getElementById("parametersTrackClass").prependChild(pClass);
@@ -291,6 +293,17 @@ btnConfirm.addEventListener('click',() => {
 
 
 
+    if(dronesToClassify.includes(currentDroneID)){
+
+      indexToDelete = dronesToClassify.indexOf(currentDroneID);
+
+      dronesToClassify.splice(indexToDelete, 1)
+
+
+
+
+
+  
     // we create a variable that works as a counter for how many drones the user has got right (initially 0)
     if(currentButtonPressed == droneClass){
       var classification = "correct"
@@ -301,6 +314,12 @@ btnConfirm.addEventListener('click',() => {
       var classification = "incorrect"
 
     }
+
+  }
+
+  else{
+    console.log("already classified")
+  }
     // dronesClassifiedIncorrectly = (20 - dronesClassifiedCorrectly);
     // this variable has info on the user ID drone id classified and classification
     finalDroneClassification = "The final drone classification of user "+ UserID+" of drone ID "+ currentDroneID+ ", class "+ droneClass+  ", is "+ currentButtonPressed+ ", this classification, is " + classification+ "!";
@@ -433,7 +452,7 @@ function cb(droneIndex) {
     selectedDroneIndex = droneIndex;
     drones[selectedDroneIndex].selected = true;
   //sets the index to variable to be displayed
-  selectedDroneID_p.innerText = "ID: " + droneIndex;
+  selectedDroneID_p.innerText = "ID: " + drones[droneIndex].id;
 
   
   // clears second iteration onwards of the tracking interval
@@ -645,7 +664,7 @@ function draw() {
      
     }
 
-    text(i, drones[i].xPos, drones[i].yPos);
+    text(drones[i].id, drones[i].xPos, drones[i].yPos);
     textSize(25);
     
   

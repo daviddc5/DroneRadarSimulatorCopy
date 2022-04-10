@@ -112,39 +112,85 @@
 
     finishedQuizesBtn.style.display = 'none';
 
+    // let quizOneCheck = false;
+    // let quizTwoCheck = false;
+    // let quizThreeCheck = false;
+
+
+
 
     function checkQuizOne() {
         quizOne.style.display = 'none';
         quizOneFinished.style.backgroundColor = "#32CD32"
+        // quizOneCheck = true;
+        // console.log(quizOneCheck);
+        deleteQuiz("quizOneCheck");
+
 
     }
 
     function checkQuizTwo() {
         quizTwo.style.display = 'none';
         quizTwoFinished.style.backgroundColor = "#32CD32"
+        // quizTwoCheck = true;
+
+        // console.log(quizTwoCheck);
+        deleteQuiz("quizTwoCheck");
+
 
     }
     function checkQuizThree() {
         quizThree.style.display = 'none';
         quizThreeFinished.style.backgroundColor = "#32CD32"
-        finishedQuizesBtn.style.display = 'block';
+        deleteQuiz("quizThreeCheck");
 
-
+        // quizThreeCheck = true;
 
 
     }
 
+
+
+    // console.log(quizOneCheck);
+    // console.log(quizTwoCheck);
+
+    // console.log(quizThreeCheck);
+
+    quizzes = ["quizOneCheck", "quizTwoCheck", "quizThreeCheck"]
+
+    function deleteQuiz(quizDone) {
+
+        const index = quizzes.indexOf(quizDone);
+
+        quizzes.splice(index, 1)
+        console.log(quizzes);
+
+        if (quizzes.length == 0) {
+
+            finishedQuizesBtn.style.display = "block"
+
+        }
+
+    }
+
+
+
+
+
+
+
+
+    // console.log(quizOneCheck);
+    // console.log(quizTwoCheck);
+
+    // console.log(quizThreeCheck);
+
+
+
     finishedQuizesBtn.onclick = function () {
-
-
-
-
+        sessionStorage.setItem("beforeTrialsQuestionaireFinished", "true");
         (window.location.href = '/home')
         console.log("redirecting");
-
-
-
-
 
     }
 

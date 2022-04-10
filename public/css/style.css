@@ -187,6 +187,18 @@ border-top:100px;
   
   border-radius: 10px;
 }
+
+#finishedUnsupervised{
+  left:10%;
+  background-color: #ff3c3c;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  
+  border-radius: 10px;
+
+}
 #finished1 {
   left:10%;
   background-color: #ff3c3c;
@@ -252,6 +264,17 @@ border-top:100px;
 }
 
 #beforeTrialsQuestionaire {
+  left:10%;
+  background-color: #ff3c3c;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  
+  border-radius: 10px;
+}
+
+#unsupervisedTest{
   left:10%;
   background-color: #ff3c3c;
   color: white;

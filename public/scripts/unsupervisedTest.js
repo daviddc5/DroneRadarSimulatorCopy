@@ -4,10 +4,10 @@ setTimeout(function(){
   
 
     modal.style.display = "block";
-    sessionStorage.setItem("testScenario", "true");
+    sessionStorage.setItem("unsupervisedTestScenario", "true");
     noLoop();
   
-  }, 6000);
+  }, 20000);
   
   testScenarioLog = [];
   
@@ -50,30 +50,16 @@ setTimeout(function(){
     const box = document.querySelector('.box');
     const blackCoverBox = document.getElementById('black-cover-box');
     const quiz= document.getElementById('responsiveQuizContainer');
-  
     
     
-    
-    
-    // how do I pass all of the information I have finally managed to get in a console log on the sketch file.
-    // do I currently have any variable I am passing into back end from front end?
-    
-    // I have had an idea, maybe if I manage to understand the url parameters I can create a timeout so that after a certain amount of time the parameters change to that accuracy and then they change back from x= {25,75,95} back to 95 which is the default accuracy
-    
-    // the question is, how do I pass variable from a front end javascript file to a back end node js file
-    // can I pass variables from the front to the back end the same way as i did from back to front end
-    // the variables that I want to fetch from the back end are t fheollowing:
-    //
-    
-    
-    // // interval to display screen freeze
-    // intervalId = 0;
-    // setInterval(() => {
-    //   blackCoverBox.style.display = 'block';
-    //   setTimeout(() => {
-    //     blackCoverBox.style.display = 'none';
-    //   }, 800)
-    // },60000);
+  // // interval to display screen freeze
+  //   intervalId = 0;
+  //   setInterval(() => {
+  //     blackCoverBox.style.display = 'block';
+  //     setTimeout(() => {
+  //       blackCoverBox.style.display = 'none';
+  //     }, 800)
+  //   },60000);
     
     
     
@@ -224,7 +210,7 @@ setTimeout(function(){
     //list of drones initially not classified
     //ineficient but simple way to track what drones have been classified, when a drone is classified it gets removed from list
     dronesClassified = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19];
-    dronesClassifiedCorrectly = 0;
+    
   
    
    
@@ -238,15 +224,7 @@ setTimeout(function(){
                                                                                                     
     
     btnConfirm.addEventListener('click',() => {  
-  
-      
-  
-  
-  
-  
-  
-              
-          
+
       
       var outputConfirmButton = (getButton("confirm"));
     
@@ -285,6 +263,11 @@ setTimeout(function(){
         // axios.post("/testScenario",timeElapsedBetweenClickingAndConfirming);
   
         testScenarioLog.push(timeElapsedBetweenClickingAndConfirming);
+
+        //make a list of all od ids, 
+        //get id of drone being classfieds get drone id, delete from list and add cprrect or incorrect
+
+
   
   
   
@@ -300,7 +283,7 @@ setTimeout(function(){
         }
         dronesClassifiedIncorrectly = (20 - dronesClassifiedCorrectly);
         // this variable has info on the user ID drone id classified and classification
-        finalDroneClassification = "The final drone classification of user "+ UserID+" of drone ID "+ currentDroneID+ " is "+ currentButtonPressed+ ", which is " + classification+ "!";
+        finalDroneClassification = "The final drone classification of user "+ UserID+" of drone ID "+ currentDroneID+ " is "+ currentButtonPressed+ ", which is " + classification+ "!";;
         
   
             // information to be logged in drone tracker
@@ -313,11 +296,11 @@ setTimeout(function(){
     
   
   
-      pID.innerText = "ID of drone tracked: " + droneID;
+      pID.innerText = "ID of drone tracked: " + drones[droneID].id;
   
       // + ", classified as " + currentButtonPressed;
   
-      pClass.innerText = "classification:" + currentButtonPressed+ " is: " +classification;
+      pClass.innerText = "classification:" + currentButtonPressed;
   
   
       randomPrependORAppend= Math.round(random(0,1));
@@ -506,7 +489,7 @@ setTimeout(function(){
         selectedDroneIndex = droneIndex;
         drones[selectedDroneIndex].selected = true;
       //sets the index to variable to be displayed
-      selectedDroneID_p.innerText = "ID: " + droneIndex;
+      selectedDroneID_p.innerText = "ID: " + drones[droneIndex].id;
       // clears second iteration onwards of the tracking interval
       clearInterval(selectedDroneTrackingInterval);
       //for every interval of 5 seconds it creates a variable that will be sent and output in index.ejs
@@ -527,7 +510,7 @@ setTimeout(function(){
         "Country: " + drones[droneIndex].countryOfOrigin;
       // IFF
       selectedDroneIFU_p.innerText =
-        "IFU: " + drones[droneIndex].identificationFriendOrUknown;
+        "Intention: " + drones[droneIndex].identificationFriendOrUknown;
       //Weapons
       selectedDroneWeapons_p.innerText = "Weapons: " + drones[droneIndex].weapons;
       //Emmisions
@@ -636,7 +619,7 @@ setTimeout(function(){
            drones[i].disguisedMovement();
   
         }
-        text(i, drones[i].xPos, drones[i].yPos);
+        text(drones[i].id, drones[i].xPos, drones[i].yPos);
         textSize(25);
         
       
@@ -657,7 +640,8 @@ setTimeout(function(){
   // When the user clicks the button, open the modal 
   finishedQuizesBtn.onclick = function () {
   
-    axios.post("testScenario", testScenarioLog);
+    axios.post("/unsupervisedTestScenario", testScenarioLog);
+
     console.log("redirecting");
     (window.location.href = '/home')
   }

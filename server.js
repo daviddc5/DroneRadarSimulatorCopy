@@ -102,6 +102,11 @@ app.get("/testScenario", (req,res)=>{
   
 });
 
+app.get("/unsupervisedTestScenario", (req,res)=>{
+  res.render("unsupervisedTestScenario.ejs", { ID: req.session.username });
+  
+});
+
 
 //when get request will render to index the variable name attached to a string
 app.get("/scenario1", (req, res) => {
@@ -213,6 +218,22 @@ app.post("/testScenario", (request) =>{
   logger.write(dataToBeLogged + "\n" )
   // console.log("posting in Scenario1")
   // res.json({ msg: 'success' });
+})
+
+
+app.post("/unsupervisedTestScenario", (request) =>{
+  var dataToBeLogged = JSON.stringify(request.body)
+  // console.log(dataToBeLogged);
+  
+  // creates a log
+  var logger = fs.createWriteStream('log.json', {
+    flags: 'a' // flags allow to set if old data should be stored, a stands for appending mod, write removes and writes
+  })
+
+  // UNCOMMENT THIS
+  logger.write(dataToBeLogged + "\n" )
+
+
 })
 
 

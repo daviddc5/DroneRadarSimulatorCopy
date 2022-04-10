@@ -7,7 +7,7 @@ setTimeout(function(){
   sessionStorage.setItem("testScenario", "true");
   noLoop();
 
-}, 2000);
+}, 10000);
 
 testScenarioLog = [];
 
@@ -299,7 +299,7 @@ let finalNumberOfCorrectlyClassifiedDronesp = document.getElementById("finalNumb
   
 
 
-    pID.innerText = "ID of drone tracked: " + droneID;
+    pID.innerText = "ID of drone tracked: " + drones[droneID].id;
 
     // + ", classified as " + currentButtonPressed;
 
@@ -307,7 +307,7 @@ let finalNumberOfCorrectlyClassifiedDronesp = document.getElementById("finalNumb
 
 
     randomPrependORAppend= Math.round(random(0,1));
-    console.log(randomPrependORAppend)
+    // console.log(randomPrependORAppend)
 
     if (randomPrependORAppend == 0){
       document.getElementById("parametersTrackID").prepend(separationID);
@@ -492,7 +492,7 @@ let finalNumberOfCorrectlyClassifiedDronesp = document.getElementById("finalNumb
       selectedDroneIndex = droneIndex;
       drones[selectedDroneIndex].selected = true;
     //sets the index to variable to be displayed
-    selectedDroneID_p.innerText = "ID: " + droneIndex;
+    selectedDroneID_p.innerText = "ID: " + drones[droneIndex].id;
     // clears second iteration onwards of the tracking interval
     clearInterval(selectedDroneTrackingInterval);
     //for every interval of 5 seconds it creates a variable that will be sent and output in index.ejs
@@ -622,7 +622,7 @@ let finalNumberOfCorrectlyClassifiedDronesp = document.getElementById("finalNumb
          drones[i].disguisedMovement();
 
       }
-      text(i, drones[i].xPos, drones[i].yPos);
+      text(drones[i].id, drones[i].xPos, drones[i].yPos);
       textSize(25);
       
     
@@ -643,7 +643,7 @@ var finishedQuizesBtn = document.getElementById("finishedQuizesBtn");
 // When the user clicks the button, open the modal 
 finishedQuizesBtn.onclick = function () {
 
-  axios.post("testScenario", testScenarioLog);
+  axios.post("/testScenario", testScenarioLog);
   console.log("redirecting");
   (window.location.href = '/home')
 }

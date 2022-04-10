@@ -70,6 +70,8 @@ function setup() {
     frameRate(30);
   // creates 10 instances of uncertain drones
   //background(0);
+
+  
  
 
   for (let i = 0; i < 20; i++){
@@ -177,12 +179,17 @@ function getTimeDroneClicked(timeClicked){
 }
 
 
+dronesToClassify = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]
+
+
+
 var dronesClassifiedCorrectly = 0;
 
-//list of drones initially not classified
-//ineficient but simple way to track what drones have been classified, when a drone is classified it gets removed from list
-// dronesClassified = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19];
-// dronesClassifiedCorrectly = 0;
+
+
+// console.log(dronesToClassify)
+
+
 
 //                        __   _                        _               _     _                   
 //                          / _| (_)                      | |             | |   | |                  
@@ -195,61 +202,12 @@ var dronesClassifiedCorrectly = 0;
 
 
 btnConfirm.addEventListener('click',() => {  
+
+  
   const confirmButtonLog = {outputConfirmButton:(getButton("confirm"))+ (getTime())};
   // console.log(confirmButtonLog);
 
   dataToPostScenario1.push(confirmButtonLog)
-
-  
-  
-// information to be logged in drone tracker
-  const pID = document.createElement('p');
-  const pClass = document.createElement('p');
-  const separationID = document.createElement('hr');
-  const separationClass = document.createElement('hr');
- 
-
-  
-
-
-    pID.innerText = "ID of drone tracked: " + droneID;
-
-    // + ", classified as " + currentButtonPressed;
-
-    pClass.innerText = "classification:" + currentButtonPressed;
-
-
-    randomPrependORAppend= Math.round(random(0,1));
-    console.log(randomPrependORAppend)
-
-    if (randomPrependORAppend == 0){
-      document.getElementById("parametersTrackID").prepend(separationID);
-      document.getElementById("parametersTrackID").prepend(pID);
-      document.getElementById("parametersTrackID").prepend(separationID);
-      document.getElementById("parametersTrackClass").prepend(pClass);
-      document.getElementById("parametersTrackClass").prepend(separationClass);
-      document.getElementById("parametersTrackClass").prepend(separationClass);
-
-    }
-    if (randomPrependORAppend== 1){
-      document.getElementById("parametersTrackID").append(separationID);
-      document.getElementById("parametersTrackID").append(pID);
-      document.getElementById("parametersTrackID").append(separationID);
-
-      document.getElementById("parametersTrackClass").append(separationClass);
-      document.getElementById("parametersTrackClass").append(pClass);
-      document.getElementById("parametersTrackClass").append(separationClass);
-
-    }
-
-  
-    // document.getElementById("parametersTrackID").append(pID);
-    // document.getElementById("parametersTrackID").appendChild(separationID);
-    // document.getElementById("parametersTrackClass").appendChild(pClass);
-    // document.getElementById("parametersTrackClass").appendChild(separationClass);
-
-
-    //timeStampDroneConfirmed, gets second at which the user has confirmed drone
 
     const date = new Date()
 
@@ -275,7 +233,28 @@ btnConfirm.addEventListener('click',() => {
     dataToPostScenario1.push(timeElapsedBetweenClickingAndConfirming)
 
 
+    //GET DRONE ID CHECK LIST 
+    // IF IT IS IN LIST GO ON ELSE NOTHING
 
+    // console.log(drones[currentDroneID].id);
+
+    // indexOfCurrentDrone = dronesToClassify.indexOf(drones[currentDroneID].id)
+    console.log(dronesToClassify  )
+
+
+
+
+    if(dronesToClassify.includes(currentDroneID)){
+
+      indexToDelete = dronesToClassify.indexOf(currentDroneID);
+
+      dronesToClassify.splice(indexToDelete, 1)
+
+
+
+
+
+  
     // we create a variable that works as a counter for how many drones the user has got right (initially 0)
     if(currentButtonPressed == droneClass){
       var classification = "correct"
@@ -286,6 +265,12 @@ btnConfirm.addEventListener('click',() => {
       var classification = "incorrect"
 
     }
+
+  }
+
+  else{
+    console.log("already classified")
+  }
     // dronesClassifiedIncorrectly = (20 - dronesClassifiedCorrectly);
     // this variable has info on the user ID drone id classified and classification
     finalDroneClassification = "The final drone classification of user "+ UserID+" of drone ID "+ currentDroneID+ ", class "+ droneClass+  ", is "+ currentButtonPressed+ ", this classification, is " + classification+ "!";
@@ -322,6 +307,9 @@ btnConfirm.addEventListener('click',() => {
 
   }  
 });
+
+
+
 
 btnHostile.addEventListener('click',() => {    
   var outputHostileButton = (getButton("hostile"));
@@ -423,20 +411,31 @@ function cb(droneIndex) {
   // selectedDroneIndex used as a reference for the previously selected drone
   
   // initialDroneColour = drones[droneIndex].colour
-  //console.log("drone index: " + droneIndex);
+  
+  
+// console.log(selectedDroneIndex);
   if (selectedDroneIndex != null) {
     //drones[selectedDroneIndex].colour = initialDroneColour;
     drones[selectedDroneIndex].selected = false;
   }
     // sselectedDroneIndex is set to new drone index, reference for the new one
+    // console.log(droneIndex)
+    // selectedDroneIndex = droneIndex;
+
     selectedDroneIndex = droneIndex;
+    // console.log(selectedDroneIndex)
+
+    // console.log(" id is" + drones[selectedDroneIndex])
+
+    
+
     drones[selectedDroneIndex].selected = true;
   //sets the index to variable to be displayed
   // selectedDroneID_p.innerText = "ID: " + droneIndex;
 
   // selectedDroneID_p.innerText = "ID: " + droneIndex;
 
-  selectedDroneID_p.innerText = "ID: " + droneIndex;
+  selectedDroneID_p.innerText = "ID: " + drones[droneIndex].id;
 
   // clears second iteration onwards of the tracking interval
   clearInterval(selectedDroneTrackingInterval);
@@ -537,11 +536,15 @@ function mousePressed() {
     
   // }
 
-  
+ 
 
   for (let i = 0; i < drones.length; i++) {
+   
+    
 
-    // console.log(drones[i].id);
+
+    
+
 
     // droneID = (drones[i].id)
     // console.log(droneID)
@@ -550,6 +553,8 @@ function mousePressed() {
     
 
       drones[i].droneClicked(i, cb);
+
+      // dronesToClassify.push(droneID)
 
       // console.log(drones[i].droneClicked(droneID, cb));
   }

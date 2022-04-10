@@ -35,15 +35,31 @@
 
 
 
+
 <div id="ScenariosLinksContainer">
     <br>
     <h1>Group C</h1>
     <br>
 
     <h4>Please complete the following scenarios as presented till all pannels are green:</h4>
-    <br>
 
     <br>
+    <br>
+    <a id=beforeTrialsQuestionaire href="/beforeTrialsQuestionaire">
+        <h4>before Trials Questionaire </h4>
+    </a>
+
+
+    <br>
+    <br>
+    <a id=unsupervisedTest href="/unsupervisedTestScenario">
+        <h4>unsupervised Test Scenario</h4>
+
+    </a>
+    <br>
+    <br>
+
+
     <a id=testScenario href="/testScenario">
         <h4>Test scenario</h4>
 
@@ -51,18 +67,19 @@
     <br>
     <br>
 
-    <a id=scenario1 href="/scenario3">
-        <h4>System A</h4>
+    <a id=scenario1 href="/scenario1">
+        <h4>System A </h4>
     </a>
+
     <hr class="new1">
     <br>
 
-    <a id=scenario2 href="/scenario1">
-        <h4>System B</h4>
+    <a id=scenario2 href="/scenario2">
+        <h4>System B </h4>
     </a>
     <hr class="new1">
     <br>
-    <a id=scenario3 href="/scenario2">
+    <a id=scenario3 href="/scenario3">
         <h4>System C</h4>
     </a>
     <br>
@@ -70,15 +87,19 @@
 
 </div>
 
-
-
 <div id="scenariosFinishedContainer">
 
-
     <h3>Scenarios finished</h3>
+    <hr class="new1">
     <br>
     <a id=finishedTest>
         <h4>Test scenario</h4>
+
+    </a>
+    <br>
+    <br>
+    <a id=finishedUnsupervised>
+        <h4>unsupervised Test scenario</h4>
 
     </a>
     <br>
@@ -101,7 +122,6 @@
 
 </div>
 
-
 <!-- 
 █▀█ █▀█ █▀▄ █▀▀ █▀█   █▀█ █▀▀   █▀ █▀▀ █▀▀ █▄░█ ▄▀█ █▀█ █ █▀█ █▀
 █▄█ █▀▄ █▄▀ ██▄ █▀▄   █▄█ █▀░   ▄█ █▄▄ ██▄ █░▀█ █▀█ █▀▄ █ █▄█ ▄█
@@ -120,8 +140,9 @@
     //scenario 3 deleted, list finished
     //in the else statement display to user (finished, thanks for your time)
 
+    const beforeTrialsQuestionaire = document.getElementById("beforeTrialsQuestionaire")
     const testScenario = document.getElementById("testScenario")
-
+    const unsupervisedTest = document.getElementById("unsupervisedTest");
     const scenario1 = document.getElementById("scenario1")
     const scenario2 = document.getElementById("scenario2")
     const scenario3 = document.getElementById("scenario3")
@@ -129,31 +150,58 @@
 
 
     // var to check if scenario is finished
+    const beforeTrialsQuestionaireFinished = sessionStorage.getItem("beforeTrialsQuestionaireFinished");
     const testScenarioFinished = sessionStorage.getItem("testScenario");
+    const unsupervisedTestScenarioFinished = sessionStorage.getItem("unsupervisedTestScenario");
+    const scenario1Finished = sessionStorage.getItem("scenario1");
+    const scenario2Finished = sessionStorage.getItem("scenario2");
+    const scenario3Finished = sessionStorage.getItem("scenario3");
 
-    const scenario1Finished = sessionStorage.getItem("scenario3");
-    const scenario2Finished = sessionStorage.getItem("scenario1");
-    const scenario3Finished = sessionStorage.getItem("scenario2");
 
     // const testScenarioFinished = sessionStorage.getItem("testScenario");
     const testScenarioStatus = document.getElementById("finishedTest");
-    console.log(testScenarioStatus)
+
+    const unsupervisedTestScenarioStatus = document.getElementById("finishedUnsupervised");
+
     const scenario1status = document.getElementById("finished1");
 
     const scenario2status = document.getElementById("finished2");
+
     const scenario3status = document.getElementById("finished3");
 
-    testScenario.style.display = "block";
+
+
+    beforeTrialsQuestionaire.style.display = "block"
+
+    testScenario.style.display = "none";
+    unsupervisedTest.style.display = "none";
     scenario1.style.display = "none";
     scenario2.style.display = "none"
     scenario3.style.display = "none"
 
+    if (beforeTrialsQuestionaireFinished) {
+
+        testScenario.style.display = "block";
+        beforeTrialsQuestionaire.style.display = "none";
+
+    }
+
     if (testScenarioFinished) {
-        console.log("true!!")
+
         testScenario.style.display = "none";
-        scenario1.style.display = "block";
+        unsupervisedTest.style.display = "block";
 
         testScenarioStatus.style.backgroundColor = "#32CD32";
+
+    }
+
+    if (unsupervisedTestScenarioFinished) {
+
+        scenario1.style.display = "block";
+        unsupervisedTest.style.display = "none";
+        unsupervisedTestScenarioStatus.style.backgroundColor = "#32CD32";
+
+
 
     }
     if (scenario1Finished) {

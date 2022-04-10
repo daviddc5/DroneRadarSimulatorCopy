@@ -1,0 +1,205 @@
+<head>
+    <!-- Bootstrap CSS and javascript -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- axios cdn so that I can use axios post requests -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+
+
+    <!-- choose either online CDN or local script p5 -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.min.js"></script>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <meta charset="utf-8">
+
+    <title> Micromonde combat simulation system</title>
+
+
+    <link rel="stylesheet" href="public/css/style.css" rel="stylesheet">
+    <!-- <script src="jquery-3.5.1.min.js"></script> -->
+
+
+<body>
+
+    <!--nav bar-->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">MCSS</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <!-- <li><a href="/home"><span class="glyphicon glyphicon-home"></span> Home</a></li> -->
+
+
+
+                <li class="active"><a><span class="glyphicon glyphicon-screenshot"></span> Simulation in
+                        Progress!</a></li>
+
+
+
+            </ul>
+        </div>
+    </nav>
+
+
+
+
+
+
+    <!--parameters-->
+
+    <div id="dronesInfoContainer">
+        <div class="parameters">
+            <h4 style="color:black">Track parameters:</h4>
+            <hr class="new1">
+            <p id="ID"></p>
+            <hr class="new1">
+
+            <p id='selected-drone-xPos'>
+            </p>
+            <hr class="new1">
+            <p id="selected-drone-yPos"> </p>
+
+            <hr class="new1">
+
+            <p id="countryOrigin">
+            </p>
+            <hr class="new1">
+
+            <p id="Altitude"> </p>
+            <hr class="new1">
+            <p id="IFF"> </p>
+            <hr class="new1">
+            <p id="Weapons"> </p>
+            <hr class="new1">
+            <p id="Emissions"> </p>
+        </div>
+
+
+
+
+
+
+
+        <!--  creates a var set to the ID  that should allow to access it from sketch.js -->
+        <script>
+            let UserID = "<%= ID %>"
+
+
+
+
+        </script>
+
+
+
+
+
+
+        <div class="droneButtonsTitle">
+
+        </div>
+        <div class="droneButtons">
+            <div>
+                <h4 style="color: black;">Classification: </h4>
+            </div>
+
+            <hr class="new1">
+
+            <button id="hostile" type="button">
+                Hostile
+            </button>
+            <button id="nonHostile" type="button">
+                Non-hostile
+            </button>
+            <button id="uncertain" type="button">
+                Uncertain
+            </button>
+            <button id="confirmButton" type="button">
+                Confirm
+            </button>
+            <br>
+
+        </div>
+
+
+        <br>
+
+
+
+        <!-- drone tracker -->
+
+
+        <!-- drone tracker -->
+        <div id="parametersTrackIDHeading">
+
+
+
+
+            <h4> Classified Drone (ID) Tracker </h4>
+
+        </div>
+
+        <div id="parametersTrackClassHeading">
+
+
+
+
+            <h4> Classified Drone (Class) Tracker </h4>
+
+        </div>
+
+
+
+        <div id="dronesIdParameters">
+            <div id="parametersTrackID">
+                <p id="IdTrack"></p>
+            </div>
+
+        </div>
+
+
+        <div id="dronesClassParameters">
+            <div id="parametersTrackClass">
+
+
+
+                <p id="IdTrack"></p>
+            </div>
+
+        </div>
+
+
+        <!-- Qualtrics questionaires -->
+        <!-- Trigger/Open The Modal -->
+        <!-- <button id="myBtn">Open Modal</button> -->
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+
+                <p>Time is out! you managed to classify correctly :</p>
+                <p id="finalNumberOfCorrectlyClassifiedDrones"></p>
+                <p>drone/s</p>
+                <button id="finishedQuizesBtn">Finished</button>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js"></script>
+    <script src="/scripts/drones.js"></script>
+    <script src="/scripts/unsupervisedTest.js"></script>
+
+</body>
