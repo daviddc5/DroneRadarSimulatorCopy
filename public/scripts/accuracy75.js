@@ -1,14 +1,94 @@
+// // after 16 minutes the user is redirected home, so they can proceed to the next scenario
+// setTimeout(function(){
+//   sessionStorage.setItem("scenario2", "true");
+//   modal.style.display = "block";
+  
+//   noLoop();
+// }, 960000);
+
+
+
+
+
+
 // after 16 minutes the user is redirected home, so they can proceed to the next scenario
 setTimeout(function(){
-  sessionStorage.setItem("scenario2", "true");
-  modal.style.display = "block";
-  
   noLoop();
-}, 960000);
+  modal.style.display = "block";
+  repeatingModal.style.display = "none";
+  sessionStorage.setItem("scenario1", "true");
+  
+},960000);
+
+
+
+  var repeatingQuizInterval = setInterval(() => {
+
+    noLoop();
+    repeatingModal.style.display = "block";
+  
+    repeatingFinishButton.style.display = 'none';
+
+    // repeatingQuizCounter= repeatingQuizCounter+1;
+   
+  
+    
+    
+  },240000);
+
+
+
+
+//  GETS all of the elements defined in scenario2 
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the modal
+var repeatingModal = document.getElementById("repeatingMyModal");
+
+var repeatingFinishButton = document.getElementById("repeatingFinishButton");
+
+repeatingFinishButton.onclick = function(){
+  repeatingModal.style.display = "none";
+
+  repeatingQuizOne.style.display = 'block';
+  repeatingQuizOneFinished.style.backgroundColor = "ff3c3c";
+
+  repeatingQuizTwo.style.display = 'block';
+  repeatingQuizTwoFinished.style.backgroundColor = "ff3c3c";
+
+  repeatingQuizThree.style.display = 'block';
+  repeatingQuizThreeFinished.style.backgroundColor = "ff3c3c";
+  
+  loop();
+  
+    
+}
+
+// finished quizzes and scenario button
+var finishedQuizesBtn = document.getElementById("finishedQuizesBtn");
+
+// When the user clicks the button, open the modal 
+finishedQuizesBtn.onclick = function () {
+  
+  axios.post("/scenario2", dataToPostScenario2)
+  
+
+  (window.location.href = '/home')
+    console.log("redirecting");
+  
+    
+}
+
+
+
+
 
 
 dataToPostScenario2 = [];
 
+dataToPostScenario2.push( {accuracy75 :"starting scenario of accuracy 75"});
 
 
 // SENDS ALL VARIABLES THAT HAVE TO BE DISPLAYED IN THE HTML
@@ -118,7 +198,7 @@ function setup() {
 
 function updateSelectedButton(buttonType){
   currentButtonPressed = buttonType;
-  console.log(currentButtonPressed)
+  // console.log(currentButtonPressed)
   return currentButtonPressed;
 }
 
@@ -273,9 +353,9 @@ btnConfirm.addEventListener('click',() => {
 
 
 
-    if(dronesToClassify.includes(currentDroneID)){
+    if(dronesToClassify.includes(droneID)){
 
-      indexToDelete = dronesToClassify.indexOf(currentDroneID);
+      indexToDelete = dronesToClassify.indexOf(droneID);
 
       dronesToClassify.splice(indexToDelete, 1)
 
@@ -302,7 +382,7 @@ btnConfirm.addEventListener('click',() => {
   }
     // dronesClassifiedIncorrectly = (20 - dronesClassifiedCorrectly);
     // this variable has info on the user ID drone id classified and classification
-    finalDroneClassification = "The final drone classification of user "+ UserID+" of drone ID "+ currentDroneID+ ", class "+ droneClass+  ", is "+ currentButtonPressed+ ", this classification, is " + classification+ "!";
+    finalDroneClassification = "The final drone classification of user "+ UserID+" of drone ID "+ droneID+ ", class "+ droneClass+  ", is "+ currentButtonPressed+ ", this classification, is " + classification+ "!";
     //this variable updates every time the confirm button is switched, and will add one if the drone has been correctly classified
     finalNumberOfCorrectlyClassifiedDrones = "the current number of drones classified correctly is " + dronesClassifiedCorrectly +" /20 drones in scenario"
     // finalNumberOfIncorrectlyClassifiedDrones = "the current number of drones classified incorrectly is " + dronesClassifiedIncorrectly +" /20 drones in scenario"
@@ -342,9 +422,9 @@ btnConfirm.addEventListener('click',() => {
 
 btnHostile.addEventListener('click',() => {    
   var outputHostileButton = (getButton("hostile"));
-  console.log(outputHostileButton);
+  // console.log(outputHostileButton);
   var outputHostileTimeLog = (getTime());
-  console.log(outputHostileTimeLog);
+  // console.log(outputHostileTimeLog);
 
   const HostileButtonLog = {outputHostileButton, outputHostileTimeLog };
 
@@ -370,11 +450,11 @@ btnHostile.addEventListener('click',() => {
 
 btnNonHostile.addEventListener('click',() => {    
   var outputNonHostileButton = (getButton("non hostile"));
-  console.log(outputNonHostileButton);
+  // console.log(outputNonHostileButton);
 
 
   var outputNonHostileTimeLog = (getTime());
-  console.log(outputNonHostileTimeLog);
+  // console.log(outputNonHostileTimeLog);
 
   const nonHostileButton = {outputNonHostileButton, outputNonHostileTimeLog};
 
@@ -395,11 +475,11 @@ btnNonHostile.addEventListener('click',() => {
 btnUncertain.addEventListener('click',() => {  
   
   var outputUncertainButton = (getButton("uncertain"));
-  console.log(outputUncertainButton);
+  // console.log(outputUncertainButton);
 
 
   var outputUncertainTimeLog = (getTime());
-  console.log(outputUncertainTimeLog);
+  // console.log(outputUncertainTimeLog);
 
   const UncertainButtonLog = {outputUncertainButton, outputUncertainTimeLog};
 
@@ -478,7 +558,7 @@ function cb(droneIndex) {
     // CHANGING THE COLOURS OF THE BUTTONS WHEN DRONES ARE PRESSED
 
     
-    console.log((drones[selectedDroneIndex].colour.levels));
+    // console.log((drones[selectedDroneIndex].colour.levels));
 
     if (drones[selectedDroneIndex].colour.levels[1] == 255){
       // console.log("working")
@@ -520,7 +600,7 @@ function cb(droneIndex) {
     }
 
     if (drones[selectedDroneIndex] instanceof HostileDrone){
-      console.log("hostile drone")
+      // console.log("hostile drone")
     
       // updateSelectedButton("Hostile");
       updateSelectedDroneClass("Hostile");
@@ -530,7 +610,7 @@ function cb(droneIndex) {
     }
   
     if (drones[selectedDroneIndex] instanceof nonHostileDrone){
-      console.log("non hostile drone")
+      // console.log("non hostile drone")
       // updateSelectedButton("nonHostile");
       updateSelectedDroneClass("nonHostile");
       
@@ -647,20 +727,20 @@ function draw() {
 }
 
 
-//  GETS all of the elements defined in scenario2 
+// //  GETS all of the elements defined in scenario2 
 
-// Get the modal
-var modal = document.getElementById("myModal");
-
-
-// confirm button allows the user to click button when finished with all quizzes
-var finishedQuizesBtn = document.getElementById("finishedQuizesBtn");
+// // Get the modal
+// var modal = document.getElementById("myModal");
 
 
-// When the user clicks the button, open the modal 
-finishedQuizesBtn.onclick = function () {
+// // confirm button allows the user to click button when finished with all quizzes
+// var finishedQuizesBtn = document.getElementById("finishedQuizesBtn");
 
-  axios.post("/scenario2", dataToPostScenario2);
-  (window.location.href = '/home')
-}
+
+// // When the user clicks the button, open the modal 
+// finishedQuizesBtn.onclick = function () {
+
+//   axios.post("/scenario2", dataToPostScenario2);
+//   (window.location.href = '/home')
+// }
 

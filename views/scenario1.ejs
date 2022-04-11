@@ -165,6 +165,8 @@
 
 
 
+
+
         <!-- Qualtrics questionaires -->
         <!-- Trigger/Open The Modal -->
         <!-- <button id="myBtn">Open Modal</button> -->
@@ -181,28 +183,28 @@
                     <hr class="new1">
                     <br>
 
-                    <a id=quizOne href="https://cardiff.qualtrics.com/jfe/form/SV_3e2XR6XZEKUmaGO"
+                    <a id=quizOne href="https://cardiff.qualtrics.com/jfe/form/SV_1Yt0ZBsAsS4Id7w"
                         onclick="checkQuizOne()" target="_blank">quiz
                         1</a>
 
-                    <a id=quizOneFinished onclick="checkQuizOne()">quiz 1 finished </a>
+                    <a id=quizOneFinished>quiz 1 finished </a>
 
 
                     <hr class="new1">
                     <br>
 
-                    <a id=quizTwo href="https://cardiff.qualtrics.com/jfe/form/SV_bHDpAecWItu8eN0"
+                    <a id=quizTwo href="https://cardiff.qualtrics.com/jfe/form/SV_7NXEoNS9UcN1E6a"
                         onclick="checkQuizTwo()" target="_blank">quiz
                         2 </a>
-                    <a id=quizTwoFinished onclick="checkQuizTwo()">quiz 2 finished </a>
+                    <a id=quizTwoFinished>quiz 2 finished </a>
 
                     <hr class="new1">
                     <br>
 
-                    <a id=quizThree href="https://cardiff.qualtrics.com/jfe/form/SV_7ZLj3a1LxGg0DZQ"
+                    <a id=quizThree href="https://cardiff.qualtrics.com/jfe/form/SV_5u0GqCVqq8cgOvs"
                         onclick="checkQuizThree()" target="_blank">quiz 3</a>
 
-                    <a id=quizThreeFinished onclick="checkQuizThree()">quiz 3 finished</a>
+                    <a id=quizThreeFinished>quiz 3 finished</a>
 
 
 
@@ -218,9 +220,75 @@
     </div>
 
 
+    <!-- repeating qualtrics -->
+
+
+
+    <div id="repeatingMyModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="repeatingModalContent">
+            <!-- <span class="close">&times;</span> -->
+            <p>Please complete the following quizes</p>
+
+            <ul>
+                <hr class="new1">
+                <br>
+
+                <a id=repeatingQuizOne href="https://cardiff.qualtrics.com/jfe/form/SV_1Yt0ZBsAsS4Id7w"
+                    onclick="repeatingOneFinished()" target="_blank">quiz
+                    1</a>
+
+                <a id=repeatingQuizOneFinished>quiz 1 finished </a>
+
+
+                <hr class="new1">
+                <br>
+
+
+                <a id=repeatingQuizTwo href="https://cardiff.qualtrics.com/jfe/form/SV_7NXEoNS9UcN1E6a"
+                    onclick="repeatingTwoFinished()" target="_blank">quiz
+                    2 </a>
+                <a id=repeatingQuizTwoFinished>quiz 2 finished </a>
+
+                <hr class="new1">
+                <br>
+
+
+
+                <a id=repeatingQuizThree href="https://cardiff.qualtrics.com/jfe/form/SV_9YaQLYSum1xcGLc"
+                    onclick="repeatingThreeFinished()" target="_blank">quiz 3</a>
+
+                <a id=repeatingQuizThreeFinished>quiz 3 finished</a>
+
+
+
+                <hr class="new1">
+
+
+            </ul>
+            <button id="repeatingFinishButton">Finished</button>
+
+        </div>
+
+    </div>
+    </div>
+
+
 
 
     <script>
+
+
+        const repeatingQuizOne = document.getElementById("repeatingQuizOne");
+        const repeatingQuizTwo = document.getElementById("repeatingQuizTwo");
+        const repeatingQuizThree = document.getElementById("repeatingQuizThree");
+
+        const repeatingQuizOneFinished = document.getElementById("repeatingQuizOneFinished");
+        const repeatingQuizTwoFinished = document.getElementById("repeatingQuizTwoFinished");
+        const repeatingQuizThreeFinished = document.getElementById("repeatingQuizThreeFinished");
+
+
 
         //if the quizone is selected
 
@@ -234,33 +302,77 @@
 
         finishedQuizesBtn.style.display = 'none';
 
+        // repeatingFinishButton.style.display = 'none';
+
+
+
+        function repeatingOneFinished() {
+            repeatingQuizOne.style.display = 'none';
+            repeatingQuizOneFinished.style.backgroundColor = "#32CD32"
+
+
+        }
+
+        function repeatingTwoFinished() {
+            repeatingQuizTwo.style.display = 'none';
+            repeatingQuizTwoFinished.style.backgroundColor = "#32CD32"
+
+
+        }
+        function repeatingThreeFinished() {
+            repeatingQuizThree.style.display = 'none';
+            repeatingQuizThreeFinished.style.backgroundColor = "#32CD32"
+            repeatingFinishButton.style.display = 'block';
+
+
+        }
+
 
         function checkQuizOne() {
             quizOne.style.display = 'none';
             quizOneFinished.style.backgroundColor = "#32CD32"
+            deleteQuiz("quizOneCheck");
 
         }
 
         function checkQuizTwo() {
             quizTwo.style.display = 'none';
             quizTwoFinished.style.backgroundColor = "#32CD32"
+            deleteQuiz("quizTwoCheck");
 
         }
         function checkQuizThree() {
             quizThree.style.display = 'none';
             quizThreeFinished.style.backgroundColor = "#32CD32"
-            finishedQuizesBtn.style.display = 'block';
-
-
-
+            deleteQuiz("quizThreeCheck");
 
         }
         // console.log(quizOneFlag)
         // if (quizOneFlag && quizTwoFlag && quizThreeFlag) {
         //     console.log(quiz)
-           
+
 
         // }
+
+
+        quizzes = ["quizOneCheck", "quizTwoCheck", "quizThreeCheck"]
+
+        function deleteQuiz(quizDone) {
+
+            const index = quizzes.indexOf(quizDone);
+
+            quizzes.splice(index, 1)
+            console.log(quizzes);
+
+            if (quizzes.length == 0) {
+
+                finishedQuizesBtn.style.display = "block"
+
+            }
+
+        }
+
+
 
     </script>
 

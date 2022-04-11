@@ -1,13 +1,95 @@
 
+
+
+
 // after 16 minutes the user is redirected home, so they can proceed to the next scenario
 setTimeout(function(){
   noLoop();
   modal.style.display = "block";
+  repeatingModal.style.display = "none";
   sessionStorage.setItem("scenario1", "true");
-},15000);
+ 
+},960000);
+
+
+
+  var repeatingQuizInterval = setInterval(() => {
+
+    noLoop();
+    repeatingModal.style.display = "block";
+    
+  
+    repeatingFinishButton.style.display = 'none';
+
+   
+    
+  
+    
+    
+  },240000);
+
+
+
+
+//  GETS all of the elements defined in scenario2 
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the modal
+var repeatingModal = document.getElementById("repeatingMyModal");
+
+var repeatingFinishButton = document.getElementById("repeatingFinishButton");
+
+repeatingFinishButton.onclick = function(){
+  repeatingModal.style.display = "none";
+
+  repeatingQuizOne.style.display = 'block';
+  repeatingQuizOneFinished.style.backgroundColor = "ff3c3c";
+
+  repeatingQuizTwo.style.display = 'block';
+  repeatingQuizTwoFinished.style.backgroundColor = "ff3c3c";
+
+  repeatingQuizThree.style.display = 'block';
+  repeatingQuizThreeFinished.style.backgroundColor = "ff3c3c";
+  
+  loop();
+  
+    
+}
+
+
+
+
+
+
+// finished quizzes and scenario button
+var finishedQuizesBtn = document.getElementById("finishedQuizesBtn");
+
+// When the user clicks the button, open the modal 
+finishedQuizesBtn.onclick = function () {
+  
+  axios.post("/scenario1", dataToPostScenario1)
+  
+
+  (window.location.href = '/home')
+    console.log("redirecting");
+  
+    
+}
+
+
+
+
+
+
+
+
 
 
 var dataToPostScenario1 = [];
+
+dataToPostScenario1.push( {accuracy95 :"starting scenario of accuracy 95"});
 
 
 
@@ -239,7 +321,7 @@ btnConfirm.addEventListener('click',() => {
     // console.log(drones[currentDroneID].id);
 
     // indexOfCurrentDrone = dronesToClassify.indexOf(drones[currentDroneID].id)
-    console.log(dronesToClassify  )
+    // console.log(dronesToClassify  )
 
 
 
@@ -249,12 +331,6 @@ btnConfirm.addEventListener('click',() => {
       indexToDelete = dronesToClassify.indexOf(currentDroneID);
 
       dronesToClassify.splice(indexToDelete, 1)
-
-
-
-
-
-  
     // we create a variable that works as a counter for how many drones the user has got right (initially 0)
     if(currentButtonPressed == droneClass){
       var classification = "correct"
@@ -608,33 +684,9 @@ function draw() {
 
 
 
-//  GETS all of the elements defined in scenario2 
-
-// Get the modal
-var modal = document.getElementById("myModal");
-
-
-// confirm button allows the user to click button when finished with all quizzes
-var finishedQuizesBtn = document.getElementById("finishedQuizesBtn");
 
 
 
-
-
-// When the user clicks the button, open the modal 
-finishedQuizesBtn.onclick = function () {
-  
-  axios.post("/scenario1", dataToPostScenario1)
-  
-
-  (window.location.href = '/home')
-    console.log("redirecting");
-    
-
-  
-
-    
-}
 
 
 

@@ -7,7 +7,7 @@ setTimeout(function(){
     sessionStorage.setItem("unsupervisedTestScenario", "true");
     noLoop();
   
-  }, 20000);
+  }, 240000);
   
   testScenarioLog = [];
   
@@ -209,7 +209,7 @@ setTimeout(function(){
     
     //list of drones initially not classified
     //ineficient but simple way to track what drones have been classified, when a drone is classified it gets removed from list
-    dronesClassified = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19];
+    dronesToClassify = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19];
     
   
    
@@ -253,9 +253,6 @@ setTimeout(function(){
       if(timeElapsedClassifyingDrone<0){
         timeElapsedClassifyingDrone= 60-timeElapsedClassifyingDrone
       }
-      
-        
-  
         
         timeElapsed = "time between clicking drone and confirming "+timeElapsedClassifyingDrone +" seconds"
   
@@ -266,21 +263,29 @@ setTimeout(function(){
 
         //make a list of all od ids, 
         //get id of drone being classfieds get drone id, delete from list and add cprrect or incorrect
+  
+        if(dronesToClassify.includes(currentDroneID)){
 
+          indexToDelete = dronesToClassify.indexOf(currentDroneID);
+    
+          dronesToClassify.splice(indexToDelete, 1)
 
-  
-  
-  
         // we create a variable that works as a counter for how many drones the user has got right (initially 0)
         if(currentButtonPressed == droneClass){
-          classification = "correct"
+          var classification = "correct"
           dronesClassifiedCorrectly++;
           
         }
         else{
-          classification = "incorrect"
-  
+          var classification = "incorrect"
+    
         }
+    
+      }
+    
+      else{
+        console.log("already classified")}
+
         dronesClassifiedIncorrectly = (20 - dronesClassifiedCorrectly);
         // this variable has info on the user ID drone id classified and classification
         finalDroneClassification = "The final drone classification of user "+ UserID+" of drone ID "+ currentDroneID+ " is "+ currentButtonPressed+ ", which is " + classification+ "!";;

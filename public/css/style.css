@@ -62,6 +62,41 @@ canvas {
   font-size:20px;
 }
 
+
+.repeatingModal{
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 99999; /* Sit on top */
+  padding-top: 200px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+   background-color: rgb(0,0,0); 
+  background-color: rgb(0, 0, 0, 0.9); /* Black w/ opacity */
+}
+
+
+/* Modal Content */
+.repeatingModalContent {
+  background-color: #a5a5a5;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  height:60%;
+  z-index:99999;
+  border-top:500px;
+  
+}
+
+.repeatingModalContent p {
+  margin:0; 
+  display:inline;
+  font-size:20px;
+}
+
 #finishedQuizesBtn{
 
   
@@ -78,6 +113,22 @@ height:100px;
 
 }
 
+#repeatingFinishButton{
+
+  
+  left:10%;
+  background-color: #ff3c3c;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+  border-top:100px;
+  width:200px;
+  height:100px;
+  
+  }
+
 
 
 
@@ -93,6 +144,20 @@ border-radius: 10px;
 border-top:100px;
 }
 
+
+
+#repeatingQuizOne{
+
+  left:10%;
+  background-color: #ff3c3c;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+  border-top:100px;
+  }
+
 #quizTwo{
 
   left:10%;
@@ -106,6 +171,18 @@ border-top:100px;
   width:100px
   }
 
+  #repeatingQuizTwo{
+
+    left:10%;
+    background-color: #ff3c3c;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    border-top:100px;
+    width:100px
+    }
   #quizThree{
 
     left:10%;
@@ -116,6 +193,19 @@ border-top:100px;
     text-decoration: none;
     border-radius: 10px;
     border-top:100px;
+    }
+
+  #repeatingQuizThree{
+
+    left:10%;
+    background-color: #ff3c3c;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    border-top:100px;
+    width:100px
     }
 
     #quizFour{
@@ -129,6 +219,22 @@ border-top:100px;
       border-radius: 10px;
       border-top:100px;
       }
+
+    
+  #repeatingQuizFour{
+
+    left:10%;
+    background-color: #ff3c3c;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    border-top:100px;
+    width:100px
+    }
+
+
     #quizOneFinished{
 
       left:10%;
@@ -140,6 +246,18 @@ border-top:100px;
       border-radius: 10px;
       border-top:100px;
       }
+
+      #repeatingQuizOneFinished{
+
+        left:10%;
+        background-color: #ff3c3c;
+        color: white;
+        padding: 14px 25px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 10px;
+        border-top:100px;
+        }
       #quizTwoFinished{
 
         left:10%;
@@ -151,6 +269,18 @@ border-top:100px;
         border-radius: 10px;
         border-top:100px;
         }
+
+        #repeatingQuizTwoFinished{
+
+          left:10%;
+          background-color: #ff3c3c;
+          color: white;
+          padding: 14px 25px;
+          text-align: center;
+          text-decoration: none;
+          border-radius: 10px;
+          border-top:100px;
+          }
       #quizThreeFinished{
 
         left:10%;
@@ -162,6 +292,17 @@ border-top:100px;
         border-radius: 10px;
         border-top:100px;
         }
+        #repeatingQuizThreeFinished{
+
+          left:10%;
+          background-color: #ff3c3c;
+          color: white;
+          padding: 14px 25px;
+          text-align: center;
+          text-decoration: none;
+          border-radius: 10px;
+          border-top:100px;
+          }
 
         #quizFourFinished{
 
@@ -174,6 +315,18 @@ border-top:100px;
           border-radius: 10px;
           border-top:100px;
           }
+
+          #repeatingQuizFourFinished{
+
+            left:10%;
+            background-color: #ff3c3c;
+            color: white;
+            padding: 14px 25px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 10px;
+            border-top:100px;
+            }
 
 
 /* CSS for the status/finished state of scenarios button */
