@@ -166,10 +166,16 @@ function setup() {
       drones[i] = new uncertainDrone();
       //console.log(drones[i]);
     }
-    if( i>17){
+    if( i>17&& i<=19){
 
       drones[i] = new HostileDrone();
     }
+    if( i>19){
+
+      drones[i] = new missclassifiedUncertainDrone();
+    }
+
+    
   }
  
   bg = loadImage('../assets/radarLines.png');  
@@ -653,27 +659,47 @@ function draw() {
     if (i<= 8){
       drones[i].move(); 
       drones[i].show();
-      drones[i].Altitude();
+     
+      
 
     }
     if (i>8 && i<=17) {
       drones[i].generateRandomCombinationOfTraits();
       drones[i].move();
       drones[i].show();
-      drones[i].Altitude();
+      // console.log(drones[i].Altitude())
       // console.log(drones[i].Altitude());
+      
     }
 
-    if ( i> 17){
+    if ( i> 17 && i<=19){
       drones[i].show();
 
        drones[i].disguisedMovement();
-       drones[i].Altitude();
-      //  console.log(drones[i].Altitude());
+       
+       
 
       
       
     }
+
+
+    if ( i> 19){
+      drones[i].show();
+      drones[i].move();
+      
+
+        drones[i].Altitude()
+
+       
+      
+
+      
+      
+    }
+
+
+
     text(drones[i].id, drones[i].xPos, drones[i].yPos);
     textSize(25);
     

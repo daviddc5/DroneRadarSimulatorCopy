@@ -11,6 +11,11 @@ setTimeout(function(){
 
 testScenarioLog = [];
 
+
+testScenarioLog.push( {supervisedTest :"starting supervised test"});
+
+
+
 //number of correctly clasfied drones
 let finalNumberOfCorrectlyClassifiedDronesp = document.getElementById("finalNumberOfCorrectlyClassifiedDrones")
 
@@ -52,14 +57,7 @@ let finalNumberOfCorrectlyClassifiedDronesp = document.getElementById("finalNumb
   const quiz= document.getElementById('responsiveQuizContainer');
   
   
-// // interval to display screen freeze
-//   intervalId = 0;
-//   setInterval(() => {
-//     blackCoverBox.style.display = 'block';
-//     setTimeout(() => {
-//       blackCoverBox.style.display = 'none';
-//     }, 800)
-//   },60000);
+
   
   
   

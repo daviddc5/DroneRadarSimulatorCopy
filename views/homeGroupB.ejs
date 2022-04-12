@@ -82,23 +82,25 @@
     <br>
     <br>
 
-    <a id=scenario1 href="/scenario1">
-        <h4>System A </h4>
-    </a>
-
-    <hr class="new1">
-    <br>
 
     <a id=scenario2 href="/scenario2">
-        <h4>System B </h4>
+        <h4>System A </h4>
     </a>
     <hr class="new1">
     <br>
+
     <a id=scenario3 href="/scenario3">
-        <h4>System C</h4>
+        <h4>System B</h4>
     </a>
     <br>
     <br>
+    <a id=scenario1 href="/scenario1">
+        <h4>System C </h4>
+    </a>
+
+    <hr class="new1">
+    <br>
+
 
 </div>
 
@@ -114,7 +116,7 @@
     <br>
     <br>
     <a id=finishedUnsupervised>
-        <h4>Test scenario</h4>
+        <h4>unsupervised test scenario</h4>
 
     </a>
     <br>
@@ -173,6 +175,8 @@
     const scenario2Finished = sessionStorage.getItem("scenario2");
     const scenario3Finished = sessionStorage.getItem("scenario3");
 
+
+
     // const testScenarioFinished = sessionStorage.getItem("testScenario");
     const testScenarioStatus = document.getElementById("finishedTest");
 
@@ -212,38 +216,39 @@
 
     if (unsupervisedTestScenarioFinished) {
 
-        scenario1.style.display = "block";
+        scenario2.style.display = "block";
         unsupervisedTest.style.display = "none";
         unsupervisedTestScenarioStatus.style.backgroundColor = "#32CD32";
 
 
 
     }
-    if (scenario1Finished) {
-        testScenario.style.display = "none";
-        scenario2.style.display = "none"
-        scenario1.style.display = "none";
-
-        scenario3.style.display = "none"
-        scenario3status.style.backgroundColor = "#32CD32";
-
-    }
 
     if (scenario2Finished) {
         testScenario.style.display = "none";
-        scenario3.style.display = "none"
-        scenario1.style.display = "none";
+        scenario2.style.display = "none"
 
-        scenario2.style.display = "block"
+
+        scenario3.style.display = "block"
         scenario1status.style.backgroundColor = "#32CD32";
 
     }
+
     if (scenario3Finished) {
         testScenario.style.display = "none";
-        scenario1.style.display = "none";
-        scenario3.style.display = "block"
-        scenario2.style.display = "none"
+        scenario3.style.display = "none"
+        scenario1.style.display = "block";
+
+
         scenario2status.style.backgroundColor = "#32CD32";
+
+    }
+    if (scenario1Finished) {
+        testScenario.style.display = "none";
+        scenario1.style.display = "none";
+        scenario3.style.display = "none"
+        scenario2.style.display = "none"
+        scenario3status.style.backgroundColor = "#32CD32";
 
     }
 

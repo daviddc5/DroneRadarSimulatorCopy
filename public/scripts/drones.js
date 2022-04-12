@@ -23,9 +23,13 @@ class Drone {
       /* random speed at which it will go in that direction*/
       this.xSpeed = random(0.4, 0.6);
       this.ySpeed = random(0.4, 0.6);
-      this.selected = false;
-      this.Altitude();
       
+      
+   
+        
+    //should be working as everything is internal
+    
+        
     
      
       // Checks for distance in relation to the center
@@ -72,25 +76,37 @@ class Drone {
         
     }
 
+    if(this.yPos > 250) {
+
+        this.droneAltitude = "Low";
+    }
+    else if(this.yPos < 250) {
+
+      
+        this.droneAltitude = "High";
+
+    }
 
       
     }
-    //should be working as everything is internal
-    Altitude() {
-        
-            if(this.yPos > 250) {
-  
-                this.droneAltitude = "Low";
-            }
-            else if(this.yPos < 250) {
-        
-              
-                this.droneAltitude = "High";
-            }
-            
-        
+
+
+    Altitude(){
+
+        if(this.yPos > 250) {
+
+            this.droneAltitude = "Low";
+        }
+        else if(this.yPos < 250) {
+    
+          
+            this.droneAltitude = "High";
+    
+        }
+
     }
-   
+
+       
     show() {
       fill(this.colour);
       stroke(0);

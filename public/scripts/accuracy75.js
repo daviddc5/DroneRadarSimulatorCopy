@@ -16,7 +16,7 @@ setTimeout(function(){
   noLoop();
   modal.style.display = "block";
   repeatingModal.style.display = "none";
-  sessionStorage.setItem("scenario1", "true");
+  sessionStorage.setItem("scenario2", "true");
   
 },960000);
 

@@ -11,6 +11,8 @@ setTimeout(function(){
   
   testScenarioLog = [];
   
+  testScenarioLog.push( {unsupervisedTest :"starting unsupervised test"});
+
   //number of correctly clasfied drones
   let finalNumberOfCorrectlyClassifiedDronesp = document.getElementById("finalNumberOfCorrectlyClassifiedDrones")
   

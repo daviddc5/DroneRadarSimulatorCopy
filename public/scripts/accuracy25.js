@@ -12,7 +12,7 @@ setTimeout(function(){
   noLoop();
   modal.style.display = "block";
   repeatingModal.style.display = "none";
-  sessionStorage.setItem("scenario1", "true");
+  sessionStorage.setItem("scenario3", "true");
 
 },960000);
 
@@ -25,12 +25,8 @@ setTimeout(function(){
   
     repeatingFinishButton.style.display = 'none';
 
-    
     // console.log(repeatingQuizCounter)
-  
-    
-    
-  },2400000);
+  },240000);
 
 
 
@@ -175,21 +171,20 @@ function setup() {
     if( i> 8 && i<=10 ){
       drones[i] = new nonHostileDrone();
       drones.id = String(i);
-      //console.log(drones[i]);
+      
     }
    //two well sclassified
     if( i> 10 && i<=12 ){
       drones[i] = new uncertainDrone();
       drones.id = String(i);
-      //console.log(drones[i]);
+     
     }
 
 
 
     if( i> 12 && i<18 ){
       drones[i] = new missclassifiedUncertainDrone();
-      // drones.id = String(i);
-      //console.log(drones[i]);
+     
     }
     if(i>= 18 && i<=20){
       
@@ -246,7 +241,7 @@ function getButton(buttonPressed){
 function getTime() {
 
   const date = new Date()
-  // console.log(date);
+  
 
   var timeLog = String(date)
   
@@ -264,7 +259,7 @@ function logDroneID(droneIndex){
   var droneIDLog = " button pressed by user ID " + UserID +  ", ID of drone selected: " + String(droneIndex) + ", drone selected on ";
   
   var timeDronePressed =  getTime();
-  // console.log(getTime());
+  
 
   var timeAndIDDronePressed = droneIDLog +  timeDronePressed;
 
@@ -289,11 +284,11 @@ var dronesClassifiedCorrectly = 0;
 
 btnConfirm.addEventListener('click',() => {  
   const confirmButtonLog = {outputConfirmButton:(getButton("confirm"))+ (getTime())};
-  // console.log(confirmButtonLog);
+  
 
   dataToPostScenario3.push(confirmButtonLog)
 
-  // console.log(dataToPostScenario1)
+ 
   
 // information to be logged in drone tracker
   // const pID = document.createElement('p');
@@ -350,7 +345,7 @@ btnConfirm.addEventListener('click',() => {
     const date = new Date()
 
     timeStampDroneConfirmed = date.getSeconds();
-    // console.log("timestamp drone confirmed at "+ timeStampDroneConfirmed);
+    
 
     timeElapsedClassifyingDrone =timeStampDroneConfirmed-timeClickedDrone 
     
@@ -359,7 +354,7 @@ btnConfirm.addEventListener('click',() => {
     }
 
 
-    // console.log("time between clicking drone and confirming "+timeElapsedClassifyingDrone +" seconds");
+   
 
     
     timeElapsed = "time between clicking drone and confirming "+timeElapsedClassifyingDrone +" seconds"
@@ -502,7 +497,7 @@ btnHostile.addEventListener('click',() => {
 function cb(droneIndex) {
 
   var droneIndexLog = logDroneID(droneIndex);
-  console.log(droneIndexLog)
+  // console.log(droneIndexLog)
 
    setDroneID(droneIndex)
 
@@ -566,7 +561,7 @@ function cb(droneIndex) {
     // CHANGING THE COLOURS OF THE BUTTONS WHEN DRONES ARE PRESSED
 
     
-    console.log((drones[selectedDroneIndex].colour.levels));
+    // console.log((drones[selectedDroneIndex].colour.levels));
 
     if (drones[selectedDroneIndex].colour.levels[1] == 255){
       // console.log("working")
@@ -609,7 +604,7 @@ function cb(droneIndex) {
     }
 
     if (drones[selectedDroneIndex] instanceof HostileDrone){
-      console.log("hostile drone")
+      // console.log("hostile drone")
     
       // updateSelectedButton("Hostile");
       updateSelectedDroneClass("Hostile");
@@ -619,7 +614,7 @@ function cb(droneIndex) {
     }
   
     if (drones[selectedDroneIndex] instanceof nonHostileDrone){
-      console.log("non hostile drone")
+      // console.log("non hostile drone")
       // updateSelectedButton("nonHostile");
       updateSelectedDroneClass("nonHostile");
       
@@ -628,7 +623,7 @@ function cb(droneIndex) {
       
     }
      if (drones[selectedDroneIndex] instanceof uncertainDrone){
-      console.log("uncertain drone")
+      // console.log("uncertain drone")
 
       updateSelectedButton("Uncertain");
       updateSelectedDroneClass("Uncertain");
@@ -638,7 +633,7 @@ function cb(droneIndex) {
     }
 
     if (drones[selectedDroneIndex] instanceof missclassifiedUncertainDrone){
-      console.log("uncertain drone")
+      // console.log("uncertain drone")
 
       updateSelectedButton("Uncertain");
       updateSelectedDroneClass("Uncertain");
@@ -648,7 +643,7 @@ function cb(droneIndex) {
     }
 
     if (drones[selectedDroneIndex] instanceof missclassifiedNonHostileDrone){
-      console.log("uncertain drone")
+      // console.log("uncertain drone")
 
       updateSelectedButton("nonHostile");
       updateSelectedDroneClass("nonHostile");
