@@ -7,7 +7,7 @@ setTimeout(function(){
   sessionStorage.setItem("testScenario", "true");
   noLoop();
 
-}, 240000);
+}, 10000);
 
 testScenarioLog = [];
 
