@@ -9,7 +9,7 @@ setTimeout(function(){
   repeatingModal.style.display = "none";
   sessionStorage.setItem("scenario1", "true");
  
-},10000);
+},960000);
 
 
 

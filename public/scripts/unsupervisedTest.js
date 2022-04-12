@@ -7,7 +7,7 @@ setTimeout(function(){
     sessionStorage.setItem("unsupervisedTestScenario", "true");
     noLoop();
   
-  }, 10000);
+  }, 240000);
   
   testScenarioLog = [];
   
