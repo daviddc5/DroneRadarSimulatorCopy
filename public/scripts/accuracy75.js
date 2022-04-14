@@ -5,7 +5,7 @@ setTimeout(function(){
   repeatingModal.style.display = "none";
   sessionStorage.setItem("scenario2", "true");
   
-},30000);
+},960000);
 
 
 
