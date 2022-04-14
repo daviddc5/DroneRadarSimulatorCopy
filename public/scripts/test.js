@@ -240,7 +240,7 @@ let finalNumberOfCorrectlyClassifiedDronesp = document.getElementById("finalNumb
 
     //timeStampDroneConfirmed, gets second at which the user has confirmed drone
   
-    timeStampDroneConfirmed = date.getSeconds();
+    timeStampDroneConfirmed = date.getMinutes()*60 + date.getSeconds()+ date.getMilliseconds()/1000
     // console.log("timestamp drone confirmed at "+ timeStampDroneConfirmed);
   
     
@@ -338,11 +338,11 @@ let finalNumberOfCorrectlyClassifiedDronesp = document.getElementById("finalNumb
 
       //this variable updates every time the confirm button is switched, and will add one if the drone has been correctly classified
       finalNumberOfCorrectlyClassifiedDrones= "the current number of drones classified correctly is " + dronesClassifiedCorrectly +" /20 drones in scenario"
-      finalNumberOfIncorrectlyClassifiedDrones = "the current number of drones classified incorrectly is " + dronesClassifiedIncorrectly +" /20 drones in scenario"
+      
       finalNumberOfCorrectlyClassifiedDronesp.innerText = dronesClassifiedCorrectly;
 
       
-      const classificationInformation = {finalDroneClassification, finalNumberOfCorrectlyClassifiedDrones, finalNumberOfIncorrectlyClassifiedDrones };
+      const classificationInformation = {finalDroneClassification, finalNumberOfCorrectlyClassifiedDrones };
 
       
       testScenarioLog.push(classificationInformation);
@@ -460,7 +460,7 @@ let finalNumberOfCorrectlyClassifiedDronesp = document.getElementById("finalNumb
   function cb(droneIndex) {
     const date = new Date()
   
-    timestampSecondDroneClicked = date.getSeconds();
+    timestampSecondDroneClicked = date.getMinutes()*60 + date.getSeconds()+ date.getMilliseconds()/1000
     // console.log("timestamp drone clicked at "+ timestampSecondDroneClicked);
   
     getTimeDroneClicked(timestampSecondDroneClicked);

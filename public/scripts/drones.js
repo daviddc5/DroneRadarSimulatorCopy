@@ -279,7 +279,7 @@ class missclassifiedNonHostileDrone extends Drone{
                 this.colour = color(255,255,0);
                 // console.log("missclasify as green") 
             }
-            }, 181000);
+            }, 180000);
     
             
     

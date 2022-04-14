@@ -269,15 +269,30 @@ function getTimeDroneClicked(timeClicked){
 
 dronesToClassify = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]
 
-
-
 var dronesClassifiedCorrectly = 0;
+dronesClassifiedIncorrectly = 0;
+
+var totalDronesClassified = 0;
+
+var trialNumber = 1;
+
+setInterval(() => {
+
+  dronesToClassify = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]
+  dronesClassifiedCorrectly = 0;
+
+  dronesClassifiedIncorrectly = 0;
+  totalDronesClassified = 0;
+  trialNumber++;
+  
+}, 10000);
+
+
+
 
 
 
 // console.log(dronesToClassify)
-
-
 
 //                        __   _                        _               _     _                   
 //                          / _| (_)                      | |             | |   | |                  
@@ -299,20 +314,25 @@ btnConfirm.addEventListener('click',() => {
 
     const date = new Date()
 
-    timeStampDroneConfirmed = date.getSeconds();
+    timeStampDroneConfirmed = date.getMinutes()*60 + date.getSeconds()+ date.getMilliseconds()/1000
+
+    
+
+    
     // console.log("timestamp drone confirmed at "+ timeStampDroneConfirmed);
 
     timeElapsedClassifyingDrone =timeStampDroneConfirmed-timeClickedDrone 
 
-    if(timeElapsedClassifyingDrone<0){
-      timeElapsedClassifyingDrone= 60-timeElapsedClassifyingDrone
-    }
+    // console.log(timeElapsedClassifyingDrone);
 
+    
 
     // console.log("time between clicking drone and confirming "+timeElapsedClassifyingDrone +" seconds");
 
     
     timeElapsed = "time between clicking drone and confirming "+timeElapsedClassifyingDrone +" seconds"
+
+    console.log(timeElapsed)
 
     const timeElapsedBetweenClickingAndConfirming = {timeElapsed};
 
@@ -324,14 +344,12 @@ btnConfirm.addEventListener('click',() => {
     //GET DRONE ID CHECK LIST 
     // IF IT IS IN LIST GO ON ELSE NOTHING
 
-    // console.log(drones[currentDroneID].id);
 
-    // indexOfCurrentDrone = dronesToClassify.indexOf(drones[currentDroneID].id)
-    // console.log(dronesToClassify  )
+    
+  // defines accuracy as percentage
+    var accuracyTrial = 5+dronesClassifiedCorrectly*5
 
-
-
-
+   
     if(dronesToClassify.includes(currentDroneID)){
 
       indexToDelete = dronesToClassify.indexOf(currentDroneID);
@@ -341,10 +359,13 @@ btnConfirm.addEventListener('click',() => {
     if(currentButtonPressed == droneClass){
       var classification = "correct"
       dronesClassifiedCorrectly++;
-      
+      //increase number of drones classified
+      totalDronesClassified++;
+
     }
     else{
       var classification = "incorrect"
+      dronesClassifiedIncorrectly++;
 
     }
 
@@ -353,14 +374,26 @@ btnConfirm.addEventListener('click',() => {
   else{
     console.log("already classified")
   }
+
+
     // dronesClassifiedIncorrectly = (20 - dronesClassifiedCorrectly);
     // this variable has info on the user ID drone id classified and classification
     finalDroneClassification = "The final drone classification of user "+ UserID+" of drone ID "+ currentDroneID+ ", class "+ droneClass+  ", is "+ currentButtonPressed+ ", this classification, is " + classification+ "!";
     //this variable updates every time the confirm button is switched, and will add one if the drone has been correctly classified
-    finalNumberOfCorrectlyClassifiedDrones = "the current number of drones classified correctly is " + dronesClassifiedCorrectly +" /20 drones in scenario"
-    // finalNumberOfIncorrectlyClassifiedDrones = "the current number of drones classified incorrectly is " + dronesClassifiedIncorrectly +" /20 drones in scenario"
+    finalNumberOfCorrectlyClassifiedDrones = "System accuracy 95" + ", Trial number: "+ trialNumber+ ", Drones classified correctly in this trial: " + dronesClassifiedCorrectly +" /20 drone/s"+ ", Accuracy of trial/burst: "+ accuracyTrial+ "%";
+
+    finalDroneCoverage = "total drones classified in trial " + trialNumber+ ":  "+ totalDronesClassified+ "/20 drones"
+
+    finalNumberOfIncorrectlyClassifiedDrones = "System accuracy: 95" + ", Trial number: "+ trialNumber+ ", Drones classified incorrectly in this trial:" + dronesClassifiedIncorrectly;
+
+    // console.log(finalDroneCoverage)
+
+    // console.log(finalNumberOfCorrectlyClassifiedDrones);
+
+    // console.log(finalNumberOfIncorrectlyClassifiedDrones);
     
-    const classificationInformation = {finalDroneClassification, finalNumberOfCorrectlyClassifiedDrones};
+    
+    const classificationInformation = {finalDroneClassification, finalNumberOfCorrectlyClassifiedDrones, finalDroneCoverage, finalNumberOfIncorrectlyClassifiedDrones};
     // console.log(classificationInformation);
 
 
@@ -476,9 +509,15 @@ function cb(droneIndex) {
   setDroneID(droneIndex) 
 
   // const date = new Date()
-  timestampSecondDroneClicked = date.getSeconds();
+  timestampDroneClicked =  date.getMinutes()*60 + date.getSeconds()+ date.getMilliseconds()/1000
+
+
+
+
+
+
   // console.log("timestamp drone clicked at "+ timestampSecondDroneClicked);
-  getTimeDroneClicked(timestampSecondDroneClicked);
+  getTimeDroneClicked(timestampDroneClicked);
   
   var droneIndexLog = logDroneID(droneIndex);
   // console.log(droneIndexLog)

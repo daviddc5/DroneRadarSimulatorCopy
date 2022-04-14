@@ -245,16 +245,14 @@ setTimeout(function(){
   
       //timeStampDroneConfirmed, gets second at which the user has confirmed drone
     
-      timeStampDroneConfirmed = date.getSeconds();
+      timeStampDroneConfirmed = date.getMinutes()*60 + date.getSeconds()+ date.getMilliseconds()/1000
       // console.log("timestamp drone confirmed at "+ timeStampDroneConfirmed);
     
       
   
       timeElapsedClassifyingDrone =timeStampDroneConfirmed-timeClickedDrone 
       
-      if(timeElapsedClassifyingDrone<0){
-        timeElapsedClassifyingDrone= 60-timeElapsedClassifyingDrone
-      }
+      
         
         timeElapsed = "time between clicking drone and confirming "+timeElapsedClassifyingDrone +" seconds"
   
@@ -336,7 +334,7 @@ setTimeout(function(){
   
         //this variable updates every time the confirm button is switched, and will add one if the drone has been correctly classified
         finalNumberOfCorrectlyClassifiedDrones= "the current number of drones classified correctly is " + dronesClassifiedCorrectly +" /20 drones in scenario"
-        finalNumberOfIncorrectlyClassifiedDrones = "the current number of drones classified incorrectly is " + dronesClassifiedIncorrectly +" /20 drones in scenario"
+        
         finalNumberOfCorrectlyClassifiedDronesp.innerText = dronesClassifiedCorrectly;
   
         
@@ -458,7 +456,7 @@ setTimeout(function(){
     function cb(droneIndex) {
       const date = new Date()
     
-      timestampSecondDroneClicked = date.getSeconds();
+      timestampSecondDroneClicked = date.getMinutes()*60 + date.getSeconds()+ date.getMilliseconds()/1000
       // console.log("timestamp drone clicked at "+ timestampSecondDroneClicked);
     
       getTimeDroneClicked(timestampSecondDroneClicked);
