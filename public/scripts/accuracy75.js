@@ -5,7 +5,7 @@ setTimeout(function(){
   repeatingModal.style.display = "none";
   sessionStorage.setItem("scenario2", "true");
   
-},960000);
+},30000);
 
 
 
@@ -266,6 +266,8 @@ dronesClassifiedIncorrectly = 0;
 
 var totalDronesClassified = 0;
 
+var totalNumberOfClassifactions = 0;
+
 var trialNumber = 1;
 
 setInterval(() => {
@@ -274,6 +276,7 @@ setInterval(() => {
   dronesClassifiedCorrectly = 0;
 
   dronesClassifiedIncorrectly = 0;
+  totalNumberOfClassifactions = 0;
   totalDronesClassified = 0;
   trialNumber++;
   
@@ -301,6 +304,10 @@ btnConfirm.addEventListener('click',() => {
     
     
 
+var accuracyTrial = dronesClassifiedCorrectly/totalNumberOfClassifactions*100+5
+console.log(accuracyTrial)
+
+
 
     // console.log("time between clicking drone and confirming "+timeElapsedClassifyingDrone +" seconds");
 
@@ -317,9 +324,9 @@ btnConfirm.addEventListener('click',() => {
 
 
 
-    
-  // defines accuracy as percentage
-  var accuracyTrial = 5+dronesClassifiedCorrectly*5
+  totalNumberOfClassifactions++;
+
+  
 
    
   if(dronesToClassify.includes(droneID)){
@@ -334,6 +341,8 @@ btnConfirm.addEventListener('click',() => {
     //increase number of drones classified
     totalDronesClassified++;
 
+    
+
   }
   else{
     var classification = "incorrect"
@@ -341,13 +350,7 @@ btnConfirm.addEventListener('click',() => {
 
   }
 
-}
-
-else{
-  console.log("already classified")
-}
-
-
+  
   // dronesClassifiedIncorrectly = (20 - dronesClassifiedCorrectly);
   // this variable has info on the user ID drone id classified and classification
   finalDroneClassification = "The final drone classification of user "+ UserID+" of drone ID "+ droneID+ ", class "+ droneClass+  ", is "+ currentButtonPressed+ ", this classification, is " + classification+ "!";
@@ -371,6 +374,14 @@ else{
 
   // axios.post("/scenario1",classificationInformation);
   dataToPostScenario2.push(classificationInformation);
+
+}
+
+else{
+  console.log("already classified")
+}
+
+
 
 
  // depending on the value of the current button pressed we change the colour of drones

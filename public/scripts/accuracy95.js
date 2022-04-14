@@ -274,13 +274,15 @@ dronesClassifiedIncorrectly = 0;
 
 var totalDronesClassified = 0;
 
+var totalNumberOfClassifactions = 0;
+
 var trialNumber = 1;
 
 setInterval(() => {
 
   dronesToClassify = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]
   dronesClassifiedCorrectly = 0;
-
+  totalNumberOfClassifactions = 0;
   dronesClassifiedIncorrectly = 0;
   totalDronesClassified = 0;
   trialNumber++;
@@ -346,8 +348,10 @@ btnConfirm.addEventListener('click',() => {
 
 
     
-  // defines accuracy as percentage
-    var accuracyTrial = 5+dronesClassifiedCorrectly*5
+  totalNumberOfClassifactions++;
+
+    // defines accuracy as percentage
+    var accuracyTrial = dronesClassifiedCorrectly/totalNumberOfClassifactions*100+5
 
    
     if(dronesToClassify.includes(currentDroneID)){
@@ -369,13 +373,7 @@ btnConfirm.addEventListener('click',() => {
 
     }
 
-  }
-
-  else{
-    console.log("already classified")
-  }
-
-
+    
     // dronesClassifiedIncorrectly = (20 - dronesClassifiedCorrectly);
     // this variable has info on the user ID drone id classified and classification
     finalDroneClassification = "The final drone classification of user "+ UserID+" of drone ID "+ currentDroneID+ ", class "+ droneClass+  ", is "+ currentButtonPressed+ ", this classification, is " + classification+ "!";
@@ -386,19 +384,20 @@ btnConfirm.addEventListener('click',() => {
 
     finalNumberOfIncorrectlyClassifiedDrones = "System accuracy: 95" + ", Trial number: "+ trialNumber+ ", Drones classified incorrectly in this trial:" + dronesClassifiedIncorrectly;
 
-    // console.log(finalDroneCoverage)
-
-    // console.log(finalNumberOfCorrectlyClassifiedDrones);
-
-    // console.log(finalNumberOfIncorrectlyClassifiedDrones);
-    
     
     const classificationInformation = {finalDroneClassification, finalNumberOfCorrectlyClassifiedDrones, finalDroneCoverage, finalNumberOfIncorrectlyClassifiedDrones};
     // console.log(classificationInformation);
 
-
     // axios.post("/scenario1",classificationInformation);
     dataToPostScenario1.push(classificationInformation);
+
+
+
+  }
+
+  else{
+    console.log("already classified")
+  }
 
 
  // depending on the value of the current button pressed we change the colour of drones

@@ -1,0 +1,280 @@
+[
+    {
+        "accuracy75": "starting scenario of accuracy 75"
+    },
+    {
+        "droneIndexLog": " button pressed by user ID 1, ID of drone selected: 8, drone selected on Thu Apr 14 2022 12:36:31 GMT+0100 (British Summer Time)"
+    },
+    {
+        "outputConfirmButton": "confirm button pressed by user ID 1 on : Thu Apr 14 2022 12:36:32 GMT+0100 (British Summer Time)"
+    },
+    {
+        "timeElapsed": "time between clicking drone and confirming 1.0109999999999673 seconds"
+    },
+    {
+        "finalDroneClassification": "The final drone classification of user 1 of drone ID 8, class nonHostile, is nonHostile, this classification, is correct!",
+        "finalNumberOfCorrectlyClassifiedDrones": "System accuracy 75, Trial number: 1, Drones classified correctly in this trial: 1 /20 drone/s, Accuracy of trial/burst: 0%",
+        "finalDroneCoverage": "total drones classified in trial 1:  1/20 drones",
+        "finalNumberOfIncorrectlyClassifiedDrones": "System accuracy: 75, Trial number: 1, Drones classified incorrectly in this trial:0"
+    },
+    {
+        "outputUncertainButton": "uncertain button pressed by user ID 1 on : ",
+        "outputUncertainTimeLog": "Thu Apr 14 2022 12:36:33 GMT+0100 (British Summer Time)"
+    },
+    {
+        "outputConfirmButton": "confirm button pressed by user ID 1 on : Thu Apr 14 2022 12:36:35 GMT+0100 (British Summer Time)"
+    },
+    {
+        "timeElapsed": "time between clicking drone and confirming 4.087999999999738 seconds"
+    },
+    {
+        "outputNonHostileButton": "non hostile button pressed by user ID 1 on : ",
+        "outputNonHostileTimeLog": "Thu Apr 14 2022 12:36:38 GMT+0100 (British Summer Time)"
+    },
+    {
+        "outputConfirmButton": "confirm button pressed by user ID 1 on : Thu Apr 14 2022 12:36:38 GMT+0100 (British Summer Time)"
+    },
+    {
+        "timeElapsed": "time between clicking drone and confirming 7.507000000000062 seconds"
+    },
+    {
+        "droneIndexLog": " button pressed by user ID 1, ID of drone selected: 12, drone selected on Thu Apr 14 2022 12:36:40 GMT+0100 (British Summer Time)"
+    },
+    {
+        "outputConfirmButton": "confirm button pressed by user ID 1 on : Thu Apr 14 2022 12:36:44 GMT+0100 (British Summer Time)"
+    },
+    {
+        "timeElapsed": "time between clicking drone and confirming 4.027999999999793 seconds"
+    },
+    {
+        "finalDroneClassification": "The final drone classification of user 1 of drone ID 12, class Uncertain, is Uncertain, this classification, is correct!",
+        "finalNumberOfCorrectlyClassifiedDrones": "System accuracy 75, Trial number: 1, Drones classified correctly in this trial: 2 /20 drone/s, Accuracy of trial/burst: 25%",
+        "finalDroneCoverage": "total drones classified in trial 1:  2/20 drones",
+        "finalNumberOfIncorrectlyClassifiedDrones": "System accuracy: 75, Trial number: 1, Drones classified incorrectly in this trial:0"
+    },
+    {
+        "droneIndexLog": " button pressed by user ID 1, ID of drone selected: 9, drone selected on Thu Apr 14 2022 12:36:45 GMT+0100 (British Summer Time)"
+    },
+    {
+        "outputConfirmButton": "confirm button pressed by user ID 1 on : Thu Apr 14 2022 12:36:48 GMT+0100 (British Summer Time)"
+    },
+    {
+        "timeElapsed": "time between clicking drone and confirming 3.331000000000131 seconds"
+    },
+    {
+        "finalDroneClassification": "The final drone classification of user 1 of drone ID 9, class nonHostile, is nonHostile, this classification, is correct!",
+        "finalNumberOfCorrectlyClassifiedDrones": "System accuracy 75, Trial number: 1, Drones classified correctly in this trial: 3 /20 drone/s, Accuracy of trial/burst: 40%",
+        "finalDroneCoverage": "total drones classified in trial 1:  3/20 drones",
+        "finalNumberOfIncorrectlyClassifiedDrones": "System accuracy: 75, Trial number: 1, Drones classified incorrectly in this trial:0"
+    },
+    {
+        "droneIndexLog": " button pressed by user ID 1, ID of drone selected: 8, drone selected on Thu Apr 14 2022 12:36:50 GMT+0100 (British Summer Time)"
+    },
+    {
+        "droneIndexLog": " button pressed by user ID 1, ID of drone selected: 7, drone selected on Thu Apr 14 2022 12:36:51 GMT+0100 (British Summer Time)"
+    },
+    {
+        "outputConfirmButton": "confirm button pressed by user ID 1 on : Thu Apr 14 2022 12:36:52 GMT+0100 (British Summer Time)"
+    },
+    {
+        "timeElapsed": "time between clicking drone and confirming 1.2699999999999818 seconds"
+    },
+    {
+        "finalDroneClassification": "The final drone classification of user 1 of drone ID 7, class nonHostile, is nonHostile, this classification, is correct!",
+        "finalNumberOfCorrectlyClassifiedDrones": "System accuracy 75, Trial number: 1, Drones classified correctly in this trial: 4 /20 drone/s, Accuracy of trial/burst: 50%",
+        "finalDroneCoverage": "total drones classified in trial 1:  4/20 drones",
+        "finalNumberOfIncorrectlyClassifiedDrones": "System accuracy: 75, Trial number: 1, Drones classified incorrectly in this trial:0"
+    },
+    {
+        "droneIndexLog": " button pressed by user ID 1, ID of drone selected: 8, drone selected on Thu Apr 14 2022 12:36:53 GMT+0100 (British Summer Time)"
+    },
+    {
+        "outputConfirmButton": "confirm button pressed by user ID 1 on : Thu Apr 14 2022 12:36:55 GMT+0100 (British Summer Time)"
+    },
+    {
+        "timeElapsed": "time between clicking drone and confirming 1.8730000000000473 seconds"
+    },
+    {
+        "outputConfirmButton": "confirm button pressed by user ID 1 on : Thu Apr 14 2022 12:36:59 GMT+0100 (British Summer Time)"
+    },
+    {
+        "timeElapsed": "time between clicking drone and confirming 5.367000000000189 seconds"
+    }
+][
+    {
+        "accuracy75": "starting scenario of accuracy 75"
+    },
+    {
+        "droneIndexLog": " button pressed by user ID , ID of drone selected: 8, drone selected on Thu Apr 14 2022 12:52:34 GMT+0100 (British Summer Time)"
+    },
+    {
+        "droneIndexLog": " button pressed by user ID , ID of drone selected: 8, drone selected on Thu Apr 14 2022 12:52:34 GMT+0100 (British Summer Time)"
+    },
+    {
+        "outputConfirmButton": "confirm button pressed by user ID  on : Thu Apr 14 2022 12:52:35 GMT+0100 (British Summer Time)"
+    },
+    {
+        "timeElapsed": "time between clicking drone and confirming 0.7770000000000437 seconds"
+    },
+    {
+        "finalDroneClassification": "The final drone classification of user  of drone ID 8, class nonHostile, is nonHostile, this classification, is correct!",
+        "finalNumberOfCorrectlyClassifiedDrones": "System accuracy 75, Trial number: 1, Drones classified correctly in this trial: 1 /20 drone/s, Accuracy of trial/burst: Infinity%",
+        "finalDroneCoverage": "total drones classified in trial 1:  1/20 drones",
+        "finalNumberOfIncorrectlyClassifiedDrones": "System accuracy: 75, Trial number: 1, Drones classified incorrectly in this trial:0"
+    },
+    {
+        "outputConfirmButton": "confirm button pressed by user ID  on : Thu Apr 14 2022 12:52:35 GMT+0100 (British Summer Time)"
+    },
+    {
+        "timeElapsed": "time between clicking drone and confirming 1.3399999999996908 seconds"
+    },
+    {
+        "outputConfirmButton": "confirm button pressed by user ID  on : Thu Apr 14 2022 12:52:37 GMT+0100 (British Summer Time)"
+    },
+    {
+        "timeElapsed": "time between clicking drone and confirming 2.587999999999738 seconds"
+    },
+    {
+        "outputConfirmButton": "confirm button pressed by user ID  on : Thu Apr 14 2022 12:52:37 GMT+0100 (British Summer Time)"
+    },
+    {
+        "timeElapsed": "time between clicking drone and confirming 3.1729999999997744 seconds"
+    },
+    {
+        "outputConfirmButton": "confirm button pressed by user ID  on : Thu Apr 14 2022 12:52:38 GMT+0100 (British Summer Time)"
+    },
+    {
+        "timeElapsed": "time between clicking drone and confirming 3.8099999999999454 seconds"
+    },
+    {
+        "outputConfirmButton": "confirm button pressed by user ID  on : Thu Apr 14 2022 12:52:38 GMT+0100 (British Summer Time)"
+    },
+    {
+        "timeElapsed": "time between clicking drone and confirming 4.045999999999822 seconds"
+    },
+    {
+        "outputConfirmButton": "confirm button pressed by user ID  on : Thu Apr 14 2022 12:52:38 GMT+0100 (British Summer Time)"
+    },
+    {
+        "timeElapsed": "time between clicking drone and confirming 4.234999999999673 seconds"
+    },
+    {
+        "droneIndexLog": " button pressed by user ID , ID of drone selected: 4, drone selected on Thu Apr 14 2022 12:52:40 GMT+0100 (British Summer Time)"
+    },
+    {
+        "droneIndexLog": " button pressed by user ID , ID of drone selected: 4, drone selected on Thu Apr 14 2022 12:52:40 GMT+0100 (British Summer Time)"
+    },
+    {
+        "outputConfirmButton": "confirm button pressed by user ID  on : Thu Apr 14 2022 12:52:41 GMT+0100 (British Summer Time)"
+    },
+    {
+        "timeElapsed": "time between clicking drone and confirming 0.8299999999999272 seconds"
+    },
+    {
+        "finalDroneClassification": "The final drone classification of user  of drone ID 4, class nonHostile, is nonHostile, this classification, is correct!",
+        "finalNumberOfCorrectlyClassifiedDrones": "System accuracy 75, Trial number: 1, Drones classified correctly in this trial: 2 /20 drone/s, Accuracy of trial/burst: 142.85714285714286%",
+        "finalDroneCoverage": "total drones classified in trial 1:  2/20 drones",
+        "finalNumberOfIncorrectlyClassifiedDrones": "System accuracy: 75, Trial number: 1, Drones classified incorrectly in this trial:0"
+    },
+    {
+        "outputConfirmButton": "confirm button pressed by user ID  on : Thu Apr 14 2022 12:52:41 GMT+0100 (British Summer Time)"
+    },
+    {
+        "timeElapsed": "time between clicking drone and confirming 1.6539999999999964 seconds"
+    },
+    {
+        "droneIndexLog": " button pressed by user ID , ID of drone selected: 12, drone selected on Thu Apr 14 2022 12:52:53 GMT+0100 (British Summer Time)"
+    },
+    {
+        "droneIndexLog": " button pressed by user ID , ID of drone selected: 12, drone selected on Thu Apr 14 2022 12:52:53 GMT+0100 (British Summer Time)"
+    }
+]
+[
+    {
+        "accuracy75": "starting scenario of accuracy 75"
+    },
+    {
+        "droneIndexLog": " button pressed by user ID , ID of drone selected: 8, drone selected on Thu Apr 14 2022 12:52:34 GMT+0100 (British Summer Time)"
+    },
+    {
+        "droneIndexLog": " button pressed by user ID , ID of drone selected: 8, drone selected on Thu Apr 14 2022 12:52:34 GMT+0100 (British Summer Time)"
+    },
+    {
+        "outputConfirmButton": "confirm button pressed by user ID  on : Thu Apr 14 2022 12:52:35 GMT+0100 (British Summer Time)"
+    },
+    {
+        "timeElapsed": "time between clicking drone and confirming 0.7770000000000437 seconds"
+    },
+    {
+        "finalDroneClassification": "The final drone classification of user  of drone ID 8, class nonHostile, is nonHostile, this classification, is correct!",
+        "finalNumberOfCorrectlyClassifiedDrones": "System accuracy 75, Trial number: 1, Drones classified correctly in this trial: 1 /20 drone/s, Accuracy of trial/burst: Infinity%",
+        "finalDroneCoverage": "total drones classified in trial 1:  1/20 drones",
+        "finalNumberOfIncorrectlyClassifiedDrones": "System accuracy: 75, Trial number: 1, Drones classified incorrectly in this trial:0"
+    },
+    {
+        "outputConfirmButton": "confirm button pressed by user ID  on : Thu Apr 14 2022 12:52:35 GMT+0100 (British Summer Time)"
+    },
+    {
+        "timeElapsed": "time between clicking drone and confirming 1.3399999999996908 seconds"
+    },
+    {
+        "outputConfirmButton": "confirm button pressed by user ID  on : Thu Apr 14 2022 12:52:37 GMT+0100 (British Summer Time)"
+    },
+    {
+        "timeElapsed": "time between clicking drone and confirming 2.587999999999738 seconds"
+    },
+    {
+        "outputConfirmButton": "confirm button pressed by user ID  on : Thu Apr 14 2022 12:52:37 GMT+0100 (British Summer Time)"
+    },
+    {
+        "timeElapsed": "time between clicking drone and confirming 3.1729999999997744 seconds"
+    },
+    {
+        "outputConfirmButton": "confirm button pressed by user ID  on : Thu Apr 14 2022 12:52:38 GMT+0100 (British Summer Time)"
+    },
+    {
+        "timeElapsed": "time between clicking drone and confirming 3.8099999999999454 seconds"
+    },
+    {
+        "outputConfirmButton": "confirm button pressed by user ID  on : Thu Apr 14 2022 12:52:38 GMT+0100 (British Summer Time)"
+    },
+    {
+        "timeElapsed": "time between clicking drone and confirming 4.045999999999822 seconds"
+    },
+    {
+        "outputConfirmButton": "confirm button pressed by user ID  on : Thu Apr 14 2022 12:52:38 GMT+0100 (British Summer Time)"
+    },
+    {
+        "timeElapsed": "time between clicking drone and confirming 4.234999999999673 seconds"
+    },
+    {
+        "droneIndexLog": " button pressed by user ID , ID of drone selected: 4, drone selected on Thu Apr 14 2022 12:52:40 GMT+0100 (British Summer Time)"
+    },
+    {
+        "droneIndexLog": " button pressed by user ID , ID of drone selected: 4, drone selected on Thu Apr 14 2022 12:52:40 GMT+0100 (British Summer Time)"
+    },
+    {
+        "outputConfirmButton": "confirm button pressed by user ID  on : Thu Apr 14 2022 12:52:41 GMT+0100 (British Summer Time)"
+    },
+    {
+        "timeElapsed": "time between clicking drone and confirming 0.8299999999999272 seconds"
+    },
+    {
+        "finalDroneClassification": "The final drone classification of user  of drone ID 4, class nonHostile, is nonHostile, this classification, is correct!",
+        "finalNumberOfCorrectlyClassifiedDrones": "System accuracy 75, Trial number: 1, Drones classified correctly in this trial: 2 /20 drone/s, Accuracy of trial/burst: 142.85714285714286%",
+        "finalDroneCoverage": "total drones classified in trial 1:  2/20 drones",
+        "finalNumberOfIncorrectlyClassifiedDrones": "System accuracy: 75, Trial number: 1, Drones classified incorrectly in this trial:0"
+    },
+    {
+        "outputConfirmButton": "confirm button pressed by user ID  on : Thu Apr 14 2022 12:52:41 GMT+0100 (British Summer Time)"
+    },
+    {
+        "timeElapsed": "time between clicking drone and confirming 1.6539999999999964 seconds"
+    },
+    {
+        "droneIndexLog": " button pressed by user ID , ID of drone selected: 12, drone selected on Thu Apr 14 2022 12:52:53 GMT+0100 (British Summer Time)"
+    },
+    {
+        "droneIndexLog": " button pressed by user ID , ID of drone selected: 12, drone selected on Thu Apr 14 2022 12:52:53 GMT+0100 (British Summer Time)"
+    }
+]
