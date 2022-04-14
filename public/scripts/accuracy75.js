@@ -304,7 +304,7 @@ btnConfirm.addEventListener('click',() => {
     
     
 
-var accuracyTrial = dronesClassifiedCorrectly/totalNumberOfClassifactions*100+5
+var accuracyTrial = dronesClassifiedCorrectly/totalNumberOfClassifactions*100
 console.log(accuracyTrial)
 
 

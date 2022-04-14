@@ -351,7 +351,7 @@ btnConfirm.addEventListener('click',() => {
   totalNumberOfClassifactions++;
 
     // defines accuracy as percentage
-    var accuracyTrial = dronesClassifiedCorrectly/totalNumberOfClassifactions*100+5
+    var accuracyTrial = dronesClassifiedCorrectly/totalNumberOfClassifactions*100
 
    
     if(dronesToClassify.includes(currentDroneID)){
