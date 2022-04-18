@@ -9,7 +9,7 @@ setTimeout(function(){
   repeatingModal.style.display = "none";
   sessionStorage.setItem("scenario1", "true");
  
-},960000);
+},10000);
 
 
 
@@ -138,7 +138,7 @@ setInterval(() => {
     blackCoverBox.style.display = 'none';
     
   }, 800)
-},180000);
+},300000);
 
 
 
@@ -251,12 +251,27 @@ function logDroneID(droneIndex){
   // var ID = document.createTextNode("ID of drone selected: " + String(droneIndex)+ "\n");
   // logFile.append(ID);
   
+  
   var droneIDLog = " drone pressed by user ID " + UserID +  ", ID of drone selected: " + String(droneIndex) + ", drone selected on  "+ getTime();
   
 
   return droneIDLog;
 
 }
+
+function logDroneID(droneIndex){
+  // var ID = document.createTextNode("ID of drone selected: " + String(droneIndex)+ "\n");
+  // logFile.append(ID);
+  
+  
+  // var droneIDLog = " drone pressed by user ID " + UserID +  ", ID of drone selected: " + String(droneIndex) + ", drone selected on  "+ getTime();
+
+  var droneIDLog = String(droneIndex);
+
+  return droneIDLog;
+
+}
+
 
 
 function getTimeDroneClicked(timeClicked){
@@ -287,7 +302,7 @@ setInterval(() => {
   totalDronesClassified = 0;
   trialNumber++;
   
-}, 10000);
+}, 240000);
 
 
 

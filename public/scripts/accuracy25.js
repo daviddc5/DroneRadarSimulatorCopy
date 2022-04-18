@@ -14,7 +14,7 @@ setTimeout(function(){
   repeatingModal.style.display = "none";
   sessionStorage.setItem("scenario3", "true");
 
-},960000);
+},10000);
 
 
 
@@ -129,7 +129,7 @@ setInterval(() => {
   setTimeout(() => {
     blackCoverBox.style.display = 'none';
   }, 800)
-},180000);
+},300000);
 
 
 
