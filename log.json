@@ -1,412 +1,1917 @@
 [
     {
-        "accuracy75": "starting scenario of accuracy 75"
+        "participantID": "1",
+        "accuracy75": "2022-04-22T15:59:12.393Z"
     },
     {
-        "droneIndexLog": " button pressed by user ID 1, ID of drone selected: 8, drone selected on Thu Apr 14 2022 12:36:31 GMT+0100 (British Summer Time)"
+        "participantID": "1",
+        "droneID": "16",
+        "timestampDroneClicked": "2022-04-22T15:59:13.769Z",
+        "AutoclassifierHostilityLeveL": "Uncertain",
+        "droneClass": "Uncertain"
     },
     {
-        "outputConfirmButton": "confirm button pressed by user ID 1 on : Thu Apr 14 2022 12:36:32 GMT+0100 (British Summer Time)"
+        "participantID": "1",
+        "trialNumber": 1,
+        "droneID": 16,
+        "timeStampClickConfirm": "2022-04-22T15:59:16.175Z",
+        "timeElapsedClassifyingDrone": 2.406000000000404,
+        "participantGivenHostility": "Uncertain",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "1/20",
+        "dronesClassifiedCorrectly": 1,
+        "dronesClassifiedIncorrectly": 0
     },
     {
-        "timeElapsed": "time between clicking drone and confirming 1.0109999999999673 seconds"
+        "participantID": "1",
+        "droneID": "10",
+        "timestampDroneClicked": "2022-04-22T15:59:17.866Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
     },
     {
-        "finalDroneClassification": "The final drone classification of user 1 of drone ID 8, class nonHostile, is nonHostile, this classification, is correct!",
-        "finalNumberOfCorrectlyClassifiedDrones": "System accuracy 75, Trial number: 1, Drones classified correctly in this trial: 1 /20 drone/s, Accuracy of trial/burst: 0%",
-        "finalDroneCoverage": "total drones classified in trial 1:  1/20 drones",
-        "finalNumberOfIncorrectlyClassifiedDrones": "System accuracy: 75, Trial number: 1, Drones classified incorrectly in this trial:0"
+        "participantID": "1",
+        "trialNumber": 1,
+        "droneID": 10,
+        "timeStampClickConfirm": "2022-04-22T15:59:20.452Z",
+        "timeElapsedClassifyingDrone": 2.58600000000024,
+        "participantGivenHostility": "nonHostile",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "2/20",
+        "dronesClassifiedCorrectly": 2,
+        "dronesClassifiedIncorrectly": 0
     },
     {
-        "outputUncertainButton": "uncertain button pressed by user ID 1 on : ",
-        "outputUncertainTimeLog": "Thu Apr 14 2022 12:36:33 GMT+0100 (British Summer Time)"
+        "participantID": "1",
+        "droneID": "19",
+        "timestampDroneClicked": "2022-04-22T15:59:21.824Z",
+        "AutoclassifierHostilityLeveL": "Hostile",
+        "droneClass": "Hostile"
     },
     {
-        "outputConfirmButton": "confirm button pressed by user ID 1 on : Thu Apr 14 2022 12:36:35 GMT+0100 (British Summer Time)"
+        "participantID": "1",
+        "trialNumber": 1,
+        "droneID": 19,
+        "timeStampClickConfirm": "2022-04-22T15:59:28.903Z",
+        "timeElapsedClassifyingDrone": 7.0789999999997235,
+        "participantGivenHostility": "Hostile",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "3/20",
+        "dronesClassifiedCorrectly": 3,
+        "dronesClassifiedIncorrectly": 0
     },
     {
-        "timeElapsed": "time between clicking drone and confirming 4.087999999999738 seconds"
+        "participantID": "1",
+        "droneID": "2",
+        "timestampDroneClicked": "2022-04-22T15:59:29.928Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
     },
     {
-        "outputNonHostileButton": "non hostile button pressed by user ID 1 on : ",
-        "outputNonHostileTimeLog": "Thu Apr 14 2022 12:36:38 GMT+0100 (British Summer Time)"
+        "participantID": "1",
+        "trialNumber": 1,
+        "droneID": 2,
+        "timeStampClickConfirm": "2022-04-22T15:59:37.874Z",
+        "timeElapsedClassifyingDrone": 7.945999999999913,
+        "participantGivenHostility": "nonHostile",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "4/20",
+        "dronesClassifiedCorrectly": 4,
+        "dronesClassifiedIncorrectly": 0
     },
     {
-        "outputConfirmButton": "confirm button pressed by user ID 1 on : Thu Apr 14 2022 12:36:38 GMT+0100 (British Summer Time)"
+        "participantID": "1",
+        "droneID": "19",
+        "timestampDroneClicked": "2022-04-22T15:59:53.454Z",
+        "AutoclassifierHostilityLeveL": "Hostile",
+        "droneClass": "Hostile"
     },
     {
-        "timeElapsed": "time between clicking drone and confirming 7.507000000000062 seconds"
+        "participantID": "1",
+        "trialNumber": 1,
+        "droneID": 19,
+        "timeStampClickConfirm": "2022-04-22T15:59:56.019Z",
+        "timeElapsedClassifyingDrone": 2.5649999999996,
+        "participantGivenHostility": "nonHostile",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "4/20",
+        "dronesClassifiedCorrectly": 5,
+        "dronesClassifiedIncorrectly": 0
     },
     {
-        "droneIndexLog": " button pressed by user ID 1, ID of drone selected: 12, drone selected on Thu Apr 14 2022 12:36:40 GMT+0100 (British Summer Time)"
+        "participantID": "1",
+        "droneID": "11",
+        "timestampDroneClicked": "2022-04-22T15:59:58.559Z",
+        "AutoclassifierHostilityLeveL": "Uncertain",
+        "droneClass": "Uncertain"
     },
     {
-        "outputConfirmButton": "confirm button pressed by user ID 1 on : Thu Apr 14 2022 12:36:44 GMT+0100 (British Summer Time)"
+        "participantID": "1",
+        "trialNumber": 1,
+        "droneID": 11,
+        "timeStampClickConfirm": "2022-04-22T16:00:00.855Z",
+        "timeElapsedClassifyingDrone": -3597.704,
+        "participantGivenHostility": "Uncertain",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "5/20",
+        "dronesClassifiedCorrectly": 6,
+        "dronesClassifiedIncorrectly": 0
     },
     {
-        "timeElapsed": "time between clicking drone and confirming 4.027999999999793 seconds"
+        "participantID": "1",
+        "droneID": "2",
+        "timestampDroneClicked": "2022-04-22T16:00:05.104Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
     },
     {
-        "finalDroneClassification": "The final drone classification of user 1 of drone ID 12, class Uncertain, is Uncertain, this classification, is correct!",
-        "finalNumberOfCorrectlyClassifiedDrones": "System accuracy 75, Trial number: 1, Drones classified correctly in this trial: 2 /20 drone/s, Accuracy of trial/burst: 25%",
-        "finalDroneCoverage": "total drones classified in trial 1:  2/20 drones",
-        "finalNumberOfIncorrectlyClassifiedDrones": "System accuracy: 75, Trial number: 1, Drones classified incorrectly in this trial:0"
+        "participantID": "1",
+        "trialNumber": 1,
+        "droneID": 2,
+        "timeStampClickConfirm": "2022-04-22T16:00:06.689Z",
+        "timeElapsedClassifyingDrone": 1.585,
+        "participantGivenHostility": "Uncertain",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "5/20",
+        "dronesClassifiedCorrectly": 7,
+        "dronesClassifiedIncorrectly": 0
     },
     {
-        "droneIndexLog": " button pressed by user ID 1, ID of drone selected: 9, drone selected on Thu Apr 14 2022 12:36:45 GMT+0100 (British Summer Time)"
+        "participantID": "1",
+        "droneID": "1",
+        "timestampDroneClicked": "2022-04-22T16:00:18.923Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
     },
     {
-        "outputConfirmButton": "confirm button pressed by user ID 1 on : Thu Apr 14 2022 12:36:48 GMT+0100 (British Summer Time)"
+        "participantID": "1",
+        "droneID": "13",
+        "timestampDroneClicked": "2022-04-22T16:00:22.915Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "Hostile"
     },
     {
-        "timeElapsed": "time between clicking drone and confirming 3.331000000000131 seconds"
+        "participantID": "1",
+        "trialNumber": 1,
+        "droneID": 13,
+        "timeStampClickConfirm": "2022-04-22T16:00:24.244Z",
+        "timeElapsedClassifyingDrone": 1.3290000000000006,
+        "participantGivenHostility": "nonHostile",
+        "CorrectOrIncorrect": "incorrect",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "6/20",
+        "dronesClassifiedCorrectly": 7,
+        "dronesClassifiedIncorrectly": 1
     },
     {
-        "finalDroneClassification": "The final drone classification of user 1 of drone ID 9, class nonHostile, is nonHostile, this classification, is correct!",
-        "finalNumberOfCorrectlyClassifiedDrones": "System accuracy 75, Trial number: 1, Drones classified correctly in this trial: 3 /20 drone/s, Accuracy of trial/burst: 40%",
-        "finalDroneCoverage": "total drones classified in trial 1:  3/20 drones",
-        "finalNumberOfIncorrectlyClassifiedDrones": "System accuracy: 75, Trial number: 1, Drones classified incorrectly in this trial:0"
+        "participantID": "1",
+        "droneID": "19",
+        "timestampDroneClicked": "2022-04-22T16:00:25.885Z",
+        "AutoclassifierHostilityLeveL": "Hostile",
+        "droneClass": "Hostile"
     },
     {
-        "droneIndexLog": " button pressed by user ID 1, ID of drone selected: 8, drone selected on Thu Apr 14 2022 12:36:50 GMT+0100 (British Summer Time)"
+        "participantID": "1",
+        "trialNumber": 1,
+        "droneID": 19,
+        "timeStampClickConfirm": "2022-04-22T16:00:27.896Z",
+        "timeElapsedClassifyingDrone": 2.0109999999999992,
+        "participantGivenHostility": "nonHostile",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "6/20",
+        "dronesClassifiedCorrectly": 8,
+        "dronesClassifiedIncorrectly": 1
     },
     {
-        "droneIndexLog": " button pressed by user ID 1, ID of drone selected: 7, drone selected on Thu Apr 14 2022 12:36:51 GMT+0100 (British Summer Time)"
+        "participantID": "1",
+        "droneID": "17",
+        "timestampDroneClicked": "2022-04-22T16:00:28.935Z",
+        "AutoclassifierHostilityLeveL": "Hostile",
+        "droneClass": "Hostile"
     },
     {
-        "outputConfirmButton": "confirm button pressed by user ID 1 on : Thu Apr 14 2022 12:36:52 GMT+0100 (British Summer Time)"
+        "participantID": "1",
+        "trialNumber": 1,
+        "droneID": 17,
+        "timeStampClickConfirm": "2022-04-22T16:00:30.553Z",
+        "timeElapsedClassifyingDrone": 1.618000000000002,
+        "participantGivenHostility": "Hostile",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "7/20",
+        "dronesClassifiedCorrectly": 9,
+        "dronesClassifiedIncorrectly": 1
     },
     {
-        "timeElapsed": "time between clicking drone and confirming 1.2699999999999818 seconds"
+        "participantID": "1",
+        "droneID": "2",
+        "timestampDroneClicked": "2022-04-22T16:00:37.739Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
     },
     {
-        "finalDroneClassification": "The final drone classification of user 1 of drone ID 7, class nonHostile, is nonHostile, this classification, is correct!",
-        "finalNumberOfCorrectlyClassifiedDrones": "System accuracy 75, Trial number: 1, Drones classified correctly in this trial: 4 /20 drone/s, Accuracy of trial/burst: 50%",
-        "finalDroneCoverage": "total drones classified in trial 1:  4/20 drones",
-        "finalNumberOfIncorrectlyClassifiedDrones": "System accuracy: 75, Trial number: 1, Drones classified incorrectly in this trial:0"
+        "participantID": "1",
+        "trialNumber": 1,
+        "droneID": 2,
+        "timeStampClickConfirm": "2022-04-22T16:00:41.198Z",
+        "timeElapsedClassifyingDrone": 3.459000000000003,
+        "participantGivenHostility": "Hostile",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "7/20",
+        "dronesClassifiedCorrectly": 10,
+        "dronesClassifiedIncorrectly": 1
     },
     {
-        "droneIndexLog": " button pressed by user ID 1, ID of drone selected: 8, drone selected on Thu Apr 14 2022 12:36:53 GMT+0100 (British Summer Time)"
+        "participantID": "1",
+        "droneID": "1",
+        "timestampDroneClicked": "2022-04-22T16:00:49.050Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
     },
     {
-        "outputConfirmButton": "confirm button pressed by user ID 1 on : Thu Apr 14 2022 12:36:55 GMT+0100 (British Summer Time)"
+        "participantID": "1",
+        "trialNumber": 1,
+        "droneID": 1,
+        "timeStampClickConfirm": "2022-04-22T16:00:50.028Z",
+        "timeElapsedClassifyingDrone": 0.9780000000000015,
+        "participantGivenHostility": "nonHostile",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "8/20",
+        "dronesClassifiedCorrectly": 11,
+        "dronesClassifiedIncorrectly": 1
     },
     {
-        "timeElapsed": "time between clicking drone and confirming 1.8730000000000473 seconds"
+        "participantID": "1",
+        "droneID": "3",
+        "timestampDroneClicked": "2022-04-22T16:01:07.986Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
     },
     {
-        "outputConfirmButton": "confirm button pressed by user ID 1 on : Thu Apr 14 2022 12:36:59 GMT+0100 (British Summer Time)"
+        "participantID": "1",
+        "droneID": "3",
+        "timestampDroneClicked": "2022-04-22T16:01:08.293Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
     },
     {
-        "timeElapsed": "time between clicking drone and confirming 5.367000000000189 seconds"
+        "participantID": "1",
+        "trialNumber": 1,
+        "droneID": 3,
+        "timeStampClickConfirm": "2022-04-22T16:01:09.588Z",
+        "timeElapsedClassifyingDrone": 1.2949999999999875,
+        "participantGivenHostility": "nonHostile",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "9/20",
+        "dronesClassifiedCorrectly": 12,
+        "dronesClassifiedIncorrectly": 1
+    },
+    {
+        "participantID": "1",
+        "droneID": "9",
+        "timestampDroneClicked": "2022-04-22T16:01:18.487Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
+    },
+    {
+        "participantID": "1",
+        "droneID": "9",
+        "timestampDroneClicked": "2022-04-22T16:01:18.787Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
+    },
+    {
+        "participantID": "1",
+        "droneID": "12",
+        "timestampDroneClicked": "2022-04-22T16:01:19.845Z",
+        "AutoclassifierHostilityLeveL": "Uncertain",
+        "droneClass": "Uncertain"
+    },
+    {
+        "participantID": "1",
+        "droneID": "12",
+        "timestampDroneClicked": "2022-04-22T16:01:20.153Z",
+        "AutoclassifierHostilityLeveL": "Uncertain",
+        "droneClass": "Uncertain"
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 1,
+        "droneID": 12,
+        "timeStampClickConfirm": "2022-04-22T16:01:20.154Z",
+        "timeElapsedClassifyingDrone": 0.000999999999990564,
+        "participantGivenHostility": "Uncertain",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "10/20",
+        "dronesClassifiedCorrectly": 13,
+        "dronesClassifiedIncorrectly": 1
+    },
+    {
+        "participantID": "1",
+        "droneID": "3",
+        "timestampDroneClicked": "2022-04-22T16:01:30.995Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
+    },
+    {
+        "participantID": "1",
+        "droneID": "3",
+        "timestampDroneClicked": "2022-04-22T16:01:31.306Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 1,
+        "droneID": 3,
+        "timeStampClickConfirm": "2022-04-22T16:01:32.881Z",
+        "timeElapsedClassifyingDrone": 1.5750000000000028,
+        "participantGivenHostility": "Uncertain",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "10/20",
+        "dronesClassifiedCorrectly": 14,
+        "dronesClassifiedIncorrectly": 1
+    },
+    {
+        "participantID": "1",
+        "droneID": "2",
+        "timestampDroneClicked": "2022-04-22T16:01:39.161Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
+    },
+    {
+        "participantID": "1",
+        "droneID": "1",
+        "timestampDroneClicked": "2022-04-22T16:01:47.014Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
+    },
+    {
+        "participantID": "1",
+        "droneID": "1",
+        "timestampDroneClicked": "2022-04-22T16:01:47.319Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 1,
+        "droneID": 1,
+        "timeStampClickConfirm": "2022-04-22T16:01:48.944Z",
+        "timeElapsedClassifyingDrone": 1.625,
+        "participantGivenHostility": "Uncertain",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "10/20",
+        "dronesClassifiedCorrectly": 15,
+        "dronesClassifiedIncorrectly": 1
+    },
+    {
+        "participantID": "1",
+        "droneID": "6",
+        "timestampDroneClicked": "2022-04-22T16:01:50.167Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
+    },
+    {
+        "participantID": "1",
+        "droneID": "6",
+        "timestampDroneClicked": "2022-04-22T16:01:50.469Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 1,
+        "droneID": 6,
+        "timeStampClickConfirm": "2022-04-22T16:01:54.331Z",
+        "timeElapsedClassifyingDrone": 3.862000000000009,
+        "participantGivenHostility": "Uncertain",
+        "CorrectOrIncorrect": "incorrect",
+        "sameOrDifferentAutoclassifier": "different",
+        "finalDroneCoverage": "11/20",
+        "dronesClassifiedCorrectly": 15,
+        "dronesClassifiedIncorrectly": 2
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 1,
+        "droneID": 6,
+        "timeStampClickConfirm": "2022-04-22T16:02:00.544Z",
+        "timeElapsedClassifyingDrone": 10.075000000000003,
+        "participantGivenHostility": "Uncertain",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "different",
+        "finalDroneCoverage": "11/20",
+        "dronesClassifiedCorrectly": 16,
+        "dronesClassifiedIncorrectly": 2
+    },
+    {
+        "participantID": "1",
+        "droneID": "4",
+        "timestampDroneClicked": "2022-04-22T16:02:02.233Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
+    },
+    {
+        "participantID": "1",
+        "droneID": "4",
+        "timestampDroneClicked": "2022-04-22T16:02:02.536Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 1,
+        "droneID": 4,
+        "timeStampClickConfirm": "2022-04-22T16:02:07.494Z",
+        "timeElapsedClassifyingDrone": 4.957999999999998,
+        "participantGivenHostility": "nonHostile",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "12/20",
+        "dronesClassifiedCorrectly": 17,
+        "dronesClassifiedIncorrectly": 2
+    },
+    {
+        "participantID": "1",
+        "droneID": "9",
+        "timestampDroneClicked": "2022-04-22T16:02:08.885Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
+    },
+    {
+        "participantID": "1",
+        "droneID": "9",
+        "timestampDroneClicked": "2022-04-22T16:02:09.198Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 1,
+        "droneID": 9,
+        "timeStampClickConfirm": "2022-04-22T16:02:14.396Z",
+        "timeElapsedClassifyingDrone": 5.197999999999979,
+        "participantGivenHostility": "nonHostile",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "13/20",
+        "dronesClassifiedCorrectly": 18,
+        "dronesClassifiedIncorrectly": 2
+    },
+    {
+        "participantID": "1",
+        "droneID": "4",
+        "timestampDroneClicked": "2022-04-22T16:02:17.618Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
+    },
+    {
+        "participantID": "1",
+        "droneID": "4",
+        "timestampDroneClicked": "2022-04-22T16:02:17.922Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 1,
+        "droneID": 4,
+        "timeStampClickConfirm": "2022-04-22T16:02:19.574Z",
+        "timeElapsedClassifyingDrone": 1.6520000000000152,
+        "participantGivenHostility": "nonHostile",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "13/20",
+        "dronesClassifiedCorrectly": 19,
+        "dronesClassifiedIncorrectly": 2
+    },
+    {
+        "participantID": "1",
+        "droneID": "3",
+        "timestampDroneClicked": "2022-04-22T16:02:22.097Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 1,
+        "droneID": 3,
+        "timeStampClickConfirm": "2022-04-22T16:02:24.142Z",
+        "timeElapsedClassifyingDrone": 2.0449999999999875,
+        "participantGivenHostility": "nonHostile",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "13/20",
+        "dronesClassifiedCorrectly": 20,
+        "dronesClassifiedIncorrectly": 2
+    },
+    {
+        "participantID": "1",
+        "droneID": "9",
+        "timestampDroneClicked": "2022-04-22T16:02:25.412Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
+    },
+    {
+        "participantID": "1",
+        "droneID": "9",
+        "timestampDroneClicked": "2022-04-22T16:02:25.717Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 1,
+        "droneID": 9,
+        "timeStampClickConfirm": "2022-04-22T16:02:26.596Z",
+        "timeElapsedClassifyingDrone": 0.8789999999999907,
+        "participantGivenHostility": "nonHostile",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "13/20",
+        "dronesClassifiedCorrectly": 21,
+        "dronesClassifiedIncorrectly": 2
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 1,
+        "droneID": 9,
+        "timeStampClickConfirm": "2022-04-22T16:02:29.960Z",
+        "timeElapsedClassifyingDrone": 4.242999999999995,
+        "participantGivenHostility": "nonHostile",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "13/20",
+        "dronesClassifiedCorrectly": 22,
+        "dronesClassifiedIncorrectly": 2
+    },
+    {
+        "participantID": "1",
+        "InterferenceLog": "2022-04-22T16:04:12.395Z"
+    },
+    {
+        "participantID": "1",
+        "droneID": "14",
+        "timestampDroneClicked": "2022-04-22T16:05:12.925Z",
+        "AutoclassifierHostilityLeveL": "Uncertain",
+        "droneClass": "Uncertain"
+    },
+    {
+        "participantID": "1",
+        "droneID": "14",
+        "timestampDroneClicked": "2022-04-22T16:05:13.235Z",
+        "AutoclassifierHostilityLeveL": "Uncertain",
+        "droneClass": "Uncertain"
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 2,
+        "droneID": 14,
+        "timeStampClickConfirm": "2022-04-22T16:05:14.450Z",
+        "timeElapsedClassifyingDrone": 1.214999999999975,
+        "participantGivenHostility": "Uncertain",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "1/20",
+        "dronesClassifiedCorrectly": 1,
+        "dronesClassifiedIncorrectly": 0
+    },
+    {
+        "participantID": "1",
+        "droneID": "19",
+        "timestampDroneClicked": "2022-04-22T16:05:19.410Z",
+        "AutoclassifierHostilityLeveL": "Hostile",
+        "droneClass": "Hostile"
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 2,
+        "droneID": 19,
+        "timeStampClickConfirm": "2022-04-22T16:05:20.802Z",
+        "timeElapsedClassifyingDrone": 1.391999999999996,
+        "participantGivenHostility": "Hostile",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "2/20",
+        "dronesClassifiedCorrectly": 2,
+        "dronesClassifiedIncorrectly": 0
+    },
+    {
+        "participantID": "1",
+        "droneID": "7",
+        "timestampDroneClicked": "2022-04-22T16:05:25.196Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
+    },
+    {
+        "participantID": "1",
+        "droneID": "7",
+        "timestampDroneClicked": "2022-04-22T16:05:25.505Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 2,
+        "droneID": 7,
+        "timeStampClickConfirm": "2022-04-22T16:05:29.845Z",
+        "timeElapsedClassifyingDrone": 4.340000000000032,
+        "participantGivenHostility": "nonHostile",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "3/20",
+        "dronesClassifiedCorrectly": 3,
+        "dronesClassifiedIncorrectly": 0
+    },
+    {
+        "participantID": "1",
+        "droneID": "5",
+        "timestampDroneClicked": "2022-04-22T16:05:31.903Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
+    },
+    {
+        "participantID": "1",
+        "droneID": "5",
+        "timestampDroneClicked": "2022-04-22T16:05:32.204Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 2,
+        "droneID": 5,
+        "timeStampClickConfirm": "2022-04-22T16:05:33.173Z",
+        "timeElapsedClassifyingDrone": 0.9689999999999941,
+        "participantGivenHostility": "nonHostile",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "4/20",
+        "dronesClassifiedCorrectly": 4,
+        "dronesClassifiedIncorrectly": 0
+    },
+    {
+        "participantID": "1",
+        "droneID": "19",
+        "timestampDroneClicked": "2022-04-22T16:05:35.259Z",
+        "AutoclassifierHostilityLeveL": "Hostile",
+        "droneClass": "Hostile"
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 2,
+        "droneID": 19,
+        "timeStampClickConfirm": "2022-04-22T16:05:37.723Z",
+        "timeElapsedClassifyingDrone": 2.4639999999999986,
+        "participantGivenHostility": "nonHostile",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "4/20",
+        "dronesClassifiedCorrectly": 5,
+        "dronesClassifiedIncorrectly": 0
+    },
+    {
+        "participantID": "1",
+        "droneID": "16",
+        "timestampDroneClicked": "2022-04-22T16:05:38.946Z",
+        "AutoclassifierHostilityLeveL": "Uncertain",
+        "droneClass": "Uncertain"
+    },
+    {
+        "participantID": "1",
+        "droneID": "16",
+        "timestampDroneClicked": "2022-04-22T16:05:39.256Z",
+        "AutoclassifierHostilityLeveL": "Uncertain",
+        "droneClass": "Uncertain"
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 2,
+        "droneID": 16,
+        "timeStampClickConfirm": "2022-04-22T16:05:40.491Z",
+        "timeElapsedClassifyingDrone": 1.2350000000000136,
+        "participantGivenHostility": "Uncertain",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "5/20",
+        "dronesClassifiedCorrectly": 6,
+        "dronesClassifiedIncorrectly": 0
+    },
+    {
+        "participantID": "1",
+        "droneID": "7",
+        "timestampDroneClicked": "2022-04-22T16:05:42.633Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
+    },
+    {
+        "participantID": "1",
+        "droneID": "7",
+        "timestampDroneClicked": "2022-04-22T16:05:42.943Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 2,
+        "droneID": 7,
+        "timeStampClickConfirm": "2022-04-22T16:05:44.544Z",
+        "timeElapsedClassifyingDrone": 1.600999999999999,
+        "participantGivenHostility": "Uncertain",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "5/20",
+        "dronesClassifiedCorrectly": 7,
+        "dronesClassifiedIncorrectly": 0
+    },
+    {
+        "participantID": "1",
+        "droneID": "15",
+        "timestampDroneClicked": "2022-04-22T16:05:45.298Z",
+        "AutoclassifierHostilityLeveL": "Uncertain",
+        "droneClass": "Uncertain"
+    },
+    {
+        "participantID": "1",
+        "droneID": "15",
+        "timestampDroneClicked": "2022-04-22T16:05:45.607Z",
+        "AutoclassifierHostilityLeveL": "Uncertain",
+        "droneClass": "Uncertain"
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 2,
+        "droneID": 15,
+        "timeStampClickConfirm": "2022-04-22T16:05:46.865Z",
+        "timeElapsedClassifyingDrone": 1.2569999999999482,
+        "participantGivenHostility": "Uncertain",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "6/20",
+        "dronesClassifiedCorrectly": 8,
+        "dronesClassifiedIncorrectly": 0
+    },
+    {
+        "participantID": "1",
+        "droneID": "19",
+        "timestampDroneClicked": "2022-04-22T16:05:50.174Z",
+        "AutoclassifierHostilityLeveL": "Hostile",
+        "droneClass": "Hostile"
+    },
+    {
+        "participantID": "1",
+        "droneID": "19",
+        "timestampDroneClicked": "2022-04-22T16:05:50.256Z",
+        "AutoclassifierHostilityLeveL": "Hostile",
+        "droneClass": "Hostile"
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 2,
+        "droneID": 19,
+        "timeStampClickConfirm": "2022-04-22T16:05:51.970Z",
+        "timeElapsedClassifyingDrone": 1.7140000000000555,
+        "participantGivenHostility": "Uncertain",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "6/20",
+        "dronesClassifiedCorrectly": 9,
+        "dronesClassifiedIncorrectly": 0
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 2,
+        "droneID": 19,
+        "timeStampClickConfirm": "2022-04-22T16:05:53.381Z",
+        "timeElapsedClassifyingDrone": 3.125,
+        "participantGivenHostility": "Uncertain",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "6/20",
+        "dronesClassifiedCorrectly": 10,
+        "dronesClassifiedIncorrectly": 0
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 2,
+        "droneID": 19,
+        "timeStampClickConfirm": "2022-04-22T16:05:56.424Z",
+        "timeElapsedClassifyingDrone": 6.168000000000006,
+        "participantGivenHostility": "Uncertain",
+        "CorrectOrIncorrect": "incorrect",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "6/20",
+        "dronesClassifiedCorrectly": 10,
+        "dronesClassifiedIncorrectly": 1
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 2,
+        "droneID": 19,
+        "timeStampClickConfirm": "2022-04-22T16:05:59.186Z",
+        "timeElapsedClassifyingDrone": 8.930000000000007,
+        "participantGivenHostility": "Uncertain",
+        "CorrectOrIncorrect": "incorrect",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "6/20",
+        "dronesClassifiedCorrectly": 10,
+        "dronesClassifiedIncorrectly": 2
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 2,
+        "droneID": 19,
+        "timeStampClickConfirm": "2022-04-22T16:06:01.194Z",
+        "timeElapsedClassifyingDrone": 10.938000000000045,
+        "participantGivenHostility": "Uncertain",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "6/20",
+        "dronesClassifiedCorrectly": 11,
+        "dronesClassifiedIncorrectly": 2
+    },
+    {
+        "participantID": "1",
+        "droneID": "15",
+        "timestampDroneClicked": "2022-04-22T16:06:02.510Z",
+        "AutoclassifierHostilityLeveL": "Uncertain",
+        "droneClass": "Uncertain"
+    },
+    {
+        "participantID": "1",
+        "droneID": "15",
+        "timestampDroneClicked": "2022-04-22T16:06:02.583Z",
+        "AutoclassifierHostilityLeveL": "Uncertain",
+        "droneClass": "Uncertain"
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 2,
+        "droneID": 15,
+        "timeStampClickConfirm": "2022-04-22T16:06:03.885Z",
+        "timeElapsedClassifyingDrone": 1.301999999999964,
+        "participantGivenHostility": "Uncertain",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "6/20",
+        "dronesClassifiedCorrectly": 12,
+        "dronesClassifiedIncorrectly": 2
+    },
+    {
+        "participantID": "1",
+        "droneID": "1",
+        "timestampDroneClicked": "2022-04-22T16:06:16.123Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
+    },
+    {
+        "participantID": "1",
+        "droneID": "1",
+        "timestampDroneClicked": "2022-04-22T16:06:16.243Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 2,
+        "droneID": 1,
+        "timeStampClickConfirm": "2022-04-22T16:06:17.704Z",
+        "timeElapsedClassifyingDrone": 1.4610000000000127,
+        "participantGivenHostility": "nonHostile",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "7/20",
+        "dronesClassifiedCorrectly": 13,
+        "dronesClassifiedIncorrectly": 2
+    },
+    {
+        "participantID": "1",
+        "droneID": "14",
+        "timestampDroneClicked": "2022-04-22T16:06:34.670Z",
+        "AutoclassifierHostilityLeveL": "Uncertain",
+        "droneClass": "Uncertain"
+    },
+    {
+        "participantID": "1",
+        "droneID": "14",
+        "timestampDroneClicked": "2022-04-22T16:06:34.752Z",
+        "AutoclassifierHostilityLeveL": "Uncertain",
+        "droneClass": "Uncertain"
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 2,
+        "droneID": 14,
+        "timeStampClickConfirm": "2022-04-22T16:06:35.979Z",
+        "timeElapsedClassifyingDrone": 1.2269999999999754,
+        "participantGivenHostility": "nonHostile",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "7/20",
+        "dronesClassifiedCorrectly": 14,
+        "dronesClassifiedIncorrectly": 2
+    },
+    {
+        "participantID": "1",
+        "droneID": "15",
+        "timestampDroneClicked": "2022-04-22T16:06:43.200Z",
+        "AutoclassifierHostilityLeveL": "Uncertain",
+        "droneClass": "Uncertain"
+    },
+    {
+        "participantID": "1",
+        "droneID": "15",
+        "timestampDroneClicked": "2022-04-22T16:06:43.292Z",
+        "AutoclassifierHostilityLeveL": "Uncertain",
+        "droneClass": "Uncertain"
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 2,
+        "droneID": 15,
+        "timeStampClickConfirm": "2022-04-22T16:06:44.779Z",
+        "timeElapsedClassifyingDrone": 1.4870000000000232,
+        "participantGivenHostility": "nonHostile",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "7/20",
+        "dronesClassifiedCorrectly": 15,
+        "dronesClassifiedIncorrectly": 2
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 2,
+        "droneID": 15,
+        "timeStampClickConfirm": "2022-04-22T16:06:46.474Z",
+        "timeElapsedClassifyingDrone": 3.1820000000000164,
+        "participantGivenHostility": "nonHostile",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "7/20",
+        "dronesClassifiedCorrectly": 16,
+        "dronesClassifiedIncorrectly": 2
+    },
+    {
+        "participantID": "1",
+        "droneID": "11",
+        "timestampDroneClicked": "2022-04-22T16:06:47.904Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "Uncertain"
+    },
+    {
+        "participantID": "1",
+        "droneID": "11",
+        "timestampDroneClicked": "2022-04-22T16:06:47.995Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "Uncertain"
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 2,
+        "droneID": 11,
+        "timeStampClickConfirm": "2022-04-22T16:06:49.450Z",
+        "timeElapsedClassifyingDrone": 1.454999999999984,
+        "participantGivenHostility": "nonHostile",
+        "CorrectOrIncorrect": "incorrect",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "8/20",
+        "dronesClassifiedCorrectly": 16,
+        "dronesClassifiedIncorrectly": 3
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 2,
+        "droneID": 11,
+        "timeStampClickConfirm": "2022-04-22T16:06:52.830Z",
+        "timeElapsedClassifyingDrone": 4.8349999999999795,
+        "participantGivenHostility": "nonHostile",
+        "CorrectOrIncorrect": "incorrect",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "8/20",
+        "dronesClassifiedCorrectly": 16,
+        "dronesClassifiedIncorrectly": 4
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 2,
+        "droneID": 11,
+        "timeStampClickConfirm": "2022-04-22T16:06:55.103Z",
+        "timeElapsedClassifyingDrone": 7.108000000000004,
+        "participantGivenHostility": "nonHostile",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "8/20",
+        "dronesClassifiedCorrectly": 17,
+        "dronesClassifiedIncorrectly": 4
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 2,
+        "droneID": 11,
+        "timeStampClickConfirm": "2022-04-22T16:06:56.442Z",
+        "timeElapsedClassifyingDrone": 8.447000000000003,
+        "participantGivenHostility": "nonHostile",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "8/20",
+        "dronesClassifiedCorrectly": 18,
+        "dronesClassifiedIncorrectly": 4
+    },
+    {
+        "participantID": "1",
+        "droneID": "14",
+        "timestampDroneClicked": "2022-04-22T16:06:59.573Z",
+        "AutoclassifierHostilityLeveL": "Uncertain",
+        "droneClass": "Uncertain"
+    },
+    {
+        "participantID": "1",
+        "droneID": "14",
+        "timestampDroneClicked": "2022-04-22T16:06:59.663Z",
+        "AutoclassifierHostilityLeveL": "Uncertain",
+        "droneClass": "Uncertain"
+    },
+    {
+        "participantID": "1",
+        "droneID": "15",
+        "timestampDroneClicked": "2022-04-22T16:07:12.071Z",
+        "AutoclassifierHostilityLeveL": "Uncertain",
+        "droneClass": "Uncertain"
+    },
+    {
+        "participantID": "1",
+        "droneID": "15",
+        "timestampDroneClicked": "2022-04-22T16:07:12.125Z",
+        "AutoclassifierHostilityLeveL": "Uncertain",
+        "droneClass": "Uncertain"
+    },
+    {
+        "participantID": "1",
+        "droneID": "11",
+        "timestampDroneClicked": "2022-04-22T16:07:18.005Z",
+        "AutoclassifierHostilityLeveL": "Uncertain",
+        "droneClass": "Uncertain"
+    },
+    {
+        "participantID": "1",
+        "droneID": "11",
+        "timestampDroneClicked": "2022-04-22T16:07:18.096Z",
+        "AutoclassifierHostilityLeveL": "Uncertain",
+        "droneClass": "Uncertain"
+    },
+    {
+        "participantID": "1",
+        "droneID": "13",
+        "timestampDroneClicked": "2022-04-22T16:07:19.920Z",
+        "AutoclassifierHostilityLeveL": "Hostile",
+        "droneClass": "Hostile"
+    },
+    {
+        "participantID": "1",
+        "droneID": "13",
+        "timestampDroneClicked": "2022-04-22T16:07:20.011Z",
+        "AutoclassifierHostilityLeveL": "Hostile",
+        "droneClass": "Hostile"
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 3,
+        "droneID": 13,
+        "timeStampClickConfirm": "2022-04-22T16:07:21.189Z",
+        "timeElapsedClassifyingDrone": 1.1779999999999973,
+        "participantGivenHostility": "Hostile",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "1/20",
+        "dronesClassifiedCorrectly": 1,
+        "dronesClassifiedIncorrectly": 0
+    },
+    {
+        "participantID": "1",
+        "droneID": "5",
+        "timestampDroneClicked": "2022-04-22T16:07:23.964Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
+    },
+    {
+        "participantID": "1",
+        "droneID": "5",
+        "timestampDroneClicked": "2022-04-22T16:07:24.039Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 3,
+        "droneID": 5,
+        "timeStampClickConfirm": "2022-04-22T16:07:25.313Z",
+        "timeElapsedClassifyingDrone": 1.274000000000001,
+        "participantGivenHostility": "nonHostile",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "2/20",
+        "dronesClassifiedCorrectly": 2,
+        "dronesClassifiedIncorrectly": 0
+    },
+    {
+        "participantID": "1",
+        "droneID": "14",
+        "timestampDroneClicked": "2022-04-22T16:07:26.935Z",
+        "AutoclassifierHostilityLeveL": "Uncertain",
+        "droneClass": "Uncertain"
+    },
+    {
+        "participantID": "1",
+        "droneID": "14",
+        "timestampDroneClicked": "2022-04-22T16:07:27.009Z",
+        "AutoclassifierHostilityLeveL": "Uncertain",
+        "droneClass": "Uncertain"
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 3,
+        "droneID": 14,
+        "timeStampClickConfirm": "2022-04-22T16:07:28.482Z",
+        "timeElapsedClassifyingDrone": 1.4730000000000132,
+        "participantGivenHostility": "Uncertain",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "3/20",
+        "dronesClassifiedCorrectly": 3,
+        "dronesClassifiedIncorrectly": 0
+    },
+    {
+        "participantID": "1",
+        "droneID": "19",
+        "timestampDroneClicked": "2022-04-22T16:07:30.058Z",
+        "AutoclassifierHostilityLeveL": "Hostile",
+        "droneClass": "Hostile"
+    },
+    {
+        "participantID": "1",
+        "droneID": "19",
+        "timestampDroneClicked": "2022-04-22T16:07:30.159Z",
+        "AutoclassifierHostilityLeveL": "Hostile",
+        "droneClass": "Hostile"
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 3,
+        "droneID": 19,
+        "timeStampClickConfirm": "2022-04-22T16:07:32.332Z",
+        "timeElapsedClassifyingDrone": 2.173000000000002,
+        "participantGivenHostility": "Hostile",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "4/20",
+        "dronesClassifiedCorrectly": 4,
+        "dronesClassifiedIncorrectly": 0
+    },
+    {
+        "participantID": "1",
+        "droneID": "6",
+        "timestampDroneClicked": "2022-04-22T16:07:34.173Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
+    },
+    {
+        "participantID": "1",
+        "droneID": "6",
+        "timestampDroneClicked": "2022-04-22T16:07:34.274Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
+    },
+    {
+        "participantID": "1",
+        "droneID": "14",
+        "timestampDroneClicked": "2022-04-22T16:07:42.187Z",
+        "AutoclassifierHostilityLeveL": "Uncertain",
+        "droneClass": "Uncertain"
+    },
+    {
+        "participantID": "1",
+        "droneID": "14",
+        "timestampDroneClicked": "2022-04-22T16:07:42.271Z",
+        "AutoclassifierHostilityLeveL": "Uncertain",
+        "droneClass": "Uncertain"
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 3,
+        "droneID": 14,
+        "timeStampClickConfirm": "2022-04-22T16:07:44.268Z",
+        "timeElapsedClassifyingDrone": 1.9969999999999573,
+        "participantGivenHostility": "Hostile",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "4/20",
+        "dronesClassifiedCorrectly": 5,
+        "dronesClassifiedIncorrectly": 0
+    },
+    {
+        "participantID": "1",
+        "droneID": "15",
+        "timestampDroneClicked": "2022-04-22T16:08:18.649Z",
+        "AutoclassifierHostilityLeveL": "Uncertain",
+        "droneClass": "Uncertain"
+    },
+    {
+        "participantID": "1",
+        "droneID": "15",
+        "timestampDroneClicked": "2022-04-22T16:08:18.740Z",
+        "AutoclassifierHostilityLeveL": "Uncertain",
+        "droneClass": "Uncertain"
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 3,
+        "droneID": 15,
+        "timeStampClickConfirm": "2022-04-22T16:08:21.279Z",
+        "timeElapsedClassifyingDrone": 2.5389999999999873,
+        "participantGivenHostility": "Uncertain",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "5/20",
+        "dronesClassifiedCorrectly": 6,
+        "dronesClassifiedIncorrectly": 0
+    },
+    {
+        "participantID": "1",
+        "droneID": "14",
+        "timestampDroneClicked": "2022-04-22T16:09:13.064Z",
+        "AutoclassifierHostilityLeveL": "Uncertain",
+        "droneClass": "Uncertain"
+    },
+    {
+        "participantID": "1",
+        "droneID": "14",
+        "timestampDroneClicked": "2022-04-22T16:09:13.176Z",
+        "AutoclassifierHostilityLeveL": "Uncertain",
+        "droneClass": "Uncertain"
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 3,
+        "droneID": 14,
+        "timeStampClickConfirm": "2022-04-22T16:09:14.316Z",
+        "timeElapsedClassifyingDrone": 1.1399999999999864,
+        "participantGivenHostility": "Uncertain",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "5/20",
+        "dronesClassifiedCorrectly": 7,
+        "dronesClassifiedIncorrectly": 0
+    },
+    {
+        "participantID": "1",
+        "droneID": "19",
+        "timestampDroneClicked": "2022-04-22T16:09:40.019Z",
+        "AutoclassifierHostilityLeveL": "Hostile",
+        "droneClass": "Hostile"
+    },
+    {
+        "participantID": "1",
+        "droneID": "19",
+        "timestampDroneClicked": "2022-04-22T16:09:40.094Z",
+        "AutoclassifierHostilityLeveL": "Hostile",
+        "droneClass": "Hostile"
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 3,
+        "droneID": 19,
+        "timeStampClickConfirm": "2022-04-22T16:09:41.064Z",
+        "timeElapsedClassifyingDrone": 0.9699999999999136,
+        "participantGivenHostility": "Uncertain",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "5/20",
+        "dronesClassifiedCorrectly": 8,
+        "dronesClassifiedIncorrectly": 0
+    },
+    {
+        "participantID": "1",
+        "droneID": "2",
+        "timestampDroneClicked": "2022-04-22T16:10:00.148Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
+    },
+    {
+        "participantID": "1",
+        "droneID": "2",
+        "timestampDroneClicked": "2022-04-22T16:10:00.244Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 3,
+        "droneID": 2,
+        "timeStampClickConfirm": "2022-04-22T16:10:01.358Z",
+        "timeElapsedClassifyingDrone": 1.113999999999919,
+        "participantGivenHostility": "nonHostile",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "6/20",
+        "dronesClassifiedCorrectly": 9,
+        "dronesClassifiedIncorrectly": 0
+    },
+    {
+        "participantID": "1",
+        "droneID": "11",
+        "timestampDroneClicked": "2022-04-22T16:10:14.345Z",
+        "AutoclassifierHostilityLeveL": "Uncertain",
+        "droneClass": "Uncertain"
+    },
+    {
+        "participantID": "1",
+        "droneID": "11",
+        "timestampDroneClicked": "2022-04-22T16:10:14.420Z",
+        "AutoclassifierHostilityLeveL": "Uncertain",
+        "droneClass": "Uncertain"
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 3,
+        "droneID": 11,
+        "timeStampClickConfirm": "2022-04-22T16:10:15.837Z",
+        "timeElapsedClassifyingDrone": 1.41700000000003,
+        "participantGivenHostility": "Uncertain",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "7/20",
+        "dronesClassifiedCorrectly": 10,
+        "dronesClassifiedIncorrectly": 0
+    },
+    {
+        "participantID": "1",
+        "droneID": "14",
+        "timestampDroneClicked": "2022-04-22T16:10:16.887Z",
+        "AutoclassifierHostilityLeveL": "Uncertain",
+        "droneClass": "Uncertain"
+    },
+    {
+        "participantID": "1",
+        "droneID": "14",
+        "timestampDroneClicked": "2022-04-22T16:10:16.969Z",
+        "AutoclassifierHostilityLeveL": "Uncertain",
+        "droneClass": "Uncertain"
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 3,
+        "droneID": 14,
+        "timeStampClickConfirm": "2022-04-22T16:10:18.735Z",
+        "timeElapsedClassifyingDrone": 1.7659999999999627,
+        "participantGivenHostility": "Uncertain",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "7/20",
+        "dronesClassifiedCorrectly": 11,
+        "dronesClassifiedIncorrectly": 0
+    },
+    {
+        "participantID": "1",
+        "droneID": "8",
+        "timestampDroneClicked": "2022-04-22T16:10:22.411Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
+    },
+    {
+        "participantID": "1",
+        "droneID": "8",
+        "timestampDroneClicked": "2022-04-22T16:10:22.490Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 3,
+        "droneID": 8,
+        "timeStampClickConfirm": "2022-04-22T16:10:23.623Z",
+        "timeElapsedClassifyingDrone": 1.1330000000000382,
+        "participantGivenHostility": "nonHostile",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "8/20",
+        "dronesClassifiedCorrectly": 12,
+        "dronesClassifiedIncorrectly": 0
+    },
+    {
+        "participantID": "1",
+        "droneID": "5",
+        "timestampDroneClicked": "2022-04-22T16:11:00.360Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
+    },
+    {
+        "participantID": "1",
+        "droneID": "5",
+        "timestampDroneClicked": "2022-04-22T16:11:00.451Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 3,
+        "droneID": 5,
+        "timeStampClickConfirm": "2022-04-22T16:11:01.720Z",
+        "timeElapsedClassifyingDrone": 1.2690000000000055,
+        "participantGivenHostility": "nonHostile",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "8/20",
+        "dronesClassifiedCorrectly": 13,
+        "dronesClassifiedIncorrectly": 0
+    },
+    {
+        "participantID": "1",
+        "droneID": "16",
+        "timestampDroneClicked": "2022-04-22T16:11:03.903Z",
+        "AutoclassifierHostilityLeveL": "Uncertain",
+        "droneClass": "Uncertain"
+    },
+    {
+        "participantID": "1",
+        "droneID": "16",
+        "timestampDroneClicked": "2022-04-22T16:11:03.988Z",
+        "AutoclassifierHostilityLeveL": "Uncertain",
+        "droneClass": "Uncertain"
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 3,
+        "droneID": 16,
+        "timeStampClickConfirm": "2022-04-22T16:11:05.201Z",
+        "timeElapsedClassifyingDrone": 1.2129999999999654,
+        "participantGivenHostility": "Uncertain",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "9/20",
+        "dronesClassifiedCorrectly": 14,
+        "dronesClassifiedIncorrectly": 0
+    },
+    {
+        "participantID": "1",
+        "droneID": "14",
+        "timestampDroneClicked": "2022-04-22T16:11:10.715Z",
+        "AutoclassifierHostilityLeveL": "Uncertain",
+        "droneClass": "Uncertain"
+    },
+    {
+        "participantID": "1",
+        "droneID": "14",
+        "timestampDroneClicked": "2022-04-22T16:11:10.785Z",
+        "AutoclassifierHostilityLeveL": "Uncertain",
+        "droneClass": "Uncertain"
+    },
+    {
+        "participantID": "1",
+        "droneID": "5",
+        "timestampDroneClicked": "2022-04-22T16:11:23.462Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
+    },
+    {
+        "participantID": "1",
+        "droneID": "5",
+        "timestampDroneClicked": "2022-04-22T16:11:23.519Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 4,
+        "droneID": 5,
+        "timeStampClickConfirm": "2022-04-22T16:11:24.466Z",
+        "timeElapsedClassifyingDrone": 0.9470000000000027,
+        "participantGivenHostility": "nonHostile",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "1/20",
+        "dronesClassifiedCorrectly": 1,
+        "dronesClassifiedIncorrectly": 0
+    },
+    {
+        "participantID": "1",
+        "droneID": "8",
+        "timestampDroneClicked": "2022-04-22T16:11:31.247Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
+    },
+    {
+        "participantID": "1",
+        "droneID": "8",
+        "timestampDroneClicked": "2022-04-22T16:11:31.321Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 4,
+        "droneID": 8,
+        "timeStampClickConfirm": "2022-04-22T16:11:32.882Z",
+        "timeElapsedClassifyingDrone": 1.5609999999999218,
+        "participantGivenHostility": "nonHostile",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "2/20",
+        "dronesClassifiedCorrectly": 2,
+        "dronesClassifiedIncorrectly": 0
+    },
+    {
+        "participantID": "1",
+        "droneID": "2",
+        "timestampDroneClicked": "2022-04-22T16:11:35.973Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
+    },
+    {
+        "participantID": "1",
+        "droneID": "2",
+        "timestampDroneClicked": "2022-04-22T16:11:36.067Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 4,
+        "droneID": 2,
+        "timeStampClickConfirm": "2022-04-22T16:11:40.811Z",
+        "timeElapsedClassifyingDrone": 4.744000000000028,
+        "participantGivenHostility": "nonHostile",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "3/20",
+        "dronesClassifiedCorrectly": 3,
+        "dronesClassifiedIncorrectly": 0
+    },
+    {
+        "participantID": "1",
+        "droneID": "14",
+        "timestampDroneClicked": "2022-04-22T16:11:45.997Z",
+        "AutoclassifierHostilityLeveL": "Uncertain",
+        "droneClass": "Uncertain"
+    },
+    {
+        "participantID": "1",
+        "droneID": "14",
+        "timestampDroneClicked": "2022-04-22T16:11:46.094Z",
+        "AutoclassifierHostilityLeveL": "Uncertain",
+        "droneClass": "Uncertain"
+    },
+    {
+        "participantID": "1",
+        "droneID": "16",
+        "timestampDroneClicked": "2022-04-22T16:11:51.869Z",
+        "AutoclassifierHostilityLeveL": "Uncertain",
+        "droneClass": "Uncertain"
+    },
+    {
+        "participantID": "1",
+        "droneID": "16",
+        "timestampDroneClicked": "2022-04-22T16:11:51.951Z",
+        "AutoclassifierHostilityLeveL": "Uncertain",
+        "droneClass": "Uncertain"
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 4,
+        "droneID": 16,
+        "timeStampClickConfirm": "2022-04-22T16:11:55.723Z",
+        "timeElapsedClassifyingDrone": 3.7719999999999345,
+        "participantGivenHostility": "Uncertain",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "4/20",
+        "dronesClassifiedCorrectly": 4,
+        "dronesClassifiedIncorrectly": 0
+    },
+    {
+        "participantID": "1",
+        "droneID": "8",
+        "timestampDroneClicked": "2022-04-22T16:13:02.692Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
+    },
+    {
+        "participantID": "1",
+        "droneID": "8",
+        "timestampDroneClicked": "2022-04-22T16:13:02.787Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 4,
+        "droneID": 8,
+        "timeStampClickConfirm": "2022-04-22T16:13:03.755Z",
+        "timeElapsedClassifyingDrone": 0.9679999999999609,
+        "participantGivenHostility": "Uncertain",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "4/20",
+        "dronesClassifiedCorrectly": 5,
+        "dronesClassifiedIncorrectly": 0
+    },
+    {
+        "participantID": "1",
+        "droneID": "5",
+        "timestampDroneClicked": "2022-04-22T16:13:05.372Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
+    },
+    {
+        "participantID": "1",
+        "droneID": "5",
+        "timestampDroneClicked": "2022-04-22T16:13:05.441Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
+    },
+    {
+        "participantID": "1",
+        "droneID": "1",
+        "timestampDroneClicked": "2022-04-22T16:13:11.680Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
+    },
+    {
+        "participantID": "1",
+        "droneID": "1",
+        "timestampDroneClicked": "2022-04-22T16:13:11.764Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 4,
+        "droneID": 1,
+        "timeStampClickConfirm": "2022-04-22T16:13:13.100Z",
+        "timeElapsedClassifyingDrone": 1.3360000000000127,
+        "participantGivenHostility": "nonHostile",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "5/20",
+        "dronesClassifiedCorrectly": 6,
+        "dronesClassifiedIncorrectly": 0
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 4,
+        "droneID": 1,
+        "timeStampClickConfirm": "2022-04-22T16:13:14.848Z",
+        "timeElapsedClassifyingDrone": 3.0839999999999463,
+        "participantGivenHostility": "nonHostile",
+        "CorrectOrIncorrect": "incorrect",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "5/20",
+        "dronesClassifiedCorrectly": 6,
+        "dronesClassifiedIncorrectly": 1
+    },
+    {
+        "participantID": "1",
+        "droneID": "14",
+        "timestampDroneClicked": "2022-04-22T16:13:18.902Z",
+        "AutoclassifierHostilityLeveL": "Uncertain",
+        "droneClass": "Uncertain"
+    },
+    {
+        "participantID": "1",
+        "droneID": "14",
+        "timestampDroneClicked": "2022-04-22T16:13:18.968Z",
+        "AutoclassifierHostilityLeveL": "Uncertain",
+        "droneClass": "Uncertain"
+    },
+    {
+        "participantID": "1",
+        "droneID": "11",
+        "timestampDroneClicked": "2022-04-22T16:13:21.192Z",
+        "AutoclassifierHostilityLeveL": "Uncertain",
+        "droneClass": "Uncertain"
+    },
+    {
+        "participantID": "1",
+        "droneID": "11",
+        "timestampDroneClicked": "2022-04-22T16:13:21.302Z",
+        "AutoclassifierHostilityLeveL": "Uncertain",
+        "droneClass": "Uncertain"
+    },
+    {
+        "participantID": "1",
+        "droneID": "13",
+        "timestampDroneClicked": "2022-04-22T16:13:22.319Z",
+        "AutoclassifierHostilityLeveL": "Hostile",
+        "droneClass": "Hostile"
+    },
+    {
+        "participantID": "1",
+        "droneID": "13",
+        "timestampDroneClicked": "2022-04-22T16:13:22.411Z",
+        "AutoclassifierHostilityLeveL": "Hostile",
+        "droneClass": "Hostile"
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 4,
+        "droneID": 13,
+        "timeStampClickConfirm": "2022-04-22T16:13:23.594Z",
+        "timeElapsedClassifyingDrone": 1.1830000000001064,
+        "participantGivenHostility": "Hostile",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "6/20",
+        "dronesClassifiedCorrectly": 7,
+        "dronesClassifiedIncorrectly": 1
+    },
+    {
+        "participantID": "1",
+        "droneID": "5",
+        "timestampDroneClicked": "2022-04-22T16:13:26.320Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
+    },
+    {
+        "participantID": "1",
+        "droneID": "5",
+        "timestampDroneClicked": "2022-04-22T16:13:26.423Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
+    },
+    {
+        "participantID": "1",
+        "droneID": "8",
+        "timestampDroneClicked": "2022-04-22T16:13:29.890Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
+    },
+    {
+        "participantID": "1",
+        "droneID": "8",
+        "timestampDroneClicked": "2022-04-22T16:13:29.998Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 4,
+        "droneID": 8,
+        "timeStampClickConfirm": "2022-04-22T16:13:31.800Z",
+        "timeElapsedClassifyingDrone": 1.8019999999999072,
+        "participantGivenHostility": "Hostile",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "6/20",
+        "dronesClassifiedCorrectly": 8,
+        "dronesClassifiedIncorrectly": 1
+    },
+    {
+        "participantID": "1",
+        "droneID": "13",
+        "timestampDroneClicked": "2022-04-22T16:14:13.046Z",
+        "AutoclassifierHostilityLeveL": "Hostile",
+        "droneClass": "Hostile"
+    },
+    {
+        "participantID": "1",
+        "droneID": "13",
+        "timestampDroneClicked": "2022-04-22T16:14:13.134Z",
+        "AutoclassifierHostilityLeveL": "Hostile",
+        "droneClass": "Hostile"
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 4,
+        "droneID": 13,
+        "timeStampClickConfirm": "2022-04-22T16:14:14.388Z",
+        "timeElapsedClassifyingDrone": 1.254000000000019,
+        "participantGivenHostility": "Hostile",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "6/20",
+        "dronesClassifiedCorrectly": 9,
+        "dronesClassifiedIncorrectly": 1
+    },
+    {
+        "participantID": "1",
+        "droneID": "2",
+        "timestampDroneClicked": "2022-04-22T16:14:18.044Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
+    },
+    {
+        "participantID": "1",
+        "droneID": "2",
+        "timestampDroneClicked": "2022-04-22T16:14:18.161Z",
+        "AutoclassifierHostilityLeveL": "nonHostile",
+        "droneClass": "nonHostile"
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 4,
+        "droneID": 2,
+        "timeStampClickConfirm": "2022-04-22T16:14:20.227Z",
+        "timeElapsedClassifyingDrone": 2.066000000000031,
+        "participantGivenHostility": "Hostile",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "6/20",
+        "dronesClassifiedCorrectly": 10,
+        "dronesClassifiedIncorrectly": 1
+    },
+    {
+        "participantID": "1",
+        "droneID": "13",
+        "timestampDroneClicked": "2022-04-22T16:14:37.884Z",
+        "AutoclassifierHostilityLeveL": "Hostile",
+        "droneClass": "Hostile"
+    },
+    {
+        "participantID": "1",
+        "droneID": "13",
+        "timestampDroneClicked": "2022-04-22T16:14:37.946Z",
+        "AutoclassifierHostilityLeveL": "Hostile",
+        "droneClass": "Hostile"
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 4,
+        "droneID": 13,
+        "timeStampClickConfirm": "2022-04-22T16:14:39.486Z",
+        "timeElapsedClassifyingDrone": 1.5399999999999636,
+        "participantGivenHostility": "Hostile",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "6/20",
+        "dronesClassifiedCorrectly": 11,
+        "dronesClassifiedIncorrectly": 1
+    },
+    {
+        "participantID": "1",
+        "droneID": "16",
+        "timestampDroneClicked": "2022-04-22T16:14:45.503Z",
+        "AutoclassifierHostilityLeveL": "Uncertain",
+        "droneClass": "Uncertain"
+    },
+    {
+        "participantID": "1",
+        "droneID": "16",
+        "timestampDroneClicked": "2022-04-22T16:14:45.592Z",
+        "AutoclassifierHostilityLeveL": "Uncertain",
+        "droneClass": "Uncertain"
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 4,
+        "droneID": 16,
+        "timeStampClickConfirm": "2022-04-22T16:14:46.919Z",
+        "timeElapsedClassifyingDrone": 1.3269999999999982,
+        "participantGivenHostility": "Hostile",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "6/20",
+        "dronesClassifiedCorrectly": 12,
+        "dronesClassifiedIncorrectly": 1
+    },
+    {
+        "participantID": "1",
+        "droneID": "15",
+        "timestampDroneClicked": "2022-04-22T16:14:52.190Z",
+        "AutoclassifierHostilityLeveL": "Uncertain",
+        "droneClass": "Uncertain"
+    },
+    {
+        "participantID": "1",
+        "droneID": "15",
+        "timestampDroneClicked": "2022-04-22T16:14:52.293Z",
+        "AutoclassifierHostilityLeveL": "Uncertain",
+        "droneClass": "Uncertain"
+    },
+    {
+        "participantID": "1",
+        "trialNumber": 4,
+        "droneID": 15,
+        "timeStampClickConfirm": "2022-04-22T16:14:53.455Z",
+        "timeElapsedClassifyingDrone": 1.1620000000000346,
+        "participantGivenHostility": "Uncertain",
+        "CorrectOrIncorrect": "correct",
+        "sameOrDifferentAutoclassifier": "same",
+        "finalDroneCoverage": "7/20",
+        "dronesClassifiedCorrectly": 13,
+        "dronesClassifiedIncorrectly": 1
     }
 ]
-
-
-[
-    {
-        "accuracy75": "starting scenario of accuracy 75"
-    },
-    {
-        "droneIndexLog": " button pressed by user ID , ID of drone selected: 8, drone selected on Thu Apr 14 2022 12:52:34 GMT+0100 (British Summer Time)"
-    },
-    {
-        "droneIndexLog": " button pressed by user ID , ID of drone selected: 8, drone selected on Thu Apr 14 2022 12:52:34 GMT+0100 (British Summer Time)"
-    },
-    {
-        "outputConfirmButton": "confirm button pressed by user ID  on : Thu Apr 14 2022 12:52:35 GMT+0100 (British Summer Time)"
-    },
-    {
-        "timeElapsed": "time between clicking drone and confirming 0.7770000000000437 seconds"
-    },
-    {
-        "finalDroneClassification": "The final drone classification of user  of drone ID 8, class nonHostile, is nonHostile, this classification, is correct!",
-        "finalNumberOfCorrectlyClassifiedDrones": "System accuracy 75, Trial number: 1, Drones classified correctly in this trial: 1 /20 drone/s, Accuracy of trial/burst: Infinity%",
-        "finalDroneCoverage": "total drones classified in trial 1:  1/20 drones",
-        "finalNumberOfIncorrectlyClassifiedDrones": "System accuracy: 75, Trial number: 1, Drones classified incorrectly in this trial:0"
-    },
-    {
-        "outputConfirmButton": "confirm button pressed by user ID  on : Thu Apr 14 2022 12:52:35 GMT+0100 (British Summer Time)"
-    },
-    {
-        "timeElapsed": "time between clicking drone and confirming 1.3399999999996908 seconds"
-    },
-    {
-        "outputConfirmButton": "confirm button pressed by user ID  on : Thu Apr 14 2022 12:52:37 GMT+0100 (British Summer Time)"
-    },
-    {
-        "timeElapsed": "time between clicking drone and confirming 2.587999999999738 seconds"
-    },
-    {
-        "outputConfirmButton": "confirm button pressed by user ID  on : Thu Apr 14 2022 12:52:37 GMT+0100 (British Summer Time)"
-    },
-    {
-        "timeElapsed": "time between clicking drone and confirming 3.1729999999997744 seconds"
-    },
-    {
-        "outputConfirmButton": "confirm button pressed by user ID  on : Thu Apr 14 2022 12:52:38 GMT+0100 (British Summer Time)"
-    },
-    {
-        "timeElapsed": "time between clicking drone and confirming 3.8099999999999454 seconds"
-    },
-    {
-        "outputConfirmButton": "confirm button pressed by user ID  on : Thu Apr 14 2022 12:52:38 GMT+0100 (British Summer Time)"
-    },
-    {
-        "timeElapsed": "time between clicking drone and confirming 4.045999999999822 seconds"
-    },
-    {
-        "outputConfirmButton": "confirm button pressed by user ID  on : Thu Apr 14 2022 12:52:38 GMT+0100 (British Summer Time)"
-    },
-    {
-        "timeElapsed": "time between clicking drone and confirming 4.234999999999673 seconds"
-    },
-    {
-        "droneIndexLog": " button pressed by user ID , ID of drone selected: 4, drone selected on Thu Apr 14 2022 12:52:40 GMT+0100 (British Summer Time)"
-    },
-    {
-        "droneIndexLog": " button pressed by user ID , ID of drone selected: 4, drone selected on Thu Apr 14 2022 12:52:40 GMT+0100 (British Summer Time)"
-    },
-    {
-        "outputConfirmButton": "confirm button pressed by user ID  on : Thu Apr 14 2022 12:52:41 GMT+0100 (British Summer Time)"
-    },
-    {
-        "timeElapsed": "time between clicking drone and confirming 0.8299999999999272 seconds"
-    },
-    {
-        "finalDroneClassification": "The final drone classification of user  of drone ID 4, class nonHostile, is nonHostile, this classification, is correct!",
-        "finalNumberOfCorrectlyClassifiedDrones": "System accuracy 75, Trial number: 1, Drones classified correctly in this trial: 2 /20 drone/s, Accuracy of trial/burst: 142.85714285714286%",
-        "finalDroneCoverage": "total drones classified in trial 1:  2/20 drones",
-        "finalNumberOfIncorrectlyClassifiedDrones": "System accuracy: 75, Trial number: 1, Drones classified incorrectly in this trial:0"
-    },
-    {
-        "outputConfirmButton": "confirm button pressed by user ID  on : Thu Apr 14 2022 12:52:41 GMT+0100 (British Summer Time)"
-    },
-    {
-        "timeElapsed": "time between clicking drone and confirming 1.6539999999999964 seconds"
-    },
-    {
-        "droneIndexLog": " button pressed by user ID , ID of drone selected: 12, drone selected on Thu Apr 14 2022 12:52:53 GMT+0100 (British Summer Time)"
-    },
-    {
-        "droneIndexLog": " button pressed by user ID , ID of drone selected: 12, drone selected on Thu Apr 14 2022 12:52:53 GMT+0100 (British Summer Time)"
-    }
-]
-[
-    {
-        "accuracy75": "starting scenario of accuracy 75"
-    },
-    {
-        "droneIndexLog": " button pressed by user ID , ID of drone selected: 8, drone selected on Thu Apr 14 2022 12:52:34 GMT+0100 (British Summer Time)"
-    },
-    {
-        "droneIndexLog": " button pressed by user ID , ID of drone selected: 8, drone selected on Thu Apr 14 2022 12:52:34 GMT+0100 (British Summer Time)"
-    },
-    {
-        "outputConfirmButton": "confirm button pressed by user ID  on : Thu Apr 14 2022 12:52:35 GMT+0100 (British Summer Time)"
-    },
-    {
-        "timeElapsed": "time between clicking drone and confirming 0.7770000000000437 seconds"
-    },
-    {
-        "finalDroneClassification": "The final drone classification of user  of drone ID 8, class nonHostile, is nonHostile, this classification, is correct!",
-        "finalNumberOfCorrectlyClassifiedDrones": "System accuracy 75, Trial number: 1, Drones classified correctly in this trial: 1 /20 drone/s, Accuracy of trial/burst: Infinity%",
-        "finalDroneCoverage": "total drones classified in trial 1:  1/20 drones",
-        "finalNumberOfIncorrectlyClassifiedDrones": "System accuracy: 75, Trial number: 1, Drones classified incorrectly in this trial:0"
-    },
-    {
-        "outputConfirmButton": "confirm button pressed by user ID  on : Thu Apr 14 2022 12:52:35 GMT+0100 (British Summer Time)"
-    },
-    {
-        "timeElapsed": "time between clicking drone and confirming 1.3399999999996908 seconds"
-    },
-    {
-        "outputConfirmButton": "confirm button pressed by user ID  on : Thu Apr 14 2022 12:52:37 GMT+0100 (British Summer Time)"
-    },
-    {
-        "timeElapsed": "time between clicking drone and confirming 2.587999999999738 seconds"
-    },
-    {
-        "outputConfirmButton": "confirm button pressed by user ID  on : Thu Apr 14 2022 12:52:37 GMT+0100 (British Summer Time)"
-    },
-    {
-        "timeElapsed": "time between clicking drone and confirming 3.1729999999997744 seconds"
-    },
-    {
-        "outputConfirmButton": "confirm button pressed by user ID  on : Thu Apr 14 2022 12:52:38 GMT+0100 (British Summer Time)"
-    },
-    {
-        "timeElapsed": "time between clicking drone and confirming 3.8099999999999454 seconds"
-    },
-    {
-        "outputConfirmButton": "confirm button pressed by user ID  on : Thu Apr 14 2022 12:52:38 GMT+0100 (British Summer Time)"
-    },
-    {
-        "timeElapsed": "time between clicking drone and confirming 4.045999999999822 seconds"
-    },
-    {
-        "outputConfirmButton": "confirm button pressed by user ID  on : Thu Apr 14 2022 12:52:38 GMT+0100 (British Summer Time)"
-    },
-    {
-        "timeElapsed": "time between clicking drone and confirming 4.234999999999673 seconds"
-    },
-    {
-        "droneIndexLog": " button pressed by user ID , ID of drone selected: 4, drone selected on Thu Apr 14 2022 12:52:40 GMT+0100 (British Summer Time)"
-    },
-    {
-        "droneIndexLog": " button pressed by user ID , ID of drone selected: 4, drone selected on Thu Apr 14 2022 12:52:40 GMT+0100 (British Summer Time)"
-    },
-    {
-        "outputConfirmButton": "confirm button pressed by user ID  on : Thu Apr 14 2022 12:52:41 GMT+0100 (British Summer Time)"
-    },
-    {
-        "timeElapsed": "time between clicking drone and confirming 0.8299999999999272 seconds"
-    },
-    {
-        "finalDroneClassification": "The final drone classification of user  of drone ID 4, class nonHostile, is nonHostile, this classification, is correct!",
-        "finalNumberOfCorrectlyClassifiedDrones": "System accuracy 75, Trial number: 1, Drones classified correctly in this trial: 2 /20 drone/s, Accuracy of trial/burst: 142.85714285714286%",
-        "finalDroneCoverage": "total drones classified in trial 1:  2/20 drones",
-        "finalNumberOfIncorrectlyClassifiedDrones": "System accuracy: 75, Trial number: 1, Drones classified incorrectly in this trial:0"
-    },
-    {
-        "outputConfirmButton": "confirm button pressed by user ID  on : Thu Apr 14 2022 12:52:41 GMT+0100 (British Summer Time)"
-    },
-    {
-        "timeElapsed": "time between clicking drone and confirming 1.6539999999999964 seconds"
-    },
-    {
-        "droneIndexLog": " button pressed by user ID , ID of drone selected: 12, drone selected on Thu Apr 14 2022 12:52:53 GMT+0100 (British Summer Time)"
-    },
-    {
-        "droneIndexLog": " button pressed by user ID , ID of drone selected: 12, drone selected on Thu Apr 14 2022 12:52:53 GMT+0100 (British Summer Time)"
-    }
-][
-    {
-        "accuracy75": "starting scenario of accuracy 75"
-    },
-    {
-        "droneIndexLog": " button pressed by user ID 1, ID of drone selected: 8, drone selected on Thu Apr 14 2022 13:15:14 GMT+0100 (British Summer Time)"
-    },
-    {
-        "droneIndexLog": " button pressed by user ID 1, ID of drone selected: 8, drone selected on Thu Apr 14 2022 13:15:14 GMT+0100 (British Summer Time)"
-    },
-    {
-        "outputConfirmButton": "confirm button pressed by user ID 1 on : Thu Apr 14 2022 13:15:15 GMT+0100 (British Summer Time)"
-    },
-    {
-        "timeElapsed": "time between clicking drone and confirming 0.9489999999999554 seconds"
-    },
-    {
-        "finalDroneClassification": "The final drone classification of user 1 of drone ID 8, class nonHostile, is nonHostile, this classification, is correct!",
-        "finalNumberOfCorrectlyClassifiedDrones": "System accuracy 75, Trial number: 1, Drones classified correctly in this trial: 1 /20 drone/s, Accuracy of trial/burst: NaN%",
-        "finalDroneCoverage": "total drones classified in trial 1:  1/20 drones",
-        "finalNumberOfIncorrectlyClassifiedDrones": "System accuracy: 75, Trial number: 1, Drones classified incorrectly in this trial:0"
-    },
-    {
-        "outputConfirmButton": "confirm button pressed by user ID 1 on : Thu Apr 14 2022 13:15:16 GMT+0100 (British Summer Time)"
-    },
-    {
-        "timeElapsed": "time between clicking drone and confirming 1.7409999999999854 seconds"
-    },
-    {
-        "outputConfirmButton": "confirm button pressed by user ID 1 on : Thu Apr 14 2022 13:15:17 GMT+0100 (British Summer Time)"
-    },
-    {
-        "timeElapsed": "time between clicking drone and confirming 2.9079999999999018 seconds"
-    },
-    {
-        "droneIndexLog": " button pressed by user ID 1, ID of drone selected: 4, drone selected on Thu Apr 14 2022 13:15:20 GMT+0100 (British Summer Time)"
-    },
-    {
-        "outputConfirmButton": "confirm button pressed by user ID 1 on : Thu Apr 14 2022 13:15:21 GMT+0100 (British Summer Time)"
-    },
-    {
-        "timeElapsed": "time between clicking drone and confirming 1.2160000000000082 seconds"
-    },
-    {
-        "finalDroneClassification": "The final drone classification of user 1 of drone ID 4, class nonHostile, is nonHostile, this classification, is correct!",
-        "finalNumberOfCorrectlyClassifiedDrones": "System accuracy 75, Trial number: 1, Drones classified correctly in this trial: 2 /20 drone/s, Accuracy of trial/burst: 33.33333333333333%",
-        "finalDroneCoverage": "total drones classified in trial 1:  2/20 drones",
-        "finalNumberOfIncorrectlyClassifiedDrones": "System accuracy: 75, Trial number: 1, Drones classified incorrectly in this trial:0"
-    },
-    {
-        "outputConfirmButton": "confirm button pressed by user ID 1 on : Thu Apr 14 2022 13:15:22 GMT+0100 (British Summer Time)"
-    },
-    {
-        "timeElapsed": "time between clicking drone and confirming 1.893000000000029 seconds"
-    },
-    {
-        "droneIndexLog": " button pressed by user ID 1, ID of drone selected: 12, drone selected on Thu Apr 14 2022 13:15:27 GMT+0100 (British Summer Time)"
-    },
-    {
-        "droneIndexLog": " button pressed by user ID 1, ID of drone selected: 12, drone selected on Thu Apr 14 2022 13:15:27 GMT+0100 (British Summer Time)"
-    },
-    {
-        "outputConfirmButton": "confirm button pressed by user ID 1 on : Thu Apr 14 2022 13:15:28 GMT+0100 (British Summer Time)"
-    },
-    {
-        "timeElapsed": "time between clicking drone and confirming 0.9629999999999654 seconds"
-    },
-    {
-        "finalDroneClassification": "The final drone classification of user 1 of drone ID 12, class Uncertain, is Uncertain, this classification, is correct!",
-        "finalNumberOfCorrectlyClassifiedDrones": "System accuracy 75, Trial number: 1, Drones classified correctly in this trial: 3 /20 drone/s, Accuracy of trial/burst: 40%",
-        "finalDroneCoverage": "total drones classified in trial 1:  3/20 drones",
-        "finalNumberOfIncorrectlyClassifiedDrones": "System accuracy: 75, Trial number: 1, Drones classified incorrectly in this trial:0"
-    },
-    {
-        "outputNonHostileButton": "non hostile button pressed by user ID 1 on : ",
-        "outputNonHostileTimeLog": "Thu Apr 14 2022 13:15:29 GMT+0100 (British Summer Time)"
-    },
-    {
-        "outputConfirmButton": "confirm button pressed by user ID 1 on : Thu Apr 14 2022 13:15:29 GMT+0100 (British Summer Time)"
-    },
-    {
-        "timeElapsed": "time between clicking drone and confirming 2.380999999999972 seconds"
-    },
-    {
-        "droneIndexLog": " button pressed by user ID 1, ID of drone selected: 17, drone selected on Thu Apr 14 2022 13:15:31 GMT+0100 (British Summer Time)"
-    },
-    {
-        "droneIndexLog": " button pressed by user ID 1, ID of drone selected: 17, drone selected on Thu Apr 14 2022 13:15:31 GMT+0100 (British Summer Time)"
-    },
-    {
-        "outputConfirmButton": "confirm button pressed by user ID 1 on : Thu Apr 14 2022 13:15:32 GMT+0100 (British Summer Time)"
-    },
-    {
-        "timeElapsed": "time between clicking drone and confirming 0.9759999999999991 seconds"
-    },
-    {
-        "finalDroneClassification": "The final drone classification of user 1 of drone ID 17, class Hostile, is Hostile, this classification, is correct!",
-        "finalNumberOfCorrectlyClassifiedDrones": "System accuracy 75, Trial number: 1, Drones classified correctly in this trial: 4 /20 drone/s, Accuracy of trial/burst: 42.857142857142854%",
-        "finalDroneCoverage": "total drones classified in trial 1:  4/20 drones",
-        "finalNumberOfIncorrectlyClassifiedDrones": "System accuracy: 75, Trial number: 1, Drones classified incorrectly in this trial:0"
-    },
-    {
-        "outputConfirmButton": "confirm button pressed by user ID 1 on : Thu Apr 14 2022 13:15:36 GMT+0100 (British Summer Time)"
-    },
-    {
-        "timeElapsed": "time between clicking drone and confirming 5.5499999999999545 seconds"
-    },
-    {
-        "droneIndexLog": " button pressed by user ID 1, ID of drone selected: 18, drone selected on Thu Apr 14 2022 13:15:40 GMT+0100 (British Summer Time)"
-    },
-    {
-        "droneIndexLog": " button pressed by user ID 1, ID of drone selected: 18, drone selected on Thu Apr 14 2022 13:15:40 GMT+0100 (British Summer Time)"
-    },
-    {
-        "outputConfirmButton": "confirm button pressed by user ID 1 on : Thu Apr 14 2022 13:15:41 GMT+0100 (British Summer Time)"
-    },
-    {
-        "timeElapsed": "time between clicking drone and confirming 0.9809999999999945 seconds"
-    },
-    {
-        "finalDroneClassification": "The final drone classification of user 1 of drone ID 18, class Hostile, is Hostile, this classification, is correct!",
-        "finalNumberOfCorrectlyClassifiedDrones": "System accuracy 75, Trial number: 1, Drones classified correctly in this trial: 5 /20 drone/s, Accuracy of trial/burst: 44.44444444444444%",
-        "finalDroneCoverage": "total drones classified in trial 1:  5/20 drones",
-        "finalNumberOfIncorrectlyClassifiedDrones": "System accuracy: 75, Trial number: 1, Drones classified incorrectly in this trial:0"
-    }
-][{"supervisedTest":"starting supervised test"},{"droneIndexLog":" drone pressed by user ID 1, ID of drone selected: 5, drone selected on Thu Apr 14 2022 14:41:07 GMT+0100 (British Summer Time)"},{"outputConfirmButton":"confirm button pressed by user ID 1 on : ","outputConfirmTimeLog":"Thu Apr 14 2022 14:41:08 GMT+0100 (British Summer Time)"},{"timeElapsed":"time between clicking drone and confirming 0.9789999999998145 seconds"},{"finalDroneClassification":"The final drone classification of user 1 of drone ID 5 is nonHostile, which is correct!","finalNumberOfCorrectlyClassifiedDrones":"the current number of drones classified correctly is 1 /20 drones in scenario"},{"outputConfirmButton":"confirm button pressed by user ID 1 on : ","outputConfirmTimeLog":"Thu Apr 14 2022 14:41:09 GMT+0100 (British Summer Time)"},{"timeElapsed":"time between clicking drone and confirming 2.4329999999999927 seconds"},{"finalDroneClassification":"The final drone classification of user 1 of drone ID 5 is nonHostile, which is undefined!","finalNumberOfCorrectlyClassifiedDrones":"the current number of drones classified correctly is 1 /20 drones in scenario"}]
-[{"unsupervisedTest":"starting unsupervised test"},{"droneIndexLog":" drone pressed by user ID 1, ID of drone selected: 5, drone selected on Thu Apr 14 2022 14:41:16 GMT+0100 (British Summer Time)"},{"outputConfirmButton":"confirm button pressed by user ID 1 on : ","outputConfirmTimeLog":"Thu Apr 14 2022 14:41:16 GMT+0100 (British Summer Time)"},{"timeElapsed":"time between clicking drone and confirming 0.9290000000000873 seconds"},{"outputUncertainButton":"uncertain button pressed by user ID 1 on : ","outputUncertainTimeLog":"Thu Apr 14 2022 14:41:17 GMT+0100 (British Summer Time)"},{"outputConfirmButton":"confirm button pressed by user ID 1 on : ","outputConfirmTimeLog":"Thu Apr 14 2022 14:41:17 GMT+0100 (British Summer Time)"},{"timeElapsed":"time between clicking drone and confirming 1.86200000000008 seconds"},{"droneIndexLog":" drone pressed by user ID 1, ID of drone selected: 17, drone selected on Thu Apr 14 2022 14:41:19 GMT+0100 (British Summer Time)"},{"outputConfirmButton":"confirm button pressed by user ID 1 on : ","outputConfirmTimeLog":"Thu Apr 14 2022 14:41:20 GMT+0100 (British Summer Time)"},{"timeElapsed":"time between clicking drone and confirming 0.8640000000000327 seconds"},{"outputNonHostileButton":"non hostile button pressed by user ID 1 on : ","outputNonHostileTimeLog":"Thu Apr 14 2022 14:41:20 GMT+0100 (British Summer Time)"},{"outputConfirmButton":"confirm button pressed by user ID 1 on : ","outputConfirmTimeLog":"Thu Apr 14 2022 14:41:21 GMT+0100 (British Summer Time)"},{"timeElapsed":"time between clicking drone and confirming 1.8350000000000364 seconds"},{"droneIndexLog":" drone pressed by user ID 1, ID of drone selected: 2, drone selected on Thu Apr 14 2022 14:41:23 GMT+0100 (British Summer Time)"},{"outputConfirmButton":"confirm button pressed by user ID 1 on : ","outputConfirmTimeLog":"Thu Apr 14 2022 14:41:24 GMT+0100 (British Summer Time)"},{"timeElapsed":"time between clicking drone and confirming 0.9399999999995998 seconds"}]
-[{"accuracy95":"starting scenario of accuracy 95"},{"droneIndexLog":" drone pressed by user ID 1, ID of drone selected: 5, drone selected on  Thu Apr 14 2022 14:41:27 GMT+0100 (British Summer Time)"},{"outputUncertainButton":"uncertain button pressed by user ID 1 on: "},{"outputConfirmButton":"confirm button pressed by user ID 1 on: Thu Apr 14 2022 14:41:29 GMT+0100 (British Summer Time)"},{"timeElapsed":"time between clicking drone and confirming 1.5629999999996471 seconds"},{"finalDroneClassification":"The final drone classification of user 1 of drone ID 5, class nonHostile, is Uncertain, this classification, is incorrect!","finalNumberOfCorrectlyClassifiedDrones":"System accuracy 95, Trial number: 1, Drones classified correctly in this trial: 0 /20 drone/s, Accuracy of trial/burst: 0%","finalDroneCoverage":"total drones classified in trial 1:  0/20 drones","finalNumberOfIncorrectlyClassifiedDrones":"System accuracy: 95, Trial number: 1, Drones classified incorrectly in this trial:1"},{"droneIndexLog":" drone pressed by user ID 1, ID of drone selected: 18, drone selected on  Thu Apr 14 2022 14:41:30 GMT+0100 (British Summer Time)"},{"outputConfirmButton":"confirm button pressed by user ID 1 on: Thu Apr 14 2022 14:41:31 GMT+0100 (British Summer Time)"},{"timeElapsed":"time between clicking drone and confirming 1.0740000000000691 seconds"},{"finalDroneClassification":"The final drone classification of user 1 of drone ID 18, class Hostile, is Hostile, this classification, is correct!","finalNumberOfCorrectlyClassifiedDrones":"System accuracy 95, Trial number: 1, Drones classified correctly in this trial: 1 /20 drone/s, Accuracy of trial/burst: 0%","finalDroneCoverage":"total drones classified in trial 1:  1/20 drones","finalNumberOfIncorrectlyClassifiedDrones":"System accuracy: 95, Trial number: 1, Drones classified incorrectly in this trial:1"},{"outputNonHostileButton":"non hostile button pressed by user ID 1 on: "},{"outputConfirmButton":"confirm button pressed by user ID 1 on: Thu Apr 14 2022 14:41:32 GMT+0100 (British Summer Time)"},{"timeElapsed":"time between clicking drone and confirming 2.0419999999999163 seconds"},{"droneIndexLog":" drone pressed by user ID 1, ID of drone selected: 2, drone selected on  Thu Apr 14 2022 14:41:33 GMT+0100 (British Summer Time)"},{"outputConfirmButton":"confirm button pressed by user ID 1 on: Thu Apr 14 2022 14:41:34 GMT+0100 (British Summer Time)"},{"timeElapsed":"time between clicking drone and confirming 0.9699999999997999 seconds"},{"finalDroneClassification":"The final drone classification of user 1 of drone ID 2, class nonHostile, is nonHostile, this classification, is correct!","finalNumberOfCorrectlyClassifiedDrones":"System accuracy 95, Trial number: 1, Drones classified correctly in this trial: 2 /20 drone/s, Accuracy of trial/burst: 25%","finalDroneCoverage":"total drones classified in trial 1:  2/20 drones","finalNumberOfIncorrectlyClassifiedDrones":"System accuracy: 95, Trial number: 1, Drones classified incorrectly in this trial:1"}]
-[{"accuracy75":"starting scenario of accuracy 75"},{"droneIndexLog":" button pressed by user ID 1, ID of drone selected: 8, drone selected on Thu Apr 14 2022 14:41:46 GMT+0100 (British Summer Time)"},{"outputConfirmButton":"confirm button pressed by user ID 1 on : Thu Apr 14 2022 14:41:47 GMT+0100 (British Summer Time)"},{"timeElapsed":"time between clicking drone and confirming 0.7890000000002146 seconds"},{"finalDroneClassification":"The final drone classification of user 1 of drone ID 8, class nonHostile, is nonHostile, this classification, is correct!","finalNumberOfCorrectlyClassifiedDrones":"System accuracy 75, Trial number: 1, Drones classified correctly in this trial: 1 /20 drone/s, Accuracy of trial/burst: NaN%","finalDroneCoverage":"total drones classified in trial 1:  1/20 drones","finalNumberOfIncorrectlyClassifiedDrones":"System accuracy: 75, Trial number: 1, Drones classified incorrectly in this trial:0"},{"outputUncertainButton":"uncertain button pressed by user ID 1 on : ","outputUncertainTimeLog":"Thu Apr 14 2022 14:41:48 GMT+0100 (British Summer Time)"},{"outputConfirmButton":"confirm button pressed by user ID 1 on : Thu Apr 14 2022 14:41:48 GMT+0100 (British Summer Time)"},{"timeElapsed":"time between clicking drone and confirming 1.8110000000001492 seconds"},{"droneIndexLog":" button pressed by user ID 1, ID of drone selected: 12, drone selected on Thu Apr 14 2022 14:41:49 GMT+0100 (British Summer Time)"},{"outputConfirmButton":"confirm button pressed by user ID 1 on : Thu Apr 14 2022 14:41:50 GMT+0100 (British Summer Time)"},{"timeElapsed":"time between clicking drone and confirming 1.33600000000024 seconds"},{"finalDroneClassification":"The final drone classification of user 1 of drone ID 12, class Uncertain, is Uncertain, this classification, is correct!","finalNumberOfCorrectlyClassifiedDrones":"System accuracy 75, Trial number: 1, Drones classified correctly in this trial: 2 /20 drone/s, Accuracy of trial/burst: 50%","finalDroneCoverage":"total drones classified in trial 1:  2/20 drones","finalNumberOfIncorrectlyClassifiedDrones":"System accuracy: 75, Trial number: 1, Drones classified incorrectly in this trial:0"},{"droneIndexLog":" button pressed by user ID 1, ID of drone selected: 8, drone selected on Thu Apr 14 2022 14:41:51 GMT+0100 (British Summer Time)"},{"outputConfirmButton":"confirm button pressed by user ID 1 on : Thu Apr 14 2022 14:41:52 GMT+0100 (British Summer Time)"},{"timeElapsed":"time between clicking drone and confirming 0.862999999999829 seconds"},{"outputHostileButton":"hostile button pressed by user ID 1 on : ","outputHostileTimeLog":"Thu Apr 14 2022 14:41:53 GMT+0100 (British Summer Time)"},{"outputConfirmButton":"confirm button pressed by user ID 1 on : Thu Apr 14 2022 14:41:53 GMT+0100 (British Summer Time)"},{"timeElapsed":"time between clicking drone and confirming 1.94399999999996 seconds"},{"droneIndexLog":" button pressed by user ID 1, ID of drone selected: 17, drone selected on Thu Apr 14 2022 14:41:54 GMT+0100 (British Summer Time)"},{"outputConfirmButton":"confirm button pressed by user ID 1 on : Thu Apr 14 2022 14:41:55 GMT+0100 (British Summer Time)"},{"timeElapsed":"time between clicking drone and confirming 0.6959999999999127 seconds"},{"finalDroneClassification":"The final drone classification of user 1 of drone ID 17, class Hostile, is Hostile, this classification, is correct!","finalNumberOfCorrectlyClassifiedDrones":"System accuracy 75, Trial number: 1, Drones classified correctly in this trial: 3 /20 drone/s, Accuracy of trial/burst: 40%","finalDroneCoverage":"total drones classified in trial 1:  3/20 drones","finalNumberOfIncorrectlyClassifiedDrones":"System accuracy: 75, Trial number: 1, Drones classified incorrectly in this trial:0"}]
-[{"accuracy25":"starting scenario of accuracy 25"},{"droneIndexLog":" button pressed by user ID 1, ID of drone selected: 15, drone selected on Thu Apr 14 2022 14:42:09 GMT+0100 (British Summer Time)"},{"outputConfirmButton":"confirm button pressed by user ID 1 on : Thu Apr 14 2022 14:42:10 GMT+0100 (British Summer Time)"},{"timeElapsed":"time between clicking drone and confirming 0.8700000000003456 seconds"},{"finalDroneClassification":"The final drone classification of user 1 of drone ID 15, class Uncertain, is Uncertain, this classification, is correct!","finalNumberOfCorrectlyClassifiedDrones":"System accuracy 25, Trial number: 1, Drones classified correctly in this trial: 1 /20 drone/s, Accuracy of trial/burst: 0%","finalDroneCoverage":"total drones classified in trial 1:  1/20 drones","finalNumberOfIncorrectlyClassifiedDrones":"System accuracy: 25, Trial number: 1, Drones classified incorrectly in this trial:0"},{"outputNonHostileButton":"nonHostile button pressed by user ID 1 on : ","outputNonHostileTimeLog":"Thu Apr 14 2022 14:42:11 GMT+0100 (British Summer Time)"},{"outputConfirmButton":"confirm button pressed by user ID 1 on : Thu Apr 14 2022 14:42:12 GMT+0100 (British Summer Time)"},{"timeElapsed":"time between clicking drone and confirming 2.7150000000001455 seconds"},{"droneIndexLog":" button pressed by user ID 1, ID of drone selected: 2, drone selected on Thu Apr 14 2022 14:42:13 GMT+0100 (British Summer Time)"},{"outputConfirmButton":"confirm button pressed by user ID 1 on : Thu Apr 14 2022 14:42:14 GMT+0100 (British Summer Time)"},{"timeElapsed":"time between clicking drone and confirming 0.8989999999998872 seconds"},{"finalDroneClassification":"The final drone classification of user 1 of drone ID 2, class nonHostile, is nonHostile, this classification, is correct!","finalNumberOfCorrectlyClassifiedDrones":"System accuracy 25, Trial number: 1, Drones classified correctly in this trial: 2 /20 drone/s, Accuracy of trial/burst: 33.33333333333333%","finalDroneCoverage":"total drones classified in trial 1:  2/20 drones","finalNumberOfIncorrectlyClassifiedDrones":"System accuracy: 25, Trial number: 1, Drones classified incorrectly in this trial:0"},{"droneIndexLog":" button pressed by user ID 1, ID of drone selected: 14, drone selected on Thu Apr 14 2022 14:42:15 GMT+0100 (British Summer Time)"},{"outputConfirmButton":"confirm button pressed by user ID 1 on : Thu Apr 14 2022 14:42:16 GMT+0100 (British Summer Time)"},{"timeElapsed":"time between clicking drone and confirming 1.0109999999999673 seconds"},{"finalDroneClassification":"The final drone classification of user 1 of drone ID 14, class Uncertain, is Uncertain, this classification, is correct!","finalNumberOfCorrectlyClassifiedDrones":"System accuracy 25, Trial number: 1, Drones classified correctly in this trial: 3 /20 drone/s, Accuracy of trial/burst: 50%","finalDroneCoverage":"total drones classified in trial 1:  3/20 drones","finalNumberOfIncorrectlyClassifiedDrones":"System accuracy: 25, Trial number: 1, Drones classified incorrectly in this trial:0"},{"droneIndexLog":" button pressed by user ID 1, ID of drone selected: 2, drone selected on Thu Apr 14 2022 14:42:17 GMT+0100 (British Summer Time)"}]

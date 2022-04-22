@@ -168,8 +168,7 @@ constructor(){
      //miscclasified colour generator for accuracy
      this.misclassifiedColourGenerator = Math.round(Math.floor(random() * (1 - 0 + 1)) + 0);
 
-    //   this.missclassify();
-    //   this.classifyAccurately();
+    
 }
 
 randomDroneMovement() {
@@ -261,13 +260,14 @@ class missclassifiedNonHostileDrone extends Drone{
         }
     
         missclassify(){
+            console.log("classifying inaccurately")
     
               
                 
             setTimeout(()=>{
                 
     
-                console.log(this.misclassifiedColourGenerator)
+                // console.log(this.misclassifiedColourGenerator)
             // console.log(this.misclassifiedColourGenerator);
                 //classify as hostile
             if(this.misclassifiedColourGenerator == 0){
@@ -279,7 +279,7 @@ class missclassifiedNonHostileDrone extends Drone{
                 this.colour = color(255,255,0);
                 // console.log("missclasify as green") 
             }
-            }, 180000);
+            }, 300000);
     
             
     
@@ -288,17 +288,17 @@ class missclassifiedNonHostileDrone extends Drone{
         //classfy accurately is a fucntion that is run four minutes into a scenario with a 75 or 25 trial, one minute into trial 2 of these scenarios right after the screen freeze
     
         classifyAccurately(){
+            console.log("classifying accurately")
         
-            
     
-    
-                setTimeout(() => {
+                setInterval(() => {
+                  
                     // console.log("working?")
     
                     this.colour = color(0, 255, 0);
                     console.log( "working?" +this.colour.levels);
                     
-                }, 4800000);
+                }, 240000);
         }
     }
 
@@ -582,7 +582,7 @@ class HostileDrone extends Drone{
             setTimeout(()=>{
                 
 
-                console.log(this.misclassifiedColourGenerator)
+                // console.log(this.misclassifiedColourGenerator)
             // console.log(this.misclassifiedColourGenerator);
                 //classify as hostile
             if(this.misclassifiedColourGenerator == 0){
@@ -594,7 +594,7 @@ class HostileDrone extends Drone{
                 this.colour = color(0,255,0);
                 // console.log("missclasify uncertain as green") 
             }
-            }, 180000);
+            }, 300000);
 
             
 
@@ -603,12 +603,123 @@ class HostileDrone extends Drone{
         //classfy accurately is a fucntion that is run four minutes into a scenario with a 75 or 25 trial, one minute into trial 2 of these scenarios right after the screen freeze
 
         classifyAccurately(){
-                setTimeout(() => {
+                setInterval(() => {
+                   
                     // console.log("working?")
 
                     this.colour = color(255, 255, 0);
                     console.log( "working?"+this.colour.levels);
                     
-                }, 480000);
+                }, 240000);
         }
     }
+
+
+    class missclassifiedHostileDrone extends Drone{
+        constructor(){
+            super();
+            // this.colour = color(255,0,0);
+            //weapons and emissions which are binary or alternatively hardcoded
+            //Checks for distance in relation to the center
+            this.Distance = Math.abs(Math.round((this.xPos/2 -250   + this.yPos/2 )));
+            this.countryOfOrigin= "ADRK";
+            this.identificationFriendOrUknown = "Uknown";
+            this.weapons = "Yes";
+            this.emissions = "Yes";
+            this.randomDroneMovement();
+            // this.disguisedMovement();
+    
+            //miscclasified colour generator for accuracy
+            this.misclassifiedColourGenerator = Math.round(Math.floor(random() * (1 - 0 + 1)) + 0);
+            // this.fakeColour = (Math.floor(random() * (1 - 0 + 1)) + 0);
+            // this.fakeColour = Math.round(random(0,1));
+            // this.switchToHostile();
+
+            if(this.misclassifiedColourGenerator == 0){
+                this.colour = color(255,255,0);
+                // console.log("missclasify uncertain as red") 
+            }
+        
+            if(this.misclassifiedColourGenerator == 1){
+                this.colour = color(0,255,0);
+                // console.log("missclasify uncertain as green") 
+            }
+          
+
+
+            
+            this.missclassify();
+            this.classifyAccurately();
+            
+    
+        }
+
+        
+        randomDroneMovement() {
+            //for a random interval(between 3.5 and 7 seconds the direction of the ball will change)
+            setInterval(() => {
+            /*random direction*/
+            this.xBallDir = random(-1, 1);
+            this.yBallDir = random(-1, 1);
+            this.xSpeed = random(0.5, 0.6);
+            this.ySpeed = random(0.5, 0.6);
+            
+            }, this.randomSeed * 15000);
+        }
+
+
+        move() {
+            //updates position of x and y with a direction and speeds
+            // added 100 to height and width so that it can move out of radar
+            this.xPos = (this.xPos + this.xBallDir * this.xSpeed)%(width+100);
+            this.yPos = (this.yPos +this.yBallDir *  this.ySpeed)%(height+25);
+        
+            // between width and height -10
+            
+            if (this.xPos > width + 85 ) {
+            this.xSpeed = -this.xSpeed;
+            } else if (this.yPos > height + 20) {
+            this.ySpeed = -this.ySpeed;
+            
+            }
+        }
+    
+        missclassify(){
+
+          
+            
+            setTimeout(()=>{
+                
+
+                console.log(this.misclassifiedColourGenerator)
+            // console.log(this.misclassifiedColourGenerator);
+                //classify as hostile
+            if(this.misclassifiedColourGenerator == 0){
+                this.colour = color(255,255,0);
+                // console.log("missclasify uncertain as red") 
+            }
+        
+            if(this.misclassifiedColourGenerator == 1){
+                this.colour = color(0,255,0);
+                // console.log("missclasify uncertain as green") 
+            }
+            }, 300000);
+
+            
+
+          
+        }
+        //classfy accurately is a fucntion that is run four minutes into a scenario with a 75 or 25 trial, one minute into trial 2 of these scenarios right after the screen freeze
+
+        classifyAccurately(){
+                setInterval(() => {
+                   
+                    // console.log("working?")
+
+                    this.colour = color(255, 0, 0);
+                    console.log( "working?"+this.colour.levels);
+                    
+                }, 240000);
+        }
+    }
+

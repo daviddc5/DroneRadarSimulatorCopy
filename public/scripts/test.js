@@ -7,12 +7,18 @@ setTimeout(function(){
   sessionStorage.setItem("testScenario", "true");
   noLoop();
 
-}, 10000);
+}, 240000);
 
 testScenarioLog = [];
 
+var participantID = UserID
 
-testScenarioLog.push( {supervisedTest :"starting supervised test"});
+
+supervisedTest = getTime() 
+
+
+
+testScenarioLog.push( {participantID, supervisedTest});
 
 
 
@@ -55,22 +61,11 @@ let finalNumberOfCorrectlyClassifiedDronesp = document.getElementById("finalNumb
   const box = document.querySelector('.box');
   const blackCoverBox = document.getElementById('black-cover-box');
   const quiz= document.getElementById('responsiveQuizContainer');
-  
-  
 
   
-  
-  
-  
-  
   //create button that will display after three minutes that redirects to the next trial
-  
-  
   //setup function is part of p5 and creates a canvas and allows to define a framerate
   function setup() {
-    
-    
-   
       randomSeed(1);
       createCanvas(800, 800);
       frameRate(30);
@@ -113,9 +108,7 @@ let finalNumberOfCorrectlyClassifiedDronesp = document.getElementById("finalNumb
     return droneID
   
   }
-  
-  
-  
+
   
   function getButton(buttonPressed){
   
@@ -183,14 +176,18 @@ let finalNumberOfCorrectlyClassifiedDronesp = document.getElementById("finalNumb
     // var ID = document.createTextNode("ID of drone selected: " + String(droneIndex)+ "\n");
     // logFile.append(ID);
     
-    var droneIDLog = " drone pressed by user ID " + UserID +  ", ID of drone selected: " + String(droneIndex) + ", drone selected on ";
     
-    var timeDronePressed =  getTime();
-    // console.log(getTime());
+    // var droneIDLog = " drone pressed by user ID " + UserID +  ", ID of drone selected: " + String(droneIndex) + ", drone selected on  "+ getTime();
   
-    var timeAndIDDronePressed = droneIDLog +  timeDronePressed;
+    var droneIDLog = String(droneIndex);
   
-    return timeAndIDDronePressed;
+    return droneIDLog;
+  
+  }
+
+  function updateHostilityLeveAutoclassifier(HostilityLeveAutoclassifier){
+    AutoclassifierHostilityLeveL = HostilityLeveAutoclassifier
+    return AutoclassifierHostilityLeveL
   
   }
   
@@ -203,17 +200,23 @@ let finalNumberOfCorrectlyClassifiedDronesp = document.getElementById("finalNumb
   }
   
   
-  var dronesClassifiedCorrectly = 0;
-  
-  //list of drones initially not classified
-  //ineficient but simple way to track what drones have been classified, when a drone is classified it gets removed from list
-  dronesToClassify = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19];
-  dronesClassifiedCorrectly = 0;
+ 
+dronesToClassify = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]
+
+var dronesClassifiedCorrectly = 0;
+var dronesClassifiedIncorrectly = 0;
+
+var totalDronesClassified = 0;
+
+var totalNumberOfClassifactions = 0;
+
+var finalNumberOfCorrectlyClassifiedDrones = 0;
+
 
  
  
   
-  //                        __   _                        _               _     _                   
+     //                        __   _                        _               _     _                   
   //                          / _| (_)                      | |             | |   | |                  
   //    ___    ___    _ __   | |_   _   _ __   _ __ ___     | |__    _   _  | |_  | |_    ___    _ __  
   //   / __|  / _ \  | '_ \  |  _| | | | '__| | '_ ` _ \    | '_ \  | | | | | __| | __|  / _ \  | '_ \ 
@@ -223,17 +226,7 @@ let finalNumberOfCorrectlyClassifiedDronesp = document.getElementById("finalNumb
   
   btnConfirm.addEventListener('click',() => {  
     
-    var outputConfirmButton = (getButton("confirm"));
-  
-    // console.log(outputConfirmButton);
-    var outputConfirmTimeLog = (getTime());
-    // console.log(outputConfirmTimeLog);
-    // logger.write(outputConfirmButton) // append string to your file")
-    const confirmButtonLog = {outputConfirmButton, outputConfirmTimeLog };
-  
-    // axios.post("/testScenario",confirmButtonLog);
-
-    testScenarioLog.push(confirmButtonLog);
+    
 
 
     const date = new Date()
@@ -241,59 +234,97 @@ let finalNumberOfCorrectlyClassifiedDronesp = document.getElementById("finalNumb
     //timeStampDroneConfirmed, gets second at which the user has confirmed drone
   
     timeStampDroneConfirmed = date.getMinutes()*60 + date.getSeconds()+ date.getMilliseconds()/1000
-    // console.log("timestamp drone confirmed at "+ timeStampDroneConfirmed);
+    
+    timeStampClickConfirm = getTime();
+
+    timeElapsedClassifyingDrone = timeStampDroneConfirmed-timeClickedDrone 
+
+
   
     
 
-    timeElapsedClassifyingDrone =timeStampDroneConfirmed-timeClickedDrone 
-    
-    if(timeElapsedClassifyingDrone<0){
-      timeElapsedClassifyingDrone= 60-timeElapsedClassifyingDrone
+    if(currentButtonPressed == droneClass){
+
+      CorrectOrIncorrect = "correct"
+      dronesClassifiedCorrectly++;
+     
     }
+    else if (currentButtonPressed != droneClass){
+      CorrectOrIncorrect = "incorrect"
+      dronesClassifiedIncorrectly++;
     
-      
-
-      
-      timeElapsed = "time between clicking drone and confirming "+timeElapsedClassifyingDrone +" seconds"
-
-      const timeElapsedBetweenClickingAndConfirming = {timeElapsed};
-      // axios.post("/testScenario",timeElapsedBetweenClickingAndConfirming);
-
-      testScenarioLog.push(timeElapsedBetweenClickingAndConfirming);
-
-
-
-      if(dronesToClassify.includes(currentDroneID)){
-
-        indexToDelete = dronesToClassify.indexOf(currentDroneID);
-  
-        dronesToClassify.splice(indexToDelete, 1)
-  
-  
-  
-  
-  
-    
-      // we create a variable that works as a counter for how many drones the user has got right (initially 0)
-      if(currentButtonPressed == droneClass){
-        var classification = "correct"
-        dronesClassifiedCorrectly++;
-        
-      }
-      else{
-        var classification = "incorrect"
-  
-      }
-  
     }
-  
-    else{
-      console.log("already classified")}
 
-      dronesClassifiedIncorrectly = (20 - dronesClassifiedCorrectly);
-      // this variable has info on the user ID drone id classified and classification
-      finalDroneClassification = "The final drone classification of user "+ UserID+" of drone ID "+ currentDroneID+ " is "+ currentButtonPressed+ ", which is " + classification+ "!";
+    if(dronesToClassify.includes(currentDroneID)){
+
+      indexToDelete = dronesToClassify.indexOf(currentDroneID);
+
+      dronesToClassify.splice(indexToDelete, 1)
+  
+
+    
+
+    if(currentButtonPressed == droneClass){
+
+      // CorrectOrIncorrect = "correct"
       
+      //increase number of drones classified
+      totalDronesClassified++;
+      console.log(CorrectOrIncorrect)
+      finalNumberOfCorrectlyClassifiedDrones++;
+      
+
+    }
+    else if (currentButtonPressed != droneClass){
+      // CorrectOrIncorrect = "incorrect"
+      
+      totalDronesClassified++;
+      console.log(CorrectOrIncorrect)
+
+    }
+  }
+
+    
+    // dronesClassifiedIncorrectly = (20 - dronesClassifiedCorrectly);
+    // this variable has info on the user ID drone id classified and classification
+    
+    // finalDroneClassification =  currentDroneID+ ", class "+ droneClass+  ", is "+ currentButtonPressed+ ", this classification, is " + classification+ "!";
+    //this variable updates every time the confirm button is switched, and will add one if the drone has been correctly classified
+    
+
+    // finalDroneCoverage = "total drones classified in trial " + trialNumber+ ":  "+ totalDronesClassified+ "/20"
+
+    finalDroneCoverage =  totalDronesClassified+ "/20"
+
+    // finalNumberOfIncorrectlyClassifiedDrones = dronesClassifiedIncorrectly + "/20"
+
+
+    finalNumberOfCorrectlyClassifiedDronesp.innerText = String(finalNumberOfCorrectlyClassifiedDrones)+ "/20"
+
+
+    participantGivenHostility = currentButtonPressed;
+
+
+    if (AutoclassifierHostilityLeveL == participantGivenHostility){
+      sameOrDifferentAutoclassifier ="same";
+    }
+    else {
+      sameOrDifferentAutoclassifier ="different";
+
+    }
+
+
+    
+    const classificationInformation = {participantID, droneID, timeStampClickConfirm,timeElapsedClassifyingDrone, participantGivenHostility, CorrectOrIncorrect, sameOrDifferentAutoclassifier,  finalDroneCoverage, dronesClassifiedCorrectly, dronesClassifiedIncorrectly};
+    // console.log(classificationInformation);
+
+   
+    testScenarioLog.push(classificationInformation);
+
+
+
+  
+
 
           // information to be logged in drone tracker
   const pID = document.createElement('p');
@@ -309,7 +340,7 @@ let finalNumberOfCorrectlyClassifiedDronesp = document.getElementById("finalNumb
 
     // + ", classified as " + currentButtonPressed;
 
-    pClass.innerText = "classification:" + currentButtonPressed+ " is: " +classification;
+    pClass.innerText = "classification:" + currentButtonPressed+ " is: " +CorrectOrIncorrect;
 
 
     randomPrependORAppend= Math.round(random(0,1));
@@ -335,26 +366,7 @@ let finalNumberOfCorrectlyClassifiedDronesp = document.getElementById("finalNumb
 
     }
       
-
-      //this variable updates every time the confirm button is switched, and will add one if the drone has been correctly classified
-      finalNumberOfCorrectlyClassifiedDrones= "the current number of drones classified correctly is " + dronesClassifiedCorrectly +" /20 drones in scenario"
-      
-      finalNumberOfCorrectlyClassifiedDronesp.innerText = dronesClassifiedCorrectly;
-
-      
-      const classificationInformation = {finalDroneClassification, finalNumberOfCorrectlyClassifiedDrones };
-
-      
-      testScenarioLog.push(classificationInformation);
-  
         
-  
-  
-      
-    
-  
-   
-  
    // depending on the value of the current button pressed we change the colour of drones
   
     if(currentButtonPressed == "nonHostile") {
@@ -376,6 +388,9 @@ let finalNumberOfCorrectlyClassifiedDronesp = document.getElementById("finalNumb
   
     }  
   });
+
+
+
   
   btnHostile.addEventListener('click',() => {    
     var outputHostileButton = (getButton("hostile"));
@@ -392,7 +407,7 @@ let finalNumberOfCorrectlyClassifiedDronesp = document.getElementById("finalNumb
     
     // axios.post("/testScenario",HostileButtonLog);
 
-    testScenarioLog.push(HostileButtonLog);
+    // testScenarioLog.push(HostileButtonLog);
   
     updateSelectedButton("Hostile");
   
@@ -414,7 +429,7 @@ let finalNumberOfCorrectlyClassifiedDronesp = document.getElementById("finalNumb
     const nonHostileButton = {outputNonHostileButton, outputNonHostileTimeLog};
   
     // axios.post("/testScenario", nonHostileButton);
-    testScenarioLog.push(nonHostileButton);
+    // testScenarioLog.push(nonHostileButton);
   
     btnNonHostile.style.backgroundColor = "00ff00";
     btnHostile.style.backgroundColor = "B1ACA3";
@@ -448,7 +463,7 @@ let finalNumberOfCorrectlyClassifiedDronesp = document.getElementById("finalNumb
   
     // axios.post("/testScenario", UncertainButtonLog)
 
-    testScenarioLog.push(UncertainButtonLog);
+    // testScenarioLog.push(UncertainButtonLog);
   
     updateSelectedButton("Uncertain");
   
@@ -458,29 +473,25 @@ let finalNumberOfCorrectlyClassifiedDronesp = document.getElementById("finalNumb
   
   // called when a drone is pressed, checks if drone is checked and if it is not set to white if not then it is red
   function cb(droneIndex) {
+
     const date = new Date()
-  
-    timestampSecondDroneClicked = date.getMinutes()*60 + date.getSeconds()+ date.getMilliseconds()/1000
-    // console.log("timestamp drone clicked at "+ timestampSecondDroneClicked);
-  
-    getTimeDroneClicked(timestampSecondDroneClicked);
-    
-  
-    var droneIndexLog = logDroneID(droneIndex);
-    // console.log(droneIndexLog)
-  
     //set drone ID to be current
     setDroneID(droneIndex) 
+  
+    // const date = new Date()
+    timestampDroneClicked =  date.getMinutes()*60 + date.getSeconds()+ date.getMilliseconds()/1000
+  
+  
+    // console.log("timestamp drone clicked at "+ timestampSecondDroneClicked);
+  
+    getTimeDroneClicked(timestampDroneClicked);
+  
+    var timestampDroneClicked = getTime();
+    
+    var droneID = logDroneID(droneIndex);
     
   
-    const backEndDroneIndexLog = {droneIndexLog};
-  
-    // axios.post("/testScenario", backEndDroneIndexLog);
-
-    testScenarioLog.push(backEndDroneIndexLog);
-  
     // UPDATES DRONE id
-  
     updateSelectedDroneID(droneIndex)
   
   
@@ -539,6 +550,7 @@ let finalNumberOfCorrectlyClassifiedDronesp = document.getElementById("finalNumb
         btnNonHostile.style.backgroundColor = "#00ff00"
         btnHostile.style.backgroundColor = "#B1ACA3"
         btnUncertain.style.backgroundColor = "#B1ACA3"
+        updateSelectedButton("nonHostile");
       
       }
   
@@ -549,6 +561,7 @@ let finalNumberOfCorrectlyClassifiedDronesp = document.getElementById("finalNumb
           btnNonHostile.style.backgroundColor = "#B1ACA3"
           btnHostile.style.backgroundColor = "#B1ACA3"
           btnUncertain.style.backgroundColor = "#ffff00"
+          updateSelectedButton("Uncertain");
   
         }
   
@@ -556,40 +569,44 @@ let finalNumberOfCorrectlyClassifiedDronesp = document.getElementById("finalNumb
           btnNonHostile.style.backgroundColor = "#B1ACA3"
           btnHostile.style.backgroundColor = "#ff0000"
           btnUncertain.style.backgroundColor = "B1ACA3"
+          updateSelectedButton("Hostile");
   
         }
   
       }
+
+
       if (drones[selectedDroneIndex] instanceof HostileDrone){
-        
-        updateSelectedButton("Hostile");
-        updateSelectedDroneClass("Hostile")
-        // btnHostile.style.backgroundColor = "#ff0000"
-        // btnNonHostile.style.backgroundColor = "#B1ACA3"
-        // btnUncertain.style.backgroundColor = "#B1ACA3"
-      }
-    
-      if (drones[selectedDroneIndex] instanceof nonHostileDrone){
-        
-        updateSelectedButton("nonHostile");
-        updateSelectedDroneClass("nonHostile");
-        
-        
-        // btnNonHostile.style.backgroundColor = "#00ff00"
-        // btnHostile.style.backgroundColor = "#B1ACA3"
-        // btnUncertain.style.backgroundColor = "#B1ACA3"
-      }
-       if (drones[selectedDroneIndex] instanceof uncertainDrone){
+      // console.log("hostile drone")
+
+      updateSelectedDroneClass("Hostile")
+      updateHostilityLeveAutoclassifier("Hostile");
+
+    }
   
-        
-        updateSelectedButton("Uncertain");
-        updateSelectedDroneClass("Uncertain");
-        // btnUncertain.style.backgroundColor = "#ffff00"
-        // btnHostile.style.backgroundColor = "#B1ACA3"
-        // btnNonHostile.style.backgroundColor = "#B1ACA3"
-      }
-  
+    if (drones[selectedDroneIndex] instanceof nonHostileDrone){
+      // console.log("non hostile drone")
+      
+      updateSelectedDroneClass("nonHostile");
+      updateHostilityLeveAutoclassifier("nonHostile");
+      
+      
+     
+    }
+     if (drones[selectedDroneIndex] instanceof uncertainDrone){
+
+      // console.log("uncertain drone")
+      
+      updateSelectedDroneClass("Uncertain");
+      updateHostilityLeveAutoclassifier("Uncertain");
+      
+    }
+
+
+    testScenarioLog.push({participantID, droneID, timestampDroneClicked, AutoclassifierHostilityLeveL, droneClass });
   }
+
+    
   
   //when mose is pressed it calles drone clicked for that instance
   function mousePressed() {
