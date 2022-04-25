@@ -419,7 +419,7 @@ btnConfirm.addEventListener('click',() => {
     }
   }
 
-  const classificationInformation = {participantID, trialNumber, droneID, timeStampClickConfirm,timeElapsedClassifyingDrone, participantGivenHostility, CorrectOrIncorrect, sameOrDifferentAutoclassifier,  finalDroneCoverage, dronesClassifiedCorrectly, dronesClassifiedIncorrectly};
+  const classificationInformation = {participantID, trialNumber, droneID, timeStampClickConfirm,timeElapsedClassifyingDrone, timeFromStartBurst,  participantGivenHostility, CorrectOrIncorrect, sameOrDifferentAutoclassifier,  finalDroneCoverage, dronesClassifiedCorrectly, dronesClassifiedIncorrectly};
     
     
     dataToPostScenario2.push(classificationInformation);
