@@ -8,24 +8,27 @@ setTimeout(function(){
   modal.style.display = "block";
   repeatingModal.style.display = "none";
   sessionStorage.setItem("scenario1", "true");
- 
 },960000);
 
 
 
 
+//use clear timeout to change the interval so that it stops counting
 
+// 4 minutes clear interval(stop), start interval 4 minutes, start interval
 
 
   var repeatingQuizInterval = setInterval(() => {
-
-    
     // console.log(repeatingQuizIntervalCounter)
     noLoop();
     repeatingModal.style.display = "block";
+
+    //start timer
+
+
   },240000);
 
-  // console.log(repeatingQuizIntervalCounter)
+
   
 
 //  GETS all of the elements defined in scenario2 
@@ -38,7 +41,7 @@ var repeatingModal = document.getElementById("repeatingMyModal");
 
 var repeatingFinishButton = document.getElementById("repeatingFinishButton");
 
-var repeatingQuizIntervalCounter = 0;
+var repeatingQuizIntervalCounter = 1;
 
 repeatingFinishButton.onclick = function(){
   repeatingModal.style.display = "none";
@@ -58,6 +61,18 @@ repeatingFinishButton.onclick = function(){
   console.log(repeatingQuizIntervalCounter)
   
   loop();
+
+  
+  clearInterval(repeatingQuizInterval)
+
+  repeatingQuizInterval = setInterval(() => {
+    console.log(repeatingQuizIntervalCounter)
+    noLoop();
+    repeatingModal.style.display = "block";
+
+    //start timer
+  },240000);
+
 
   if(repeatingQuizIntervalCounter==3){
     clearInterval(repeatingQuizInterval)

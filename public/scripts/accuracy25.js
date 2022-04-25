@@ -31,7 +31,7 @@ var repeatingModal = document.getElementById("repeatingMyModal");
 
 var repeatingFinishButton = document.getElementById("repeatingFinishButton");
 
-var repeatingQuizIntervalCounter = 0;
+var repeatingQuizIntervalCounter = 1;
 
 repeatingFinishButton.onclick = function(){
   repeatingModal.style.display = "none";
@@ -51,6 +51,17 @@ repeatingFinishButton.onclick = function(){
   console.log(repeatingQuizIntervalCounter)
   
   loop();
+
+  clearInterval(repeatingQuizInterval)
+
+  repeatingQuizInterval = setInterval(() => {
+    console.log(repeatingQuizIntervalCounter)
+    noLoop();
+    repeatingModal.style.display = "block";
+
+    //start timer
+  },240000);
+
 
   if(repeatingQuizIntervalCounter==3){
     clearInterval(repeatingQuizInterval)
