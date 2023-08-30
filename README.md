@@ -68,18 +68,10 @@ To set up the project locally, follow these steps:
     export $(cat .env | xargs)
     ```
 
-### Windows
-
-If you're on Windows, you might need to add additional setup instructions here.
-
-### macOS / Linux
-
-If you're on macOS or Linux, you might need to add additional setup instructions here.
-
 ## Usage
 
-1. Start the server: `npm start`
-2. Open a web browser and navigate to `http://localhost:3000` (or whatever port you've configured)
+1. Start the server: `npm run devStart`
+2. Open a web browser and navigate to configured port in server.js file, you may have to change the default 5000 port
 3. Follow the on-screen instructions to run the simulation and complete the questionnaires.
 
 ## How It Works
