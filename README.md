@@ -1,14 +1,15 @@
 # MCSS(drone radar simulation)
 
 ## About
-
-This is a copy of the code I developed during my placement.
-
 This program is inspired by inspired by the Micromonde combat control system developed by University of Laval.
 It simulates three different drone radar systems with different changing accuracies and two test scenarios to aid get the user used to the system.
 The program periodically links to external qualtrics questionaires that the user must respond in order to continue.
-## System Features
 
+## Aim
+The aim is to ....
+
+## System Features
+Add more detail and maybe videos here
 - Three drone radar systems with dynamic accuracy levels
 - Two test scenarios for training
 - Qualtrics questionnaire integration
@@ -45,8 +46,6 @@ To set up the project locally, follow these steps:
 1. Start the server: `npm run devStart`
 2. Open a web browser and navigate to configured port in server.js file, you may have to change the default 5000 port
 3. Follow the on-screen instructions to run the simulation and complete the questionnaires.
-
-## System features
 
 ## How It Works
 
