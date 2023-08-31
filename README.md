@@ -1,4 +1,4 @@
-# MCSS(drone radar simulation)
+# MCCS(drone radar simulation)
 
 ## About
 This program is inspired by inspired by the Micromonde combat control system developed by University of Laval.
