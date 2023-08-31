@@ -12,7 +12,9 @@ Three groups A,B,C where created to test users trust in the system with differen
 ## System Features
 
 - Three drone radar systems with dynamic accuracy levels
+  <img align="left" src="https://media.giphy.com/media/38UQZDj7URgZYAjS3t/giphy.gif">
 - Two test scenarios for training
+- 
 - Qualtrics questionnaire integration
 
 ## Prerequisites
@@ -47,9 +49,5 @@ To set up the project locally, follow these steps:
 1. Start the server: `npm run devStart`
 2. Open a web browser and navigate to configured port in server.js file, you may have to change the default 5000 port
 3. Follow the on-screen instructions to run the simulation and complete the questionnaires.
-
-## How It Works
-
-The software runs on a Node.js backend. When started, it initializes the drone radar systems and the test scenarios. Each radar system has its own set of algorithms to simulate varying levels of accuracy. As the user interacts with the software, they may be prompted to complete Qualtrics questionnaires at specific intervals for data collection and user feedback.
 
 
