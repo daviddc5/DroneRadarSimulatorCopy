@@ -12,7 +12,7 @@ Three groups A,B,C where created to test users trust in the system with differen
 ## System Features
 
 - Three drone radar systems with dynamic accuracy levels
-  <img align="left" src="https://media.giphy.com/media/38UQZDj7URgZYAjS3t/giphy.gif">
+  <img align="left" src="file:///Users/daviddiazclifton/Desktop/photos%20for%20placement%20code/Screenshot%202023-08-31%20at%2020.52.11.png">
 - Two test scenarios for training
 - 
 - Qualtrics questionnaire integration
