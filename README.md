@@ -6,7 +6,9 @@ It simulates three different drone radar systems with different changing accurac
 The program periodically links to external qualtrics questionaires that the user must respond in order to continue.
 
 ## Aim
-The aim of this program is to measure users trust in the system when presented with the three different systems in different orders. The three different systems where divided in three different blocks, all of the first and third had 95 per cent accuracy and the second either 25,75,95. Three groups A,B,C where created to test users trust in the system with different accuracies. Group A had 95,95,95, Group B 95,25,95 and Group C 95,75,95. The users where asked to correct the systems classifications if necessary and where also periodically presented qualtrics questionaires such as a stress index and trust in system. Based on their classifications and the questionaires trust in the different groups was measured by psychologists using SPSS.
+The aim of this program is to measure users trust in the system when presented with the three different systems in different orders. The three different systems where divided in three different blocks, all of the first and third had 95 per cent accuracy and the second either 25,75,95. 
+
+Three groups A,B,C where created to test users trust in the system with different accuracies. Group A had 95,95,95, Group B 95,25,95 and Group C 95,75,95. The users where asked to correct the systems classifications if necessary and where also periodically presented qualtrics questionaires such as a stress index and trust in system. Based on their classifications and the questionaires trust in the different groups was measured by psychologists using SPSS.
 ## System Features
 
 - Three drone radar systems with dynamic accuracy levels
