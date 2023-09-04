@@ -11,11 +11,11 @@ The aim of this program is to measure users trust in the system when presented w
 Three groups A,B,C where created to test users trust in the system with different accuracies. Group A had 95,95,95, Group B 95,25,95 and Group C 95,75,95. The users where asked to correct the systems classifications if necessary and where also periodically presented qualtrics questionaires such as a stress index and trust in system. Based on their classifications and the questionaires trust in the different groups was measured by psychologists using SPSS.
 ## System Features
 
-- Three drone radar systems with dynamic accuracy levels
+### Three drone radar systems with dynamic accuracy levels
  ![Radar System 1](./screenshots/scenario1GroupA.png)
-- Two test scenarios for training
+### Two test scenarios for training
 - 
-- Qualtrics questionnaire integration
+### Qualtrics questionnaire integration
 
 ## Prerequisites
 
