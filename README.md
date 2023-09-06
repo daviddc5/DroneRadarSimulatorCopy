@@ -12,12 +12,12 @@ Three groups A,B,C where created to test users trust in the system with differen
 ## System Features
 
 ### Three drone radar systems with dynamic accuracy levels(here is one of the scenarios from Group A)
- ![Radar System 1](./screenshots/scenario1GroupA.png)
+ ![scenario1GroupA](./screenshots/scenario1GroupA.png)
 ### Two test scenarios for training
- ![Radar System 1](./screenshots/SupervisedTests.png)
- ![Radar System 1](./screenshots/UnsupervisedTest.png)
+ ![SupervisedTest](./screenshots/SupervisedTests.png)
+ ![UnsupervisedTests](./screenshots/UnsupervisedTest.png)
 ### Qualtrics questionnaire integration
-![Radar System 1](./screenshots/QualtricsQuestionaire.png)
+![Qualtrics](./screenshots/QualtricsQuestionaire.png)
 
 ## Prerequisites
 
