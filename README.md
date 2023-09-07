@@ -1,7 +1,7 @@
 # 📡 MCCS(drone radar simulation)
 
 ## 📄 About
-This program is inspired by the Micromonde combat control system developed by University of Laval. 🎓
+This program is inspired by the Micromonde combat control system developed by University of Laval. 
 It simulates three different drone radar systems with dynamic accuracies and two test scenarios to help the user acclimate to the system.
 The program periodically links to external Qualtrics questionnaires that the user must answer to proceed.
 
